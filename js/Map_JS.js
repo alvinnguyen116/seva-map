@@ -60,11 +60,11 @@ function plotMarkers(m)
     maxZoom: 10,
     gridSize: 40, //the proximity required to cluster 
     styles: [{
-     anchor1:[27,22], //seperate anchors for various digits 
-     anchor2: [29,20], //[y,x] where top right is [0,0]
+     anchor1:[13,21], //seperate anchors for various digits 
+     anchor2: [13,15.5], //[y,x] where top right is [0,0]
      textColor: "white",
-     textSize1: 15,
-     testSize2: 14,
+     textSize1: 18,
+     textSize2: 18,
      height: 52,
      width: 52,
      url: "images/cluster_mentee.png"
@@ -74,11 +74,11 @@ function plotMarkers(m)
     maxZoom: 10,
     gridSize: 40,
     styles: [{
-     anchor1:[28,22],
-     anchor2:[28,22], //[y,x] where top right is [0,0]
+     anchor1:[13,21],
+     anchor2:[13,15.5], //[y,x] where top right is [0,0]
      textColor: "white",
-     textSize1: 15, //seperate textSizes for various digits 
-     testSize2: 15,
+     textSize1: 18, //seperate textSizes for various digits 
+     textSize2: 18,
      height: 52, 
      width: 52,
      url: "images/cluster_partner.png"
