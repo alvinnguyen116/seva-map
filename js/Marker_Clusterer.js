@@ -831,7 +831,7 @@ function Cluster(markerClusterer) {
 }
 
 /**
- * Determins if a marker is already added to the cluster.
+ * Determines if a marker is already added to the cluster.
  *
  * @param {google.maps.Marker} marker The marker to check.
  * @return {boolean} True if the marker is already added.
@@ -1198,9 +1198,9 @@ ClusterIcon.prototype.useStyle = function() {
   this.url_ = style['url'];
   this.height_ = style['height'];
   this.width_ = style['width'];
+  this.anchor_ = (this.cluster_.getSize() <= 9) ? style['anchor1'] : style['anchor2'];
   this.textColor_ = style['textColor'];
-  this.anchor_ = style['anchor'];
-  this.textSize_ = style['textSize'];
+  this.textSize_ = (this.cluster_.getSize() <= 9) ? style['textSize1'] : style['textSize2'];
   this.backgroundPosition_ = style['backgroundPosition'];
 };
 
