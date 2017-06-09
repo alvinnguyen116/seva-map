@@ -384,6 +384,3 @@ function clusterPartner(list) {
     }]
   });
 }
-
-
-
