@@ -239,9 +239,7 @@ function plotMarkers(m)
         position: position,
         icon: icons[marker.type].icon,
         category: [marker.type],
-        animation: google.maps.Animation.DROP,
-        visible: false,
-        map: map
+        animation: google.maps.Animation.DROP
       });
     var contentString = infoWindowContent(marker.name, marker.description, marker.image);
     var infoWindow = new google.maps.InfoWindow({
@@ -311,7 +309,8 @@ function show(category) {
   var list = [];
   for (var i=0; i<markers.length; i++) {
     if (markers[i].category == category) {
-      markers[i].setVisible(true);
+      markers[i].setMap(map);
+      markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
       list.push(markers[i]);
     }
   }
@@ -326,7 +325,7 @@ function show(category) {
 function hide(category) {
   for (var i=0; i<markers.length; i++) {
     if (markers[i].category == category) {
-      markers[i].setVisible(false);
+      markers[i].setMap(null); //loses animation 
     }
   }
   // == clear the checkbox ==
@@ -384,3 +383,6 @@ function clusterPartner(list) {
     }]
   });
 }
+
+
+
