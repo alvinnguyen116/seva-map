@@ -5,6 +5,22 @@ var prevWindow = false; //prevent multiple infoWindows
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
+var icons = {
+      sevaOffice: {
+        name: "Seva Office",
+        icon: 'images/seva_office.png' //http://www.flaticon.com
+      },
+      sevaPartner: {
+        name: "Seva Partner",
+        icon: 'images/seva_partner.png'
+      },
+      sevaMentee: {
+        name: "Seva Mentee",
+        icon: 'images/seva_mentee.png'
+      }
+  };
+
+
 document.addEventListener('DOMContentLoaded', function () { //foundation: https://www.sitepoint.com/google-maps-javascript-api-the-right-way/ 
   if (document.querySelectorAll('#map').length > 0)
   {
@@ -208,59 +224,23 @@ function initMap()
     }
     map.setOptions({ scrollwheel: true }); //re-enables scrolling 
   });
+  menteeClusterer = new MarkerClusterer(map, []);
+  partnerClusterer = new MarkerClusterer(map, []);
 }
-var icons = {
-      sevaOffice: {
-        name: "Seva Office",
-        icon: 'images/seva_office.png' //http://www.flaticon.com
-      },
-      sevaPartner: {
-        name: "Seva Partner",
-        icon: 'images/seva_partner.png'
-      },
-      sevaMentee: {
-        name: "Seva Mentee",
-        icon: 'images/seva_mentee.png'
-      }
-  };
+
 function plotMarkers(m)
 {
   markers = []; // clustering 
   bounds = new google.maps.LatLngBounds();
-  menteeCluster = new MarkerClusterer(map, [], {
-    maxZoom: 10,
-    gridSize: 40, //the proximity required to cluster 
-    styles: [{
-     anchor1:[13,21], //seperate anchors for various digits 
-     anchor2: [13,15.5], //[y,x] where top right is [0,0]
-     textColor: "white",
-     textSize1: 18,
-     textSize2: 18,
-     height: 52,
-     width: 52,
-     url: "images/cluster_mentee.png"
-    }] 
-  });
-  partnerClusterer = new MarkerClusterer(map, [], {
-    maxZoom: 10,
-    gridSize: 40,
-    styles: [{
-     anchor1:[13,21],
-     anchor2:[13,15.5], //[y,x] where top right is [0,0]
-     textColor: "white",
-     textSize1: 18, //seperate textSizes for various digits 
-     textSize2: 18,
-     height: 52, 
-     width: 52,
-     url: "images/cluster_partner.png"
-    }] 
-  });
+
   m.forEach(function (marker) {
     var position = new google.maps.LatLng(marker.lat, marker.lng);
     var newMarker = new google.maps.Marker({
         position: position,
         icon: icons[marker.type].icon,
+        category: [marker.type],
         animation: google.maps.Animation.DROP,
+        visible: false,
         map: map
       });
     var contentString = infoWindowContent(marker.name, marker.description, marker.image);
@@ -298,11 +278,6 @@ function plotMarkers(m)
       } 
     });
     markers.push(newMarker); 
-    if (marker.type == "sevaMentee") {
-      menteeCluster.addMarker(newMarker);
-    } else if (marker.type == "sevaPartner") {
-      partnerClusterer.addMarker(newMarker);
-    }
     bounds.extend(position);
   });
   map.fitBounds(bounds);
@@ -331,3 +306,84 @@ function isInfoWindowOpen(infoWindow) {
     var map = infoWindow.getMap();
     return (map !== null && typeof map !== "undefined");
 }
+
+function show(category) {
+  var list = [];
+  for (var i=0; i<markers.length; i++) {
+    if (markers[i].category == category) {
+      markers[i].setVisible(true);
+      list.push(markers[i]);
+    }
+  }
+   document.getElementById(category+"Box").checked = true;
+   if (category == "sevaMentee") {
+    clusterMentee(list);
+  } else if (category == "sevaPartner") {
+    clusterPartner(list);
+  }
+}
+
+function hide(category) {
+  for (var i=0; i<markers.length; i++) {
+    if (markers[i].category == category) {
+      markers[i].setVisible(false);
+    }
+  }
+  // == clear the checkbox ==
+  document.getElementById(category+"Box").checked = false;
+  // == close the info window, in case its open on a marker that we just hid
+  if (prevWindow) {
+    prevWindow.close();
+    prevWindow = false;
+  }
+  if (category == "sevaMentee") {
+    menteeClusterer.clearMarkers();
+  } else if (category == "sevaPartner") {
+    partnerClusterer.clearMarkers();
+  }
+}
+
+function boxclick(box,category) {
+  if (box.checked) {
+    show(category);
+  } else {
+    hide(category);
+  }
+}
+
+function clusterMentee(list) {
+  menteeClusterer = new MarkerClusterer(map, list, {
+    maxZoom: 10,
+    gridSize: 40, //the proximity required to cluster 
+    styles: [{
+     anchor1:[13,21], //seperate anchors for various digits 
+     anchor2: [13,15.5], //[y,x] where top right is [0,0]
+     textColor: "white",
+     textSize1: 18,
+     textSize2: 18,
+     height: 52,
+     width: 52,
+     url: "images/cluster_mentee.png"
+    }]
+  });
+}
+
+function clusterPartner(list) {
+    partnerClusterer = new MarkerClusterer(map, list, {
+    maxZoom: 10,
+    gridSize: 40,
+    styles: [{
+     anchor1:[13,21],
+     anchor2:[13,15.5], //[y,x] where top right is [0,0]
+     textColor: "white",
+     textSize1: 18, //seperate textSizes for various digits 
+     textSize2: 18,
+     height: 52, 
+     width: 52,
+     url: "images/cluster_partner.png"
+    }]
+  });
+}
+
+
+
