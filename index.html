@@ -1,6 +1,6 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  <head> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -11,6 +11,12 @@
     <script type="text/javascript" src="js/jquery.js"></script>
   </head>
   <body>
+    <form action="#">
+    Seva Office: <input type="checkbox" id="sevaOfficeBox" onclick="boxclick(this,'sevaOffice')" />
+    Seva Partner: <input type="checkbox" id="sevaPartnerBox" onclick="boxclick(this,'sevaPartner')" />
+    Seva Mentee: <input type="checkbox" id="sevaMenteeBox" onclick="boxclick(this,'sevaMentee')" />
+    </form>  
+
     <div id="map"></div>
     <div id="legend"><h3>Legend</h3></div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
