@@ -9,11 +9,13 @@ html, body {
 }
 
 #legend {
+    font-size: 14px;
     background: #fff;
     margin: 10px;
     border: 1px solid #f05a28;
     border-radius: 2px;
     font-family: 'Gotham-Book', Arial;
+    position: relative;
 }
 
 #legend h3 {
@@ -21,6 +23,7 @@ html, body {
   background: #f05a28;
   text-align: center;
   color: white;
+  position: relative;
 }
 #legend div { 
     padding: 2px 6px;
@@ -79,6 +82,18 @@ a, a:link, a:visited, a:active {
     color: #801a50;
 }
 
-a:hover {
+a:hover { 
   color: #cc1b75;
+}
+
+.category1, .category2, .category3 {
+  display: inline;
+}
+.leglabel {
+  margin-right: 10px;
+}
+#sevaOfficeBox, #sevaPartnerBox, #sevaMenteeBox {
+  position: absolute;
+  right: 0;
+  margin-top: 8.5px;
 }
