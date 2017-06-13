@@ -33,6 +33,7 @@ html, body {
 }
 #iw_container {
   margin-bottom: 10px;
+  overflow: hidden;
 }
 #iw_title {
   font-family: 'Gotham-Bold', Arial;
@@ -66,6 +67,7 @@ html, body {
    background-color: #fff;
    box-shadow: 0 1px 6px #801a50;
    border-radius: 2px;
+   overflow:hidden;
 }
 .iw-bottom-gradient {
       position: absolute;
