@@ -91,13 +91,6 @@
 		"description": "<p>Clinica Iquitos is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of Clinica Oftalmológica <a href='http://www.seva.org/site/PageNavigator/programs/partners/DNJ' target='_blank'>Divino Niño Jesús</a> (DNJ).</p>"
 	},
 	{   "image": "",
-		"lat": -9.5223236, 
-		"lng": -77.5287101,
-		"name": "MD Milagros Sanchez",
-		"type": "sevaMentee",
-		"description": "<p>MD Milagros Sanchez is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of Clinica Oftalmológica <a href='http://www.seva.org/site/PageNavigator/programs/partners/DNJ' target='_blank'>Divino Niño Jesús</a> (DNJ).</p>"
-	},
-	{   "image": "",
 		"lat": -12.1715781, 
 		"lng": -76.9746365,
 		"name": "Clinica Oftalmológica Divino Niño Jesús (DNJ)",
@@ -250,6 +243,14 @@
 		"name": "FC Ajmera Rotary Eye Hospital",
 		"type": "sevaMentee",
 		"description": "<p>FC Ajmera Rotary Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"
+	},
+	{
+		"image": "",
+		"lat": 18.4160616, 
+		"lng": 76.5401527,
+		"name": "D.S.Karad Eye Institute",
+		"type": "sevaMentee",
+		"description": "<p>D.S.Karad Eye Institute is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a>(LVPEI).</p>"
 	},
 	{   "image": "",
 		"lat": 18.351755,
