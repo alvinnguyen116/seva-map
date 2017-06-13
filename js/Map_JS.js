@@ -246,7 +246,10 @@ function plotMarkers(m)
       content: contentString
     });
   google.maps.event.addListener(infoWindow, 'domready', function() { 
-    var iwOuter = $('.gm-style-iw'); //removing InfoWindow margins 
+    var iwOuter = $('.gm-style-iw'); //removing InfoWindow margins
+    
+    iwOuter.children().first().css({'overflow': 'hidden'}); 
+
     var iwBackground = iwOuter.prev();
     iwBackground.children(':nth-child(2)').css({'display' : 'none'});
     iwBackground.children(':nth-child(4)').css({'display' : 'none'});
@@ -280,9 +283,11 @@ function plotMarkers(m)
   });
   map.fitBounds(bounds);
 
-
   var legend = document.getElementById('legend'); //legend 
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+  show("sevaOffice");
+  show("sevaMentee");
+  show("sevaPartner");
 }
 
 function infoWindowContent(name, content, image) {
@@ -377,6 +382,5 @@ function clusterPartner(list) {
     }]
   });
 }
-
 
 
