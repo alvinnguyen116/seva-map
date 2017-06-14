@@ -5,6 +5,7 @@ var prevWindow = false; //prevent multiple infoWindows
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
+var expanded = false;
 var icons = {
       sevaOffice: {
         name: "Seva Office",
@@ -226,6 +227,18 @@ function initMap()
   });
   menteeClusterer = new MarkerClusterer(map, []);
   partnerClusterer = new MarkerClusterer(map, []);
+  window.addEventListener("resize", function(){
+    if (prevWindow) {
+      responsiveOpen(prevWindow);
+    }
+  }, true);
+   window.addEventListener("orientationchange", function(){
+    if (prevWindow) {
+      responsiveOpen(prevWindow);
+    }
+  }, false);
+   var iwResp = document.getElementById('iw_responsive');
+   map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); // for responsive design 
 }
 
 function plotMarkers(m)
@@ -245,11 +258,13 @@ function plotMarkers(m)
     var infoWindow = new google.maps.InfoWindow({
       content: contentString
     });
+    infoWindow.name = marker.name;
+    infoWindow.content = marker.description;
+    infoWindow.image = marker.image;
   google.maps.event.addListener(infoWindow, 'domready', function() { 
     var iwOuter = $('.gm-style-iw'); //removing InfoWindow margins
     
     iwOuter.children().first().css({'overflow': 'hidden'}); 
-
     var iwBackground = iwOuter.prev();
     iwBackground.children(':nth-child(2)').css({'display' : 'none'});
     iwBackground.children(':nth-child(4)').css({'display' : 'none'});
@@ -273,7 +288,7 @@ function plotMarkers(m)
         prevWindow.close();
       }
       prevWindow = infoWindow;
-      infoWindow.open(map, newMarker);
+      responsiveOpen(infoWindow,newMarker);
       if (isInfoWindowOpen(infoWindow)) {
         map.setOptions({ scrollwheel: false }); //enables text scrolling 
       } 
@@ -383,4 +398,31 @@ function clusterPartner(list) {
   });
 }
 
+function responsiveOpen(infoWindow, marker) {
+  //responsive design 
+  prevWindow = infoWindow;
+  prevWindow.close();
+  var iwResp = document.getElementById("iw_responsive");
+  iwResp.style.display = 'none';
+  iwResp.innerHTML="";
 
+  var maxwidth = $(window).width();
+  var maxheight = $(window).height();
+  console.log(maxwidth);
+   if (maxwidth <= 500) { 
+     console.log("butt"); // width
+     iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
+     iwResp.style.display = 'block';
+  } else {
+    infoWindow.open(map,marker);
+  } 
+}
+
+  
+function legend() {
+      if (expanded = !expanded) {
+            $("#legend .box").animate({ "margin-left": 0 },    "slow");
+      } else {
+            $("#legend .box").animate({ "margin-left": -500 }, "slow");
+      }
+}
