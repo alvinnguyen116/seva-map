@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="utf-8"> 
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <title>Seva Map</title>
     <link rel="stylesheet" type="text/css" href="Map_CSS.css">
     <script type="text/javascript" src="js/Marker_Clusterer.js"></script>
@@ -12,12 +12,14 @@
   </head>
   <body> 
   <div id="map"></div>
-
+    <div id="iw_responsive"></div>
     <div id="legend">
-      <h3>Legend</h3>
-      <div><img src="images/seva_office.png" class="category1"><div class="category1 leglabel">Seva Office</div><input type="checkbox" id="sevaOfficeBox" class="category1" onclick="boxclick(this,'sevaOffice')" /></div>
-      <div><img src="images/seva_partner.png" class="category2"><div class="category2 leglabel">Seva Partner</div><input type="checkbox" id="sevaPartnerBox" class="category2" onclick="boxclick(this,'sevaPartner')" /></div>
-      <div><img src="images/seva_mentee.png" class="category3"><div class="category3 leglabel">Seva Mentee</div><input type="checkbox" id="sevaMenteeBox" class="category3" onclick="boxclick(this,'sevaMentee')" /></div>  
+        <div class="box">
+            <img src="images/seva_office_legend.png" class="category1">Seva Office<input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" />
+            <img src="images/seva_partner_legend.png" class="category2">Seva Partner<input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" />
+            <img src="images/seva_mentee_legend.png" class="category3">Seva Mentee<input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" />
+        </div>
+        <button onclick="legend()">Legend</button>  
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
