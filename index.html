@@ -13,13 +13,18 @@
   <body> 
   <div id="map"></div>
     <div id="iw_responsive"></div>
-    <div id="legend">
-        <div class="box">
-            <img src="images/seva_office_legend.png" class="category1">Seva Office<input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" />
-            <img src="images/seva_partner_legend.png" class="category2">Seva Partner<input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" />
-            <img src="images/seva_mentee_legend.png" class="category3">Seva Mentee<input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" />
+    <div id="legend_landscape">
+        <button onclick="toggleSlider()" id="toggleSliderBtn">Legend</button>
+        <div class="box" id="box">
+          <ul>
+            <li><img src="images/seva_office_legend.png" class="category1">Seva Office<input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" /></li>
+            
+            <li><img src="images/seva_partner_legend.png" class="category2">Seva Partner<input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" /></li>
+            
+            <li><img src="images/seva_mentee_legend.png" class="category3">Seva Mentee<input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" /></li>
+          </ul>
         </div>
-        <button onclick="legend()">Legend</button>  
+        <button onclick="legend()" id="legendBtn">Legend</button>  
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
