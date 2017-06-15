@@ -9,7 +9,6 @@ html, body {
 }
 
 #legend_landscape {
-    font-size: 14px;
     background: #f05a28; 
     margin: 10px;
     position: relative;
@@ -20,7 +19,7 @@ html, body {
     overflow-x: hidden;
 }
 #legend_portrait {
-  font-size: 14px;
+  font-size: 18px;
   background: #f05a28; /*change later with js*/
   margin: 10px;
   border-radius: 2px;
@@ -52,7 +51,7 @@ html, body {
 }
 #legend_landscape button {
   font-size: 13px;
-  margin-top: 4px;
+  margin-top: 6px;
  }
 
 #legend_landscape .box { 
@@ -83,10 +82,6 @@ html, body {
     width:140px;
     margin-left: 0;
 } 
-
-#legend img {
-    vertical-align: middle;
-}
 #iw_container {
   margin-bottom: 10px;
   overflow: hidden;
@@ -158,8 +153,13 @@ img {
   vertical-align: middle;
 }
 
-#legend_landscape .box img, #legend_landscape .box img {
-  margin-right: 4px;
+#legend_portrait .box img {
+  vertical-align: middle; 
+}
+
+#legend_landscape .box img {
+  margin-right: 0 auto;
+  vertical-align: middle;
 }
 
 #toggleSliderBtn {
@@ -168,10 +168,19 @@ img {
 
 #legend_landscape #box li {
   display: inline;
+  vertical-align: middle;
 }
-
+#legend_portrait #box li {
+  height: 20px;
+  margin: 10px auto;
+}
+#legend_portrait #box li span{
+  vertical-align: middle;
+}
 #box ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
+
+
