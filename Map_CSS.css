@@ -8,23 +8,33 @@ html, body {
   height: 100%; /*!important */
 }
 
-#legend {
+#legend_landscape {
     font-size: 14px;
-    background: #f05a28; /*change later with js*/
+    background: #f05a28; 
     margin: 10px;
+    position: relative;
     border-radius: 2px;
     font-family: 'Gotham-Book', Arial;
-    position: relative;
     border: 3px solid #f05a28;
     height: 29px;
     overflow-x: hidden;
 }
+#legend_portrait {
+  font-size: 14px;
+  background: #f05a28; /*change later with js*/
+  margin: 10px;
+  border-radius: 2px;
+  font-family: 'Gotham-Book', Arial;
+  position: relative;
+  border: 3px solid #f05a28;
+  margin-left:0;
+}
 
-#legend > * {
+#legend_landscape > div {
   float: left;
 }
 
-#legend button {
+#legend_portrait button, #legend_landscape button{
   border-radius: 10px;
   margin: 0;
   background: #f05a28;
@@ -36,11 +46,17 @@ html, body {
   cursor: pointer;
   border:none;
   padding: 5px;
+  height: 20px;
+  margin: auto;
+  padding-top: 0;
 }
+#legend_landscape button {
+  font-size: 13px;
+  margin-top: 4px;
+ }
 
-#legend .box { 
+#legend_landscape .box { 
     padding: 2px 6px;
-    display: inline-block;
     background: white;
     color: black;
     font-size: 14px;
@@ -49,10 +65,25 @@ html, body {
     border:none;
     border: 1px solid #f05a28;
     border-radius: 5px;
-    width:400px;
-    margin-left: -500px;
-    overflow-x: hidden;
+    margin-left: 0;
+    overflow-x: hidden; 
 } 
+
+
+#legend_portrait .box { 
+    padding: 2px 6px;
+    background: white;
+    color: black;
+    font-size: 14px;
+    font-family: 'Gotham-Book', Arial;
+    cursor: pointer;
+    border:none;
+    border: 1px solid #f05a28;
+    border-radius: 5px;
+    width:140px;
+    margin-left: 0;
+} 
+
 #legend img {
     vertical-align: middle;
 }
@@ -122,11 +153,25 @@ img {
   z-index: 10;
 }
 
-#legend .box input {
+#legend_lanscape .box input, #legend_portrait .box input {
   margin-left: 9px;
   vertical-align: middle;
 }
 
-#legend .box img {
+#legend_landscape .box img, #legend_landscape .box img {
   margin-right: 4px;
+}
+
+#toggleSliderBtn {
+  display: none;
+}
+
+#legend_landscape #box li {
+  display: inline;
+}
+
+#box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
 }
