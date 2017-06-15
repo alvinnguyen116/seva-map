@@ -231,14 +231,40 @@ function initMap()
     if (prevWindow) {
       responsiveOpen(prevWindow);
     }
+    console.log("penis");
+    if (getOrientation() == "Portrait") {
+      document.getElementById("legend_landscape").id = "legend_portrait";
+      $("#legendBtn").css("display","none");
+      $("#toggleSliderBtn").css("display", "block");
+      $("#box").css("margin-left" , "0");
+      toggleSlider();
+    } else {
+      document.getElementById("legend_portrait").id = "legend_landscape";
+       $("#legendBtn").css("display","block");
+      $("#toggleSliderBtn").css("display", "none");
+      $("#box").css("display" , "block");
+      legend();
+    }
   }, true);
-   window.addEventListener("orientationchange", function(){
+   $(window).on("orientationchange", function(){
     if (prevWindow) {
       responsiveOpen(prevWindow);
     }
-  }, false);
+    console.log("butt");
+  });
    var iwResp = document.getElementById('iw_responsive');
    map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); // for responsive design 
+   if (getOrientation() == "Portrait") {
+    console.log(getOrientation());
+      document.getElementById("legend_landscape").id = "legend_portrait";
+      $("#legendBtn").css("display","none");
+      $("#toggleSliderBtn").css("display", "block");
+    } else {
+      console.log(getOrientation());
+      document.getElementById("legend_portrait").id = "legend_landscape";
+      $("#legendBtn").css("display","block");
+      $("#toggleSliderBtn").css("display", "none");
+    }
 }
 
 function plotMarkers(m)
@@ -298,8 +324,12 @@ function plotMarkers(m)
   });
   map.fitBounds(bounds);
 
-  var legend = document.getElementById('legend'); //legend 
+  var legend = document.getElementById('legend_landscape'); //legend 
+  if (legend == null) {
+    legend = document.getElementById('legend_portrait');
+  }
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
+
   show("sevaOffice");
   show("sevaMentee");
   show("sevaPartner");
@@ -418,11 +448,25 @@ function responsiveOpen(infoWindow, marker) {
   } 
 }
 
-  
-function legend() {
+function legend() { 
       if (expanded = !expanded) {
-            $("#legend .box").animate({ "margin-left": 0 },    "slow");
+            $("#legend_landscape .box").animate({ "margin-left": -500 },    "slow");
       } else {
-            $("#legend .box").animate({ "margin-left": -500 }, "slow");
+            $("#legend_landscape .box").animate({ "margin-left": 0 }, "slow");
       }
+}
+
+
+function toggleSlider(){
+  if (expanded = !expanded) {
+            $("#box").slideUp('slow');
+      } else {
+            $("#box").slideDown('slow');
+
+      }
+}
+
+ function getOrientation(){
+    var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
+    return orientation;
 }
