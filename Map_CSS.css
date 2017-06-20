@@ -5,7 +5,7 @@ html, body {
 }
 
 #map {
-  height: 100%; /*!important */
+  height: 100% !important; 
 }
 
 #legend_landscape {
@@ -19,7 +19,6 @@ html, body {
     overflow-x: hidden;
 }
 #legend_portrait {
-  font-size: 18px;
   background: #f05a28; /*change later with js*/
   margin: 10px;
   border-radius: 2px;
@@ -70,7 +69,6 @@ html, body {
 
 
 #legend_portrait .box { 
-    padding: 2px 6px;
     background: white;
     color: black;
     font-size: 14px;
@@ -79,7 +77,7 @@ html, body {
     border:none;
     border: 1px solid #f05a28;
     border-radius: 5px;
-    width: 130px;
+    width: 140px;
     margin-left: 0;
 } 
 #iw_container {
@@ -89,8 +87,8 @@ html, body {
 #iw_title {
   font-family: 'Gotham-Bold', Arial;
   border: 1px solid #801a50;
-	background: #801a50;
-	text-align: center;
+  background: #801a50;
+  text-align: center;
   color: white;
   margin-bottom: 0;
   font-size: 22px;
@@ -102,7 +100,7 @@ html, body {
   font-family: 'Gotham-Book', Arial;
   font-size: 14px;
   margin-top: 0;
-	margin-right: 1px;
+  margin-right: 1px;
   margin-bottom: 0;
   padding: 0px   5px 20px 15px;
   max-height: 140px;
@@ -120,17 +118,7 @@ html, body {
    border-radius: 2px;
    overflow:hidden;
 }
-.iw-bottom-gradient {
-      position: absolute;
-      width: 376px;
-      height: 25px;
-      bottom: 0px;
-      right: 16px;
-      background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-      background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-      background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-      background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-}
+
 a, a:link, a:visited, a:active {
     color: #801a50;
 }
@@ -138,17 +126,14 @@ a, a:link, a:visited, a:active {
 a:hover { 
   color: #cc1b75;
 }
-
-img {
-  max-width: 100%;
+#map img {
+  max-width: 100% !important;
 }
-
-#iw_responsive {
-  display: none;
-  z-index: 10;
+ #legend_portrait .box input {
+  margin-left: 9px;
+  vertical-align: middle;
 }
-
-#legend_lanscape .box input, #legend_portrait .box input {
+#legend_landscape .box input {
   margin-left: 9px;
   vertical-align: middle;
 }
@@ -183,4 +168,44 @@ img {
   padding: 0;
 }
 
+#iw_responsive {
+  display: none;
+  height: 95vh;
+  width: 95vw;
+  z-index: 1 !important; 
+  margin-left: -500px;
+  overflow-x: hidden; 
+}
 
+
+.portrait_mode #iw_title img {
+  position: absolute;
+  left: 10px;
+  cursor: pointer;
+}
+.landscape_mode #iw_title img {
+  cursor: pointer;
+}
+#map .landscape_mode {
+  position: absolute;
+  left: 2.5vw !important;
+  max-height: 95vh !important;
+  overflow:hidden;
+  top: 20vh !important;
+}
+
+#map .landscape_mode #iw_image {
+  float: left;
+}
+#map .landscape_mode #iw_container {
+    background: #801a50;
+}
+
+#map .portrait_mode {
+  left: 2.5vw !important;
+  top: 2.5vh !important;
+}
+
+#legend_arrow, #legend_arrow2 {
+  padding-left: 10px;
+}
