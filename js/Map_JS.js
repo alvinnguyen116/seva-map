@@ -222,6 +222,7 @@ function initMap()
     if (prevWindow) {
       prevWindow.close();
       prevWindow = false;
+      iwclose();
     }
     map.setOptions({ scrollwheel: true }); //re-enables scrolling 
   });
@@ -231,7 +232,6 @@ function initMap()
     if (prevWindow) {
       responsiveOpen(prevWindow);
     }
-    console.log("penis");
     if (getOrientation() == "Portrait") {
       document.getElementById("legend_landscape").id = "legend_portrait";
       $("#legendBtn").css("display","none");
@@ -250,20 +250,32 @@ function initMap()
     if (prevWindow) {
       responsiveOpen(prevWindow);
     }
-    console.log("butt");
+    if (getOrientation() == "Portrait") {
+      document.getElementById("legend_landscape").id = "legend_portrait";
+      $("#legendBtn").css("display","none");
+      $("#toggleSliderBtn").css("display", "block");
+      $("#box").css("margin-left" , "0");
+      toggleSlider();
+    } else {
+      document.getElementById("legend_portrait").id = "legend_landscape";
+       $("#legendBtn").css("display","block");
+      $("#toggleSliderBtn").css("display", "none");
+      $("#box").css("display" , "block");
+      legend();
+    }
   });
    var iwResp = document.getElementById('iw_responsive');
    map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); // for responsive design 
    if (getOrientation() == "Portrait") {
-    console.log(getOrientation());
       document.getElementById("legend_landscape").id = "legend_portrait";
       $("#legendBtn").css("display","none");
       $("#toggleSliderBtn").css("display", "block");
+      document.getElementById("legend_arrow").src = "images/sort-down_opt.png";
     } else {
-      console.log(getOrientation());
       document.getElementById("legend_portrait").id = "legend_landscape";
       $("#legendBtn").css("display","block");
       $("#toggleSliderBtn").css("display", "none");
+      document.getElementById("legend_arrow2").src = "images/left-arrow_opt.png";
     }
 }
 
@@ -297,9 +309,9 @@ function plotMarkers(m)
     iwOuter.parent().parent().css({left: '115px'}); //repositioning infowindow 
     iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
     iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
-    iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow' : '0px 1px 6px #801a50', 'z-index' : '1'});
+    // iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow' : '0px 1px 6px #801a50', 'z-index' : '1'});
     var iwCloseBtn = iwOuter.next(); //info window exit button 
-    // iwCloseBtn.css({'display': 'none'});
+    iwCloseBtn.hide();
     iwCloseBtn.css({
       opacity: '1', // by default the close button has an opacity of 0.7
       border: '8px solid #801a50', // increasing button border and new color
@@ -310,8 +322,9 @@ function plotMarkers(m)
       map.setOptions({ scrollwheel: true }); //re-enables scrolling 
   });
     newMarker.addListener('click', function() {
-      if (prevWindow) {
+      if (prevWindow && (prevWindow != infoWindow)) {
         prevWindow.close();
+        iwclose();
       }
       prevWindow = infoWindow;
       responsiveOpen(infoWindow,newMarker);
@@ -337,10 +350,10 @@ function plotMarkers(m)
 
 function infoWindowContent(name, content, image) {
   if (image == "") {
-    return "<div id='iw_container'> <div id='iw_title'>" + name + "</div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
+    return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img>" + name + "</div><div id='iw_content'>" + content + "</div></div>"; //styling purposes 
   } else {
     return "<div id='iw_container'> <div id='iw_image' style='width:350px; height: 200px; background-image: url(" + image + "); background-size: cover; background-repeat: no-repeat; background-position: 50% 50%;'></div>"
-    + "<div id='iw_title'>" + name + "</div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
+    + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img>" + name + "</div><div id='iw_content'>" + content + "</div></div>";
   } 
 }
 
@@ -378,6 +391,7 @@ function hide(category) {
   if (prevWindow) {
     prevWindow.close();
     prevWindow = false;
+    iwclose();
   }
   if (category == "sevaMentee") {
     menteeClusterer.clearMarkers();
@@ -435,24 +449,46 @@ function responsiveOpen(infoWindow, marker) {
   var iwResp = document.getElementById("iw_responsive");
   iwResp.style.display = 'none';
   iwResp.innerHTML="";
-
+  var mode = getOrientation();
   var maxwidth = $(window).width();
   var maxheight = $(window).height();
-  console.log(maxwidth);
-   if (maxwidth <= 500) { 
-     console.log("butt"); // width
+  if (maxwidth <= 500 && (mode == "Portrait")) { 
      iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
      iwResp.style.display = 'block';
+     iwResp.className = "portrait_mode";
+
+     $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
+  } else if (maxheight <= 400 && (mode == "Landscape")) {
+    //change class
+    iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image); 
+    iwResp.style.display = 'block';
+    iwResp.className = "landscape_mode";
+      if (document.getElementById("iw_image") == null) {
+        $(".landscape_mode #iw_title img").css({'position':'absolute', 'left': '10px'});
+      } else {
+        $(".landscape_mode #iw_title img").css({'margin-right':'2.5vw'});
+      }
+    $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
   } else {
     infoWindow.open(map,marker);
-  } 
+  }
+  legendClose(); 
+  $("#iw_title img").on("click", function() {
+        if (prevWindow) {
+          prevWindow.close();
+          iwclose();
+        } 
+        prevWindow = false;
+  });
 }
 
 function legend() { 
       if (expanded = !expanded) {
             $("#legend_landscape .box").animate({ "margin-left": -500 },    "slow");
+            document.getElementById("legend_arrow2").src = "images/play-arrow_opt.png";
       } else {
             $("#legend_landscape .box").animate({ "margin-left": 0 }, "slow");
+            document.getElementById("legend_arrow2").src = "images/left-arrow_opt.png";
       }
 }
 
@@ -460,13 +496,28 @@ function legend() {
 function toggleSlider(){
   if (expanded = !expanded) {
             $("#box").slideUp('slow');
+            document.getElementById("legend_arrow").src = "images/caret-arrow-up_opt.png";
       } else {
             $("#box").slideDown('slow');
-
+            document.getElementById("legend_arrow").src = "images/sort-down_opt.png";
       }
 }
 
  function getOrientation(){
     var orientation = window.innerWidth > window.innerHeight ? "Landscape" : "Portrait";
     return orientation;
+}
+
+function legendClose() {
+  if (getOrientation() == "Portrait") {
+    $("#box").slideUp('slow');
+  } else {
+     $("#legend_landscape .box").animate({ "margin-left": -500 },    "slow");
+  }
+  expanded = true;
+}
+
+function iwclose(){
+  $("#iw_responsive").animate({ "margin-left": -1000 },    "slow");
+  setTimeout(function(){$("#iw_responsive").hide();}, 1000);
 }
