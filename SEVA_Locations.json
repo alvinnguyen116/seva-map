@@ -69,7 +69,7 @@
 		"type": "sevaMentee",
 		"description": "<p>Clinique Vision Plus is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, Mentee of International Eye Foundation (IEF).<p>In 2013 Seva partnered with the International Eye Foundation (IEF) and Visualiza to work with Vision Plus Clinique (CVP), an eye clinic located in Cap Haitien. Staff from IEF and Visualiza have spent time training and working with the staff of Vision Plus Clinique on surgical skills, patient flow, clinic set-up, data collection and many other topics. This hospital and its dedicated staff are one of the only clinics bringing eye care to the people of Northern Haiti. The greatest cause of blindness in Haiti is cataract. With only 55 ophthalmologists in the entire country – of whom it is not known how many are currently practicing – there is a desperate need for quality, affordable eye care.</p>"
 	},
-	{   "image": "images/Dr_Pierre.jpg",
+	{   "image": "images/Dr_Pierre.png",
 		"lat": 18.5812333, 
 		"lng": -72.2304571,
 		"name": "Dr. Pierre Decastro Clinic",
