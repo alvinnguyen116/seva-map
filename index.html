@@ -5,26 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width; initial-scale=1.0; maximum-scale=1.0; user-scalable=0;" />
     <title>Seva Map</title>
-    <link rel="stylesheet" type="text/css" href="Map_CSS.css">
     <script type="text/javascript" src="js/Marker_Clusterer.js"></script>
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
     <script type="text/javascript" src="js/jquery.js"></script>
+    <link rel="stylesheet" type="text/css" href="Map_CSS.css">
   </head>
   <body> 
   <div id="map"></div>
     <div class="portrait_mode" id="iw_responsive"></div>
-    <div id="legend_landscape">
-        <button onclick="toggleSlider()" id="toggleSliderBtn">Legend<img id="legend_arrow" src="images/sort-down_opt.png"></img></button>
+    <div class="legend" id="legend_landscape">
+        <button onclick="toggleSlider()" id="toggleSliderBtn">Legend<img id="legend_arrow_portrait" src="images/sort-down_opt.png"></img></button> <!--toggles legend vertically-->
         <div class="box" id="box">
+          
           <ul>
             <li><img src="images/seva_office_legend.png" class="category1"><span>Seva Office</span><input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" /></li>
-            
             <li><img src="images/seva_partner_legend.png" class="category2"><span>Seva Partner</span><input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" /></li>
-            
             <li><img src="images/seva_mentee_legend.png" class="category3"><span>Seva Mentee</span><input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" /></li>
           </ul>
+          
         </div>
-        <button onclick="legend()" id="legendBtn">Legend<img id="legend_arrow2" src="images/left-arrow_opt.png"></img></button>  
+        <button onclick="legend()" id="legendBtn">Legend<img id="legend_arrow_landscape" src="images/left-arrow_opt.png"></img></button> <!-- toggles legend horizontally -->
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
