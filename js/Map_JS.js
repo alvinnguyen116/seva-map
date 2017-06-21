@@ -1,4 +1,5 @@
-var map;      //global variables 
+/*GLOBAL VARIABLES*/
+var map; 
 var markers;
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
@@ -21,12 +22,15 @@ var icons = {
       }
   };
 
+
+
+
+
+
+
+
+
 /*INITIALIZING MAP*/
-
-
-
-
-
 document.addEventListener('DOMContentLoaded', function () { //foundation: https://www.sitepoint.com/google-maps-javascript-api-the-right-way/ 
   if (document.querySelectorAll('#map').length > 0)
   {
@@ -289,10 +293,9 @@ function initMap()
 
 
 
+
+
 /*PLOT AND FILTER MARKERS*/
-
-
-
 function plotMarkers(m)
 {
   markers = []; // clustering 
@@ -451,10 +454,9 @@ function clusterPartner(list) {
 
 
 
+
+
 /*HELPER FUNCTIONS*/
-
-
-
 function responsiveOpen(infoWindow) {
   //responsive design
   if (prevWindow && (prevWindow != infoWindow)) {
