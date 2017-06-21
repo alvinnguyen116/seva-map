@@ -1,3 +1,4 @@
+/*GENERAL CSS*/
 html, body {
   height: 100%;
   margin: 0;
@@ -8,143 +9,76 @@ html, body {
   height: 100% !important; 
 }
 
-#legend_landscape {
-    background: #f05a28; 
-    margin: 10px;
-    position: relative;
-    border-radius: 2px;
-    font-family: 'Gotham-Book', Arial;
-    border: 3px solid #f05a28;
-    height: 29px;
-    overflow-x: hidden;
+#map .landscape_mode, #map .portrait_mode {
+  left: 2vw !important;
+  overflow: hidden;
+  top: 2vh !important;
 }
-#legend_portrait {
-  background: #f05a28; /*change later with js*/
-  margin: 10px;
+
+
+
+
+
+/*LEGEND CSS*/
+#legend_landscape, #legend_portrait {
+  background: #f05a28; 
   border-radius: 2px;
   font-family: 'Gotham-Book', Arial;
-  position: relative;
   border: 3px solid #f05a28;
-  margin-left:0;
+  left: 10px !important;
+  overflow: hidden;
 }
+
+#legend_landscape {
+  height: 29px;
+}
+
 
 #legend_landscape > div {
   float: left;
 }
 
-#legend_portrait button, #legend_landscape button{
-  border-radius: 10px;
-  margin: 0;
+#legend_portrait button, #legend_landscape button { 
   background: #f05a28;
   text-align: center;
   color: white;
-  font-size: 14px;
+  font-size: 16px;
   font-weight: bold;
   font-family: 'Gotham-Book', Arial;
-  cursor: pointer;
-  border:none;
-  padding: 5px;
-  height: 20px;
   margin: auto;
   padding-top: 0;
+  border: none;
+  cursor: pointer;
 }
+
 #legend_landscape button {
-  font-size: 13px;
-  margin-top: 6px;
+  margin-top: 4px;
  }
 
-#legend_landscape .box { 
-    padding: 2px 6px;
-    background: white;
-    color: black;
-    font-size: 14px;
-    font-family: 'Gotham-Book', Arial;
-    cursor: pointer;
-    border:none;
-    border: 1px solid #f05a28;
-    border-radius: 5px;
-    margin-left: 0;
-    overflow-x: hidden; 
+#legend_landscape .box, #legend_portrait .box { 
+  background: white;
+  color: black;
+  font-size: 14px;
+  font-family: 'Gotham-Book', Arial;
+  border: 1px solid #f05a28;
+  border-radius: 5px;
 } 
 
+#legend_landscape .box {
+  padding: 2px 1px;
+}
 
 #legend_portrait .box { 
-    background: white;
-    color: black;
-    font-size: 14px;
-    font-family: 'Gotham-Book', Arial;
-    cursor: pointer;
-    border:none;
-    border: 1px solid #f05a28;
-    border-radius: 5px;
-    width: 140px;
-    margin-left: 0;
+  width: 140px;
 } 
-#iw_container {
-  margin-bottom: 10px;
-  overflow: hidden;
-}
-#iw_title {
-  font-family: 'Gotham-Bold', Arial;
-  border: 1px solid #801a50;
-  background: #801a50;
-  text-align: center;
-  color: white;
-  margin-bottom: 0;
-  font-size: 22px;
-  font-weight: bold;
-  padding: 15px;
-}
 
-#iw_content {
-  font-family: 'Gotham-Book', Arial;
-  font-size: 14px;
-  margin-top: 0;
-  margin-right: 1px;
-  margin-bottom: 0;
-  padding: 0px   5px 20px 15px;
-  max-height: 140px;
-  background: white;
-  overflow-y: auto;
-}
-/*http://en.marnoto.com/2014/09/5-formas-de-personalizar-infowindow.html*/
-.gm-style-iw {
-   margin: 0;
-   width: 350px !important;
-   top: 15px !important; 
-   right: 0 !important;
-   background-color: #fff;
-   box-shadow: 0 1px 6px #801a50;
-   border-radius: 2px;
-   overflow:hidden;
-}
-
-a, a:link, a:visited, a:active {
-    color: #801a50;
-}
-
-a:hover { 
-  color: #cc1b75;
-}
-#map img {
-  max-width: 100% !important;
-}
- #legend_portrait .box input {
-  margin-left: 9px;
-  vertical-align: middle;
-}
-#legend_landscape .box input {
-  margin-left: 9px;
+#legend_portrait .box input, #legend_landscape .box input {
+  margin-left: 8px;
   vertical-align: middle;
 }
 
-#legend_portrait .box img {
+#legend_portrait .box img, #legend_landscape .box img {
   vertical-align: middle; 
-}
-
-#legend_landscape .box img {
-  margin-right: 0 auto;
-  vertical-align: middle;
 }
 
 #toggleSliderBtn {
@@ -155,57 +89,92 @@ a:hover {
   display: inline;
   vertical-align: middle;
 }
+
 #legend_portrait #box li {
   height: 20px;
-  margin: 10px auto;
+  margin: 8px auto;
 }
+
 #legend_portrait #box li span{
   vertical-align: middle;
 }
+
 #box ul {
   list-style: none;
   margin: 0;
   padding: 0;
 }
 
-#iw_responsive {
-  display: none;
-  height: 95vh;
-  width: 95vw;
-  z-index: 1 !important; 
-  margin-left: -500px;
-  overflow-x: hidden; 
+#legend_arrow_portrait {
+  padding-left: 10px;
+}
+
+#legend_arrow_landscape {
+  vertical-align: middle;
+  padding-left: 5px;
 }
 
 
-.portrait_mode #iw_title img {
+
+
+
+
+
+
+
+/*INFOWINDOW CSS*/
+#iw_container {
+  overflow: hidden;
+  font-family: 'Gotham-Bold', Arial;
+}
+
+#iw_title {
+  background: #801a50;
+  text-align: center;
+  color: white;
+  font-size: 22px;
+  padding: 15px;
+}
+
+#iw_content {
+  font-size: 14px;
+  padding: 0px 20px;
+  background: white;
+  max-height: 45vh;
+  overflow-x: auto;
+}
+
+#iw_container a, a:link, a:visited, a:active {
+    color: #801a50;
+}
+
+#iw_container a:hover { 
+  color: #cc1b75;
+}
+
+#iw_responsive {
+  display: none;
+  width: 30vw;
+  z-index: 1 !important; 
+  margin-left: -500px;
+}
+
+#iw_title img {
   position: absolute;
   left: 10px;
   cursor: pointer;
-}
-.landscape_mode #iw_title img {
-  cursor: pointer;
-}
-#map .landscape_mode {
-  position: absolute;
-  left: 2.5vw !important;
-  max-height: 95vh !important;
-  overflow:hidden;
-  top: 20vh !important;
+  display: inline-block;
+  vertical-align: middle;
 }
 
-#map .landscape_mode #iw_image {
-  float: left;
-}
-#map .landscape_mode #iw_container {
-    background: #801a50;
-}
-
-#map .portrait_mode {
-  left: 2.5vw !important;
-  top: 2.5vh !important;
+#iw_title span {
+  display: inline;
+  vertical-align: middle;
+  margin-left: 25px;
 }
 
-#legend_arrow, #legend_arrow2 {
-  padding-left: 10px;
+#iw_image {
+  height: 172px;
+  background-size: cover;
+  background-position: center;
 }
