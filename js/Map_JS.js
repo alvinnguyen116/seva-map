@@ -239,16 +239,13 @@ function initMap()
   window.addEventListener("orientationchange", initLegend);
 
   function initLegend(){
-      var maxwidth = $(window).width();
-      var maxheight = $(window).height();
     if (prevWindow) {
       responsiveOpen(prevWindow);
     }
     if (getOrientation() == "Portrait") {
-      document.getElementById("legend_landscape").id = "legend_portrait";
-      $("#legendBtn").css("display","none"); //change to @media-queries 
+      $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
-      $("#box").css("margin-left" , "0");
+      $("#box").css("margin-left" , "0"); //slides out 
       if (expanded) {
             $("#box").slideUp('slow');
             document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
@@ -256,38 +253,24 @@ function initMap()
             $("#box").slideDown('slow');
             document.getElementById("legend_arrow_portrait").src = "images/sort-down_opt.png";
       }
-      if (maxwidth <= 500) { //for legend 
-        $("#iw_title").css({"font-size" : "14px", "padding": "5px"});
-        $("#legend_portrait .box").css({"font-size": "10px", "width":"110px"});
-        $("#legend_portrait button").css("font-size", "10px");
-      }
-
     } else {
-      document.getElementById("legend_portrait").id = "legend_landscape";
       $("#legendBtn").css("display","block");
       $("#toggleSliderBtn").css("display", "none");
       $("#box").css("display" , "block");
       if (expanded) {
-            $("#legend_landscape .box").animate({ "margin-left": -500 },    "slow");
+            $("#box").animate({ "margin-left": -500 },    "slow");
             document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
       } else {
-            $("#legend_landscape .box").animate({ "margin-left": 0 }, "slow");
+            $("#box").animate({ "margin-left": 0 }, "slow");
             document.getElementById("legend_arrow_landscape").src = "images/left-arrow_opt.png";
-      }
-      if (maxheight <= 400) { //for legend 
-        $("#iw_title").css({"font-size" : "14px", "padding": "5px"});
-        $("#legend_landscape .box").css({"font-size": "10px", "width":"320px"});
-        $("#legend_landscape button").css("font-size", "10px");
       }
     }
   }
 
    var iwResp = document.getElementById('iw_responsive');
-   map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); //info window will be displayed on top 
-  initLegend();
+   map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); //arbitrary, will move later with !important 
+   initLegend();
 }
-
-
 
 
 
@@ -313,27 +296,7 @@ function plotMarkers(m)
     infoWindow.name = marker.name;
     infoWindow.content = marker.description;
     infoWindow.image = marker.image;
-  // google.maps.event.addListener(infoWindow, 'domready', function() { 
-  //   var iwOuter = $('.gm-style-iw'); //removing InfoWindow margins
-    
-  //   iwOuter.children().first().css({'overflow': 'auto', 'max-height': '500px'}); 
-  //   var iwBackground = iwOuter.prev();
-  //   iwBackground.children(':nth-child(2)').css({'display' : 'none'});
-  //   iwBackground.children(':nth-child(4)').css({'display' : 'none'});
-  //   iwOuter.parent().parent().css({'left': '115px'}); //repositioning infowindow 
-  //   iwBackground.children(':nth-child(1)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
-  //   iwBackground.children(':nth-child(3)').attr('style', function(i,s){ return s + 'left: 76px !important;'});
-  //   iwBackground.children(':nth-child(3)').find('div').children().css({'box-shadow' : '0px 1px 6px #801a50', 'z-index' : '1'});
-  //   var iwCloseBtn = iwOuter.next(); //info window exit button 
-  //   iwCloseBtn.css({
-  //     opacity: '1', // by default the close button has an opacity of 0.7
-  //     border: '8px solid #801a50', // increasing button border and new color
-  //     'border-radius': '14px' // circular effect
-  //   });
-  // });
-  // google.maps.event.addListener(infoWindow,'closeclick',function(){
-  //     map.setOptions({ scrollwheel: true }); //re-enables scrolling 
-  // });
+
     newMarker.addListener('click', function() {
       responsiveOpen(infoWindow);
       map.setOptions({ scrollwheel: false }); //enables text scrolling 
@@ -343,10 +306,7 @@ function plotMarkers(m)
   });
   map.fitBounds(bounds);
 
-  var legend = document.getElementById('legend_landscape'); //legend 
-  if (legend == null) {
-    legend = document.getElementById('legend_portrait');
-  }
+  var legend = document.getElementById('legend'); //legend 
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
   show("sevaOffice");
@@ -362,11 +322,6 @@ function infoWindowContent(name, content, image) {
     + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div></div>";
   } 
 }
-
-// function isInfoWindowOpen(infoWindow) {
-//     var map = infoWindow.getMap();
-//     return (map !== null && typeof map !== "undefined");
-// }
 
 function show(category) {
   var list = [];
@@ -466,55 +421,25 @@ function responsiveOpen(infoWindow) {
 }
 
 function responsiveOpenHelper(infoWindow) {
-  var maxwidth = $(window).width();
-  var maxheight = $(window).height(); 
   prevWindow = infoWindow;
   var iwResp = document.getElementById("iw_responsive");
-  iwResp.style.display = 'none';
-  iwResp.innerHTML="";
-  var mode = getOrientation();
-
-
-  if (mode == "Portrait") { 
-     iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
-     iwResp.style.display = 'block';
-     iwResp.className = "portrait_mode";
-
-     $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
-  } else if (mode == "Landscape") {
-    //change class
-    iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image); 
-    iwResp.style.display = 'block';
-    iwResp.className = "landscape_mode";
-      if (document.getElementById("iw_image") == null) {
-        $(".landscape_mode #iw_title img").css({'position':'absolute', 'left': '10px'});
-      } else {
-        $(".landscape_mode #iw_title img").css({'margin-right':'2.5vw'});
-      }
-    $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
-  } 
-  if (!expanded) {
-    if (getOrientation() == "Portrait") {
-      toggleSlider();
-    } else {
-        legend();      
-    }
-  }  
+  iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
+  $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
   $("#iw_title img").on("click", function() {
-        if (prevWindow) {
-          iwclose();
-        } 
-        prevWindow = false; 
-        map.setOptions({ scrollwheel: true });
+    if (prevWindow) {
+      iwclose();
+    } 
+    prevWindow = false; 
+    map.setOptions({ scrollwheel: true }); //re-enables scrolling 
   });
 }
 
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
-            $("#legend_landscape .box").animate({ "margin-left": -500 },    "slow");
+            $("#box").animate({ "margin-left": -500 },    "slow");
             document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
       } else {
-            $("#legend_landscape .box").animate({ "margin-left": 0 }, "slow");
+            $("#box").animate({ "margin-left": 0 }, "slow");
             document.getElementById("legend_arrow_landscape").src = "images/left-arrow_opt.png";
       }
 }
@@ -536,8 +461,12 @@ function toggleSlider(){ //toggles legend verrtically
 }
 
 function iwclose(){ //closes info Windows 
-  var maxwidth = $(window).width();
-  var maxheight = $(window).height(); 
-  $("#iw_responsive").animate({ "margin-left": -1.5*(maxwidth) }, "slow");
+  var max = 0;
+  if (getOrientation() == "Portrait") {
+    max = $(window).height();
+  } else {
+    max = $(window).width();
+  }
+  $("#iw_responsive").animate({ "margin-left": -1.5*max }, "slow");
   map.setOptions({scrollwheel: true}); //re-enalbes scrolling 
 }
