@@ -1,3 +1,4 @@
+/*_________________DESKTOP CSS_________________*/
 /*GENERAL CSS*/
 html, body {
   height: 100%;
@@ -9,18 +10,13 @@ html, body {
   height: 100% !important; 
 }
 
-#map .landscape_mode, #map .portrait_mode {
-  left: 2vw !important;
-  overflow: hidden;
-  top: 2vh !important;
-}
 
 
 
 
 
 /*LEGEND CSS*/
-#legend_landscape, #legend_portrait {
+.legend {
   background: #f05a28; 
   border-radius: 2px;
   font-family: 'Gotham-Book', Arial;
@@ -29,16 +25,7 @@ html, body {
   overflow: hidden;
 }
 
-#legend_landscape {
-  height: 29px;
-}
-
-
-#legend_landscape > div {
-  float: left;
-}
-
-#legend_portrait button, #legend_landscape button { 
+.legend button { 
   background: #f05a28;
   text-align: center;
   color: white;
@@ -51,11 +38,7 @@ html, body {
   cursor: pointer;
 }
 
-#legend_landscape button {
-  margin-top: 4px;
- }
-
-#legend_landscape .box, #legend_portrait .box { 
+.legend .box { 
   background: white;
   color: black;
   font-size: 14px;
@@ -64,39 +47,17 @@ html, body {
   border-radius: 5px;
 } 
 
-#legend_landscape .box {
-  padding: 2px 1px;
-}
-
-#legend_portrait .box { 
-  width: 140px;
-} 
-
-#legend_portrait .box input, #legend_landscape .box input {
+.legend .box input {
   margin-left: 8px;
   vertical-align: middle;
 }
 
-#legend_portrait .box img, #legend_landscape .box img {
+.legend .box img {
   vertical-align: middle; 
 }
 
 #toggleSliderBtn {
   display: none;
-}
-
-#legend_landscape #box li {
-  display: inline;
-  vertical-align: middle;
-}
-
-#legend_portrait #box li {
-  height: 20px;
-  margin: 8px auto;
-}
-
-#legend_portrait #box li span{
-  vertical-align: middle;
 }
 
 #box ul {
@@ -105,13 +66,52 @@ html, body {
   padding: 0;
 }
 
-#legend_arrow_portrait {
+
+@media (orientation: portrait) {
+  .legend #box li {
+  height: 20px;
+  margin: 8px auto;
+  }
+
+  .legend .box { 
+    width: 140px;
+  } 
+
+  .legend #box li span {
+  vertical-align: middle;
+  }
+
+  #legend_arrow_portrait {
   padding-left: 10px;
+  }
 }
 
-#legend_arrow_landscape {
-  vertical-align: middle;
-  padding-left: 5px;
+@media (orientation: landscape) { 
+  .legend {
+    height: 29px;
+  }
+
+  .legend > div {
+    float: left;
+  }
+
+  .legend button {
+    margin-top: 4px;
+  }
+
+  .legend .box {
+    padding: 2px 1px;
+  }
+
+  .legend #box li {     
+    display: inline;
+    vertical-align: middle;
+  }
+
+  #legend_arrow_landscape {
+    vertical-align: middle;
+    padding-left: 5px;
+  }
 }
 
 
@@ -140,7 +140,7 @@ html, body {
   font-size: 14px;
   padding: 0px 20px;
   background: white;
-  max-height: 45vh;
+  max-height: 300px;
   overflow-x: auto;
 }
 
@@ -153,10 +153,16 @@ html, body {
 }
 
 #iw_responsive {
-  display: none;
-  width: 30vw;
   z-index: 1 !important; 
   margin-left: -500px;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+#iw_responsive {
+  width: 500px;
+  left: 10px !important;
+  top: 10px !important;
 }
 
 #iw_title img {
@@ -174,7 +180,204 @@ html, body {
 }
 
 #iw_image {
-  height: 172px;
+  width: 500px;
+  height: 250px;
   background-size: cover;
-  background-position: center;
 }
+
+
+/*___________BLACKBERRY PLAYBOOK_____________*/
+@media (max-height: 600px) and (min-width: 1000px) and (orientation: landscape) {
+  #iw_image {
+    float: left;
+    height: 360px;
+    width: 600px;
+  }
+
+  #iw_responsive {
+    width: 950px;
+    background: white;
+  }
+}
+
+
+
+
+
+
+
+
+/*_______________PHONE CSS___________________*/
+@media (max-height: 850px) and (max-width: 850px) {
+  #iw_image {
+    background-position: 50% 50%;
+  }
+
+  #iw_title {
+    padding: 5px 0 0 0;
+  }
+
+  #iw_responsive {
+    left: 0 !important;
+    top: 0 !important;
+  }
+}
+
+@media (max-width: 450px) and (max-height: 770px) {
+  #iw_responsive {
+    width: 400px;
+  }
+}
+
+@media (max-height: 450px) and (max-width: 770px) {
+  #iw_image {
+    float: left;
+    height: 350px;
+    width: 350px;
+  }
+
+  #iw_responsive {
+    width: 700px;
+    background-color: white;
+  }
+}
+
+@media (max-width: 400px) and (max-height: 680px) {
+  #iw_responsive {
+    width: 350px;
+  }
+
+  #iw_image {
+    height: 250px;
+  }
+
+  #iw_content {
+    max-height: 280px;
+  }
+}
+
+@media (max-width: 680px) and (max-height: 400px) {
+  #iw_responsive {
+    width: 650px;
+    background-color: white;
+  }
+
+  #iw_image {
+    float: left;
+    height: 300px;
+    width: 300px;
+  }
+
+  #iw_title {
+    padding: 5px 0 0 0;
+  }
+
+  #iw_content {
+    max-height: 250px;
+  }
+}
+
+@media (max-width: 350px) and (max-height: 650px) { 
+  #iw_responsive {
+    width: 300px;
+  }
+
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 250px;
+  }
+
+  #iw_title {
+    padding: 5px 0 0 0;
+  }
+}
+
+@media (max-height: 350px) and (max-width: 580px) { 
+  #iw_responsive {
+    width: 550px;
+  }
+
+  #iw_image {
+    float: left;
+    height: 240px;
+  }
+
+  #iw_content {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 330px) and (max-height: 550px) { 
+  #iw_responsive {
+    width: 300px;
+  }
+
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 230px;
+  }
+}
+
+@media (max-height: 330px) and (max-width: 550px) { 
+  #iw_responsive {
+    width: 500px;
+  }
+
+  #iw_image {
+    width: 250px;
+    height: 250px;
+  }
+
+  #iw_content {
+    max-height: 230px;
+  }
+}
+
+@media (max-width: 330px) and (max-height: 500px) { 
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 200px;
+  }
+
+  .legend .box {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .legend button {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 330px) and (max-width: 500px) { 
+  #iw_responsive {
+    width: 450px;
+  }
+
+  #iw_image {
+    width: 210px;
+    height: 210px;
+  }
+
+  #iw_content {
+    max-height: 200px;
+  }
+
+  .legend .box {
+    font-size: 12px;
+  }
+
+  .legend button {
+    font-size: 14px;
+  }
+}
+
