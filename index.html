@@ -12,8 +12,8 @@
   </head>
   <body> 
   <div id="map"></div>
-    <div class="portrait_mode" id="iw_responsive"></div>
-    <div class="legend" id="legend_landscape">
+    <div id="iw_responsive"></div>
+    <div class="legend" id="legend">
         <button onclick="toggleSlider()" id="toggleSliderBtn">Legend<img id="legend_arrow_portrait" src="images/sort-down_opt.png"></img></button> <!--toggles legend vertically-->
         <div class="box" id="box">
           
@@ -22,7 +22,7 @@
             <li><img src="images/seva_partner_legend.png" class="category2"><span>Seva Partner</span><input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" /></li>
             <li><img src="images/seva_mentee_legend.png" class="category3"><span>Seva Mentee</span><input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" /></li>
           </ul>
-          
+
         </div>
         <button onclick="legend()" id="legendBtn">Legend<img id="legend_arrow_landscape" src="images/left-arrow_opt.png"></img></button> <!-- toggles legend horizontally -->
     </div>
