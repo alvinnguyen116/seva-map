@@ -82,6 +82,9 @@ html, body {
   padding: 0;
 }
 
+#legendBtn {
+  width: 100px;
+}
 
 @media (orientation: portrait) {
   .legend #box li {
