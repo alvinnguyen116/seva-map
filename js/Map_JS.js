@@ -316,10 +316,10 @@ function plotMarkers(m)
 
 function infoWindowContent(name, content, image) {
   if (image == "") {
-    return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div></div>"; //styling purposes 
+    return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
   } else {
     return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
-    + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div></div>";
+    + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
   } 
 }
 
