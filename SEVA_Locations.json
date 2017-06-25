@@ -146,7 +146,7 @@
 		"type": "sevaMentee",
 		"description": "<p>Singida Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/KCCO' target='_blank'>Kilimanjaro Centre for Community Ophthalmology</a> (KCCO).</p>"
 	},
-	{   "image": "images/kcco.jpg",
+	{   "image": "",
 		"lat": -3.527647, 
 		"lng": 37.4254444,
 		"name": "Kilimanjaro Centre for Community Ophthalmology (KCCO)",
