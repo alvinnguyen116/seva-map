@@ -149,10 +149,9 @@ html, body {
 
 #iw_title {
   background: #801a50;
-  text-align: center;
   color: white;
   font-size: 22px;
-  padding: 15px;
+  padding: 15px 0;
 }
 
 #iw_content {
@@ -188,12 +187,12 @@ html, body {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
+  padding: 0 10px;
 }
 
 #iw_title span {
   display: inline;
   vertical-align: middle;
-  margin-left: 25px;
 }
 
 #iw_image {
