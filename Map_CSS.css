@@ -85,7 +85,6 @@ html, body {
 #legendBtn {
   width: 100px;
 }
-
 @media (orientation: portrait) {
   .legend #box li {
   height: 20px;
@@ -160,7 +159,7 @@ html, body {
   font-size: 14px;
   padding: 0 20px 20px;
   background: white;
-  max-height: 230px;
+  max-height: 250px;
   overflow-x: auto;
 }
 
@@ -186,8 +185,6 @@ html, body {
 }
 
 #iw_title img {
-  position: absolute;
-  left: 10px;
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
@@ -203,7 +200,7 @@ html, body {
   width: 500px;
   height: 250px;
   background-size: cover;
-} 
+}
 
 
 /*___________BLACKBERRY PLAYBOOK_____________*/
@@ -234,7 +231,7 @@ html, body {
   }
 
   #iw_title {
-    padding: 5px 0 0 0;
+    padding:0;
   }
 
   #iw_responsive {
@@ -289,7 +286,7 @@ html, body {
   }
 
   #iw_title {
-    padding: 5px 0 0 0;
+    padding: 0;
   }
 
   #iw_content {
@@ -311,7 +308,7 @@ html, body {
   }
 
   #iw_title {
-    padding: 5px 0 0 0;
+    padding: 0;
   }
 }
 
