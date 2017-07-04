@@ -41,7 +41,7 @@
 		"type": "sevaMentee",
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/IMO' target='_blank'>Instituto Mexicano de Oftalmologica</a> is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.<p>Seva began working with the Instiuto Mexicano de Oftalmologia (IMO) in 2014 through our GSI partnership with Visualiza. IMO is a social hospital that serves the poor and uninsured from Queratro and surrounding regions. Visualiza is working with IMO staff on increasing outreach services, creating a tiered pricing system to attract more paying patients to make the hospital financially sustainable, organizational development, and implementing an electronic hospital management system.</p>" 
 	},
-	{   "image": "images/Visualiza.jpg",
+	{   "image": "images/visualiza.jpg",
 		"lat": 14.6317501, 
 		"lng": -90.4674988,
 		"name": "Visualiza Clínica Médica Oftalmológica",
@@ -97,7 +97,7 @@
 		"type": "sevaPartner",
 		"description": "<p>Clinica Oftalmológica <a href='http://www.seva.org/site/PageNavigator/programs/partners/DNJ' target='_blank'>Divino Niño Jesús</a> (DNJ) started in 2005 as a project of Asociación Civil Divino Niño Jesús with the mission to prevent blindness in Lima, Peru among those who could not afford eye care. DNJ has grown their staff and hospital to perform over 1500 cataract surgeries annually. Since 2010, DNJ has conducted several eye camps in the Loreto region of Peru – the poorest and most isolated state in the nation. In order to better serve the people of Loreto, DNJ is currently building a second hospital in the capital city of Iquitos slated to open at the end of 2016.<p> DNJ works with Seva through the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> (GSI) network  . They joined in 2009 as a mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a> and quickly became a high quality, high volume center for eye care in South America. DNJ transitioned from a mentee to a mentor hospital in 2014 and has begun mentoring efforts with a focus on its own secondary hospital in Iquitos, Peru as well as two hospitals in other under-served states of the country.</p>"
 	},
-	{   "image": "",
+	{   "image": "images/fundacion_vision.jpg",
 		"lat": -25.3432198, 
 		"lng": -57.5174789,
 		"name": "Fundación Vision",
@@ -469,7 +469,7 @@
 	 	"type": "sevaMentee",
 	 	"description": "<p>Alwar Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/SCEH' target='_blank'>Dr. Shroff's Charity Eye Hospital</a> (SCEH).</p>"
 	 },
-	 {   "image": "images/vrindavan.jpg",
+	 {   "image": "",
 	 	"lat": 27.4924130,
 	 	"lng": 77.6736730,
 	 	"name": "Vrindavan Eye Hospital",
@@ -630,7 +630,7 @@
 	 	"type": "sevaMentee",
 	 	"description": "<p>Thakur Sitaram Seva Kendra is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/VMANNN' target='_blank'>Vivekananda Mission Asram Netra Niramay Niketan</a> (VMANNN).</p>"
 	 },
-	 {   "image": "images/siliguri.jpg",
+	 {   "image": "",
 	 	"lat": 26.7232780,
 	 	"lng": 88.4258480,
 	 	"name": "Siliguri Greater Lions Eye Hospital",
@@ -705,7 +705,7 @@
 	 	"lng": 97.0337140,
 	 	"name": "Mettashin Foundation",
 	 	"type": "sevaPartner",
-	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Mettashin' target='_blank'>Mettashin Foundation</a> has been providing free eye care to people in the Taunggyi , Shan Province region of <a href='http://www.seva.org/site/PageNavigator/programs/partners/MAM' target='_blank'>Myanmar</a> since 2007 through the guiding principles of self-motivation, generosity, compassion and kindness.<p>Seva and Mettashin Foundation recently partnered to build capacity and increase access to eye care in Myanmar. Seva is supporting infrastructure improvements, including equipment and technical staff training for a new eye hospital that is currently under construction.</p>"
+	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Mettashin' target='_blank'>Mettashin Foundation</a> has been providing free eye care to people in the Taunggyi, Shan Province region of <a href='http://www.seva.org/site/PageNavigator/programs/partners/MAM' target='_blank'>Myanmar</a> since 2007 through the guiding principles of self-motivation, generosity, compassion and kindness.<p>Seva and Mettashin Foundation recently partnered to build capacity and increase access to eye care in Myanmar. Seva is supporting infrastructure improvements, including equipment and technical staff training for a new eye hospital that is currently under construction.</p>"
 	 },
 	 {   "image": "images/yangon.jpg",
 	 	"lat": 16.7999060,
@@ -721,7 +721,7 @@
 	 	"type": "sevaOffice",
 	 	"description": "<p>Cambodia's medical infrastructure was destroyed by the country's painful years of genocide and civil war. Today, there are only 43 fully-trained ophthalmologists for the entire country of 14 million. More than 80% of the blindness in Cambodia is either preventable or curable, but the vast majority of Cambodians do not have access to quality, affordable eye care. Seva works in three northwestern provinces to bring essential eye care services to Cambodia's most vulnerable populations, including rural communities, women and children.<p> Seva's programs serve to build the local capacity to deliver high quality, sustainable eye care. By equipping our partners with the tools they need to provide quality, efficient care, Seva builds locally-run eye care programs that are self-sustaining within 5-10 years of establishment. Seva's proven model of sustainable development is based on a simple formula: roughly one-third of patients subsidize the cost of the two-thirds who cannot afford eye care services.</p>"
 	 },
-	 {   "image": "images/caritas.jpg",
+	 {   "image": "",
 	 	"lat": 10.9321520,
 	 	"lng": 104.7987710,
 	 	"name": "Caritas Takeo Eye Hospital",
