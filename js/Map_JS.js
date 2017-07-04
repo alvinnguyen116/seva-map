@@ -315,9 +315,18 @@ function plotMarkers(m)
 }
 
 function infoWindowContent(name, content, image) {
+  var width = $(window).width();
+  var height = $(window).height();
   if (image == "") {
+    if ((width <= 850) && (height <= 850)) {
+      return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
+    }
     return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
   } else {
+    if ((width <= 850) && (height <= 850)) {
+      return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
+    + "<div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
+    }
     return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
     + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
   } 
