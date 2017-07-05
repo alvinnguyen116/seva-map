@@ -49,7 +49,6 @@ html, body {
   font-weight: bold;
   font-family: 'Gotham-Book', Arial;
   margin: auto;
-  padding-top: 0;
   border: none;
   cursor: pointer;
 }
@@ -127,7 +126,6 @@ html, body {
   }
 
   #legend_arrow_landscape {
-    vertical-align: middle;
     padding-left: 5px;
   }
 }
@@ -151,7 +149,7 @@ html, body {
   background: #801a50;
   color: white;
   font-size: 22px;
-  padding: 15px 0;
+  padding: 10px;
 }
 
 #iw_content {
@@ -187,7 +185,7 @@ html, body {
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  padding: 0 10px;
+  padding-right: 10px;
 }
 
 #iw_title span {
@@ -230,7 +228,7 @@ html, body {
   }
 
   #iw_title {
-    padding:0;
+    padding: 5px;
   }
 
   #iw_responsive {
@@ -284,10 +282,6 @@ html, body {
     width: 300px;
   }
 
-  #iw_title {
-    padding: 0;
-  }
-
   #iw_content {
     max-height: 250px;
   }
@@ -304,10 +298,6 @@ html, body {
 
   #iw_content {
     max-height: 250px;
-  }
-
-  #iw_title {
-    padding: 0;
   }
 }
 
@@ -397,4 +387,3 @@ html, body {
   }
 }
 
- 
