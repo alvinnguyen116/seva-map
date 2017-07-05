@@ -1,6 +1,6 @@
 /*_________________DESKTOP CSS_________________*/
 /*GENERAL CSS*/
-html, body {
+html, body {  /*might affect website, change to an appropriate container*/
   height: 100%;
 }
 
