@@ -83,7 +83,9 @@ html, body {
 
 #legendBtn {
   width: 100px;
+  outline: none;
 }
+
 @media (orientation: portrait) {
   .legend #box li {
   height: 20px;
@@ -126,7 +128,7 @@ html, body {
   }
 
   #legend_arrow_landscape {
-    padding-left: 5px;
+    padding-left: 8px;
   }
 }
 
