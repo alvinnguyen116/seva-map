@@ -4,7 +4,7 @@ html, body {  /*might affect website, change to an appropriate container*/
   height: 100%;
 }
 
-#map {
+#map { 
   height: 100% !important; 
 }
 
