@@ -1,10 +1,10 @@
 	[
 	{   "image": "images/seva_foundation_hq.jpg", 
 		"lat": 37.8704265,
-		"lng": -122.2996446, 
+		"lng": -122.2996446,
 		"name": "Seva Foundation HQ",
 		"type": "sevaOffice",
-		"description": "<p>Since 1978, <a href='http://www.seva.org/site/PageServer' target='_blank'>Seva Foundation</a> has been one of the leading innovators in the delivery of vital eye care services, restoring sight to 4 million people and transforming the lives of countless others. Through an extensive network of eye care professionals and an investment in health infrastructure, Seva creates sustaining solutions for comprehensive eye care across the globe.</p><p>Seva continues to innovate and expand sight restoring programs, working in over 20 countries to build economically sustainable, community-based eye care solutions for the people who need them most.</p>"
+		"description": "<p>Since 1978, <a href='http://www.seva.org/site/PageServer' target='_blank'>Seva Foundation</a> has been one of the leading innovators in the delivery of vital eye care services, restoring sight to 4 million people and transforming the lives of countless others. Through an extensive network of eye care professionals and an investment in health infrastructure, Seva creates sustaining solutions for comprehensive eye care across the globe. Seva continues to innovate and expand sight restoring programs, working in over 20 countries to build economically sustainable, community-based eye care solutions for the people who need them most.</p>"
 	},
 	{   "image": "images/united_indian.jpg", 
 		"lat": 40.8972409, 
@@ -41,7 +41,7 @@
 		"type": "sevaMentee",
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/IMO' target='_blank'>Instituto Mexicano de Oftalmologica</a> is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.<p>Seva began working with the Instiuto Mexicano de Oftalmologia (IMO) in 2014 through our GSI partnership with Visualiza. IMO is a social hospital that serves the poor and uninsured from Queratro and surrounding regions. Visualiza is working with IMO staff on increasing outreach services, creating a tiered pricing system to attract more paying patients to make the hospital financially sustainable, organizational development, and implementing an electronic hospital management system.</p>" 
 	},
-	{   "image": "images/Visualiza.jpg",
+	{   "image": "images/visualiza.jpg",
 		"lat": 14.6317501, 
 		"lng": -90.4674988,
 		"name": "Visualiza Clínica Médica Oftalmológica",
@@ -729,4 +729,3 @@
 	 	"description": "<p>Caritas Takeo Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	 }
 ]
- 
