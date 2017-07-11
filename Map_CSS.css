@@ -38,6 +38,7 @@ html, body {  /*might affect website, change to an appropriate container*/
   font-family: 'Gotham-Book', Arial;
   border: 3px solid #f05a28;
   left: 10px !important;
+  bottom: 10px !important;
   overflow: hidden;
 }
 
