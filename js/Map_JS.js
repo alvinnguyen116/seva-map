@@ -1,7 +1,7 @@
 /*GLOBAL VARIABLES*/
 var map; 
 var markers;
-var bounds; 
+var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
@@ -223,9 +223,32 @@ function initMap()
   map.setMapTypeId('styled_map'); 
 
   map.setOptions({ minZoom: 2, maxZoom: 10 });
-  fetch('SEVA_Locations.json') //http://mygeoposition.com/ 
-  .then(function(response){return response.json();})
-  .then(plotMarkers);
+
+
+  // fetch('SEVA_Locations.json') //http://mygeoposition.com/ 
+  // .then(function(response){return response.json();})
+  // .then(plotMarkers);
+
+
+  var xmlhttp;
+  if (window.XMLHttpRequest) {
+      // code for modern browsers
+      xmlhttp = new XMLHttpRequest();
+      console.log("butt");
+   } else {
+      // code for old IE browsers
+      xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
+  }
+  xmlhttp.onreadystatechange = function() {
+      console.log("butt3");
+      var myArr = JSON.parse(this.responseText);
+      plotMarkers(myArr);
+  };
+  xmlhttp.open("GET", "SEVA_Locations.json", true);
+  xmlhttp.send();
+  console.log("butt2");
+
+
   google.maps.event.addListener(map, "click", function() { //closes infoWindows automatically 
     if (prevWindow) {
       // prevWindow.close();
@@ -281,6 +304,7 @@ function initMap()
 /*PLOT AND FILTER MARKERS*/
 function plotMarkers(m)
 {
+  console.log("butt4");
   markers = []; // clustering 
   bounds = new google.maps.LatLngBounds();
 
