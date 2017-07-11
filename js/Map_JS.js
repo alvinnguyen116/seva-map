@@ -1,4 +1,5 @@
 /*GLOBAL VARIABLES*/
+import 'whatwg-fetch';
 var map; 
 var markers;
 var bounds;
