@@ -113,11 +113,6 @@ html, body {    /*if this affects your website, change to a container*/
   .legend > div {
     float: left;
   }
-
-  .legend button {
-    margin-top: 4px;
-  }
-
   .legend .box {
     padding: 2px 1px;
   }
@@ -133,7 +128,7 @@ html, body {    /*if this affects your website, change to a container*/
 
   .legend button {
     padding: 0;
-    margin: 0;
+    margin: 4px 0 0 0;
   }
 }
 
