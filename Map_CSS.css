@@ -49,7 +49,6 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
   font-weight: bold;
   font-family: 'Gotham-Book', Arial;
-  margin: auto;
   border: none;
   cursor: pointer;
 }
@@ -104,6 +103,10 @@ html, body {    /*if this affects your website, change to a container*/
   #legend_arrow_portrait {
   padding-left: 10px;
   }
+
+  .legend button {
+    margin: auto;
+  }
 }
 
 @media (orientation: landscape) { 
@@ -111,9 +114,9 @@ html, body {    /*if this affects your website, change to a container*/
     float: left;
   }
 
-  .legend button {
+/*  .legend button {
     margin-top: 4px;
-  }
+  }*/
 
   .legend .box {
     padding: 2px 1px;
@@ -126,6 +129,10 @@ html, body {    /*if this affects your website, change to a container*/
 
   #legend_arrow_landscape {
     padding-left: 8px;
+  }
+
+  .legend button {
+    margin: 0;
   }
 }
 
