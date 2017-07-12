@@ -1,10 +1,10 @@
 /*_________________DESKTOP CSS_________________*/
 /*GENERAL CSS*/
-html, body {  /*might affect website, change to an appropriate container*/
+html, body {    /*if this affects your website, change to a container*/
   height: 100%;
 }
 
-#map { 
+#map {
   height: 100% !important; 
 }
 
@@ -38,7 +38,7 @@ html, body {  /*might affect website, change to an appropriate container*/
   font-family: 'Gotham-Book', Arial;
   border: 3px solid #f05a28;
   left: 10px !important;
-  bottom: 10px !important;
+  bottom: 20px !important;
   overflow: hidden;
 }
 
@@ -83,7 +83,7 @@ html, body {  /*might affect website, change to an appropriate container*/
 }
 
 #legendBtn {
-  width: 100px;
+  width: 110px;
   outline: none;
 }
 
@@ -390,4 +390,3 @@ html, body {  /*might affect website, change to an appropriate container*/
   }
 }
 
- 
