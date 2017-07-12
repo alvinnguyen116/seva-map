@@ -107,10 +107,6 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 @media (orientation: landscape) { 
-  .legend {
-    height: 29px;
-  }
-
   .legend > div {
     float: left;
   }
