@@ -234,28 +234,33 @@ function initMap()
   if (window.XMLHttpRequest) {
       // code for modern browsers
       xmlhttp = new XMLHttpRequest();
-      console.log("butt");
    } else {
       // code for old IE browsers
       xmlhttp = new ActiveXObject("Microsoft.XMLHTTP");
   }
   xmlhttp.onreadystatechange = function() {
-      console.log("butt3");
+      if (this.readyState == 4 && this.status == 200)
+      {
+        if (this.responseText)
+         {
       var myArr = JSON.parse(this.responseText);
       plotMarkers(myArr);
+    }
+  }
   };
   xmlhttp.open("GET", "SEVA_Locations.json", true);
   xmlhttp.send();
-  console.log("butt2");
 
 
-  google.maps.event.addListener(map, "click", function() { //closes infoWindows automatically 
+  google.maps.event.addListener(map, "mousedown", function() { //closes infoWindows automatically 
     if (prevWindow) {
       // prevWindow.close();
       prevWindow = false;
       iwclose();
     } 
   });
+
+  
   menteeClusterer = new MarkerClusterer(map, []);
   partnerClusterer = new MarkerClusterer(map, []);
   window.addEventListener("resize", initLegend, true);
@@ -293,6 +298,8 @@ function initMap()
    var iwResp = document.getElementById('iw_responsive');
    map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); //arbitrary, will move later with !important 
    initLegend();
+   var map_intro = document.getElementById("map_intro");
+   map.controls[google.maps.ControlPosition.TOP_RIGHT].push(map_intro);
 }
 
 
@@ -304,7 +311,6 @@ function initMap()
 /*PLOT AND FILTER MARKERS*/
 function plotMarkers(m)
 {
-  console.log("butt4");
   markers = []; // clustering 
   bounds = new google.maps.LatLngBounds();
 
@@ -361,6 +367,7 @@ function show(category) {
   for (var i=0; i<markers.length; i++) {
     if (markers[i].category == category) {
       markers[i].setMap(map);
+
       markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
       list.push(markers[i]);
     }
@@ -377,6 +384,7 @@ function hide(category) {
   for (var i=0; i<markers.length; i++) {
     if (markers[i].category == category) {
       markers[i].setMap(null); //loses animation 
+
     }
   }
   // == clear the checkbox ==
@@ -413,7 +421,8 @@ function clusterMentee(list) {
      textSize2: 18,
      height: 52,
      width: 52,
-     url: "images/cluster_mentee.png"
+     url: "images/cluster_mentee.png",
+     ignoreHidden: true
     }]
   });
 }
@@ -434,11 +443,6 @@ function clusterPartner(list) {
     }]
   });
 }
-
-
-
-
-
 
 
 
