@@ -169,7 +169,6 @@ html, body {    /*if this affects your website, change to a container*/
   .legend .box {
     padding: 2px 1px;
     border-radius: 0;
-    background-color: none;
   }
 
   .legend #box li {
