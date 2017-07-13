@@ -76,6 +76,9 @@ html, body {    /*if this affects your website, change to a container*/
   }
 }
 
+#legendBtn #change_arrow {
+  font-size: 20px;
+}
 
 
 
@@ -90,7 +93,6 @@ html, body {    /*if this affects your website, change to a container*/
   left: 10px !important;
   bottom: 20px !important;
   overflow: hidden;
-  width: 500px;
 }
 
 .legend button { 
@@ -180,13 +182,9 @@ html, body {    /*if this affects your website, change to a container*/
     border-radius: 4px;
   }
 
-  #legend_arrow_landscape {
-    padding-left: 8px;
-  }
-
-  .legend button {
+/*  .legend button {
     margin: 4px 0 0 0;
-  }
+  }*/
 
   #box ul {
     background-color: #f05a28;
