@@ -1,7 +1,7 @@
 /*GLOBAL VARIABLES*/
 var map;  
 var markers; 
-var bounds;min
+var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
