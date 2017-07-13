@@ -274,6 +274,7 @@ function initMap()
       $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
       $("#box").css("margin-left" , "0"); //slides out 
+      $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
             $("#box").slideUp('slow');
             document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
@@ -484,8 +485,7 @@ function legend() { //toggles legend horizontally
 }
 
 
-function toggleSlider(){ //toggles legend verrtically 
-  $(".legend").css('width','auto'); //undo landscape style 
+function toggleSlider(){ //toggles legend vertically 
   if (expanded = !expanded) {
             $("#box").slideUp('slow');
             document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
