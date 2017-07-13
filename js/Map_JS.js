@@ -1,6 +1,6 @@
 /*GLOBAL VARIABLES*/
 var map; 
-var markers;
+var markers; 
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
