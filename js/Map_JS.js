@@ -222,7 +222,7 @@ function initMap()
   map.mapTypes.set('styled_map', styledMapType); //https://developers.google.com/maps/documentation/javascript/styling
   map.setMapTypeId('styled_map'); 
 
-  map.setOptions({ minZoom: 0, maxZoom: 10 }); 
+  map.setOptions({ minZoom: 1, maxZoom: 10 }); 
 
 
   // fetch('SEVA_Locations.json') //http://mygeoposition.com/ 
