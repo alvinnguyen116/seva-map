@@ -136,7 +136,7 @@ html, body {    /*if this affects your website, change to a container*/
 @media (orientation: portrait) {
   .legend #box li {
   height: 20px;
-  margin: 8px auto;
+  margin: 8px 5px;
   }
 
   .legend .box { 
