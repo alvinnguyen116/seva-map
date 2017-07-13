@@ -1,13 +1,17 @@
 <!DOCTYPE html>
-<html lang="en"> 
-  <head> 
-    <meta charset="utf-8">   
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> 
-    <meta name="viewport" content="width=device-width, user-scalable=no" />  
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Seva Map</title>
     <script type="text/javascript" src="js/Marker_Clusterer.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>
+<!--     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"> -->
     <link href="css/Map_CSS.css" rel="stylesheet" type="text/css"/>
   </head>
   <body> 
@@ -32,7 +36,7 @@
           </ul>
 
         </div>
-        <button onclick="legend()" id="legendBtn">Legend<img id="legend_arrow_landscape" src="images/left-arrow_opt.png"> </button> <!-- toggles legend horizontally -->
+        <button onclick="legend()" id="legendBtn">Legend <span id="change_arrow">&#187;</span></button> <!-- toggles legend horizontally -->
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
