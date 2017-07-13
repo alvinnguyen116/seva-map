@@ -1,7 +1,7 @@
 /*GLOBAL VARIABLES*/
 var map; 
 var markers; 
-var bounds;
+var bounds;min
 var prevWindow = false; //prevent multiple infoWindows 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
@@ -222,7 +222,7 @@ function initMap()
   map.mapTypes.set('styled_map', styledMapType); //https://developers.google.com/maps/documentation/javascript/styling
   map.setMapTypeId('styled_map'); 
 
-  map.setOptions({ minZoom: 2, maxZoom: 10 });
+  map.setOptions({ minZoom: 1, maxZoom: 10 });
 
 
   // fetch('SEVA_Locations.json') //http://mygeoposition.com/ 
