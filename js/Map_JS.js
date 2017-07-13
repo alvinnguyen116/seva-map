@@ -474,8 +474,10 @@ function responsiveOpenHelper(infoWindow) {
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
             $("#box").animate({ "margin-left": -385 },    "slow");
+            $(".legend").css('width','auto');
             document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
       } else {
+            $(".legend").animate({"width": 500 }, "slow");
             $("#box").animate({ "margin-left": 0 }, "slow");
             document.getElementById("legend_arrow_landscape").src = "images/left-arrow_opt.png";
       }
@@ -483,6 +485,7 @@ function legend() { //toggles legend horizontally
 
 
 function toggleSlider(){ //toggles legend verrtically 
+  $(".legend").css('width','auto'); //undo landscape style 
   if (expanded = !expanded) {
             $("#box").slideUp('slow');
             document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
