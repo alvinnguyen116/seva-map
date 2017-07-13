@@ -1,6 +1,6 @@
 /*GLOBAL VARIABLES*/
-var map;  
-var markers; 
+var map; 
+var markers;
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
@@ -222,7 +222,7 @@ function initMap()
   map.mapTypes.set('styled_map', styledMapType); //https://developers.google.com/maps/documentation/javascript/styling
   map.setMapTypeId('styled_map'); 
 
-  map.setOptions({ minZoom: 1, maxZoom: 10 }); 
+  map.setOptions({ minZoom: 1, maxZoom: 10 });
 
 
   // fetch('SEVA_Locations.json') //http://mygeoposition.com/ 
@@ -287,11 +287,11 @@ function initMap()
       $("#toggleSliderBtn").css("display", "none");
       $("#box").css("display" , "block");
       if (expanded) {
-            $("#box").animate({ "margin-left": -500 },    "slow");
-            document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
+            $("#box").animate({ "margin-left": -400 },    "slow");
+            document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 0 }, "slow");
-            document.getElementById("legend_arrow_landscape").src = "images/left-arrow_opt.png";
+            document.getElementById("change_arrow").innerHTML = "&#171;";
       }
     }
   }
@@ -474,13 +474,13 @@ function responsiveOpenHelper(infoWindow) {
 
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
-            $("#box").animate({ "margin-left": -385 },    "slow");
-            $(".legend").css('width','auto');
-            document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
+            $("#box").animate({ "margin-left": -400 },    "slow");
+            // $(".legend").css('width','auto');
+            document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
-            $(".legend").animate({"width": 500 }, "slow");
+            // $(".legend").animate({"width": 500 }, "slow");
             $("#box").animate({ "margin-left": 0 }, "slow");
-            document.getElementById("legend_arrow_landscape").src = "images/left-arrow_opt.png";
+            document.getElementById("change_arrow").innerHTML = "&#171;";
       }
 }
 
