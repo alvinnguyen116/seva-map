@@ -208,7 +208,7 @@ html, body {    /*if this affects your website, change to a container*/
   margin-bottom: 10px;
 }
 
-#iw_title {
+#iw_title { 
   background: #801a50;
   color: white;
   font-size: 22px;
