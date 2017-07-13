@@ -473,7 +473,7 @@ function responsiveOpenHelper(infoWindow) {
 
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
-            $("#box").animate({ "margin-left": -500 },    "slow");
+            $("#box").animate({ "margin-left": -385 },    "slow");
             document.getElementById("legend_arrow_landscape").src = "images/play-arrow_opt.png";
       } else {
             $("#box").animate({ "margin-left": 0 }, "slow");
