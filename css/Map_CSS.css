@@ -130,7 +130,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #legendBtn {
-  width: 120px; 
+/*   width: 120px;  */
   outline: none;
 }
 
@@ -181,7 +181,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   #legend_arrow_landscape {
-    padding-left: 8px;
+/*     padding-left: 8px; */
   }
 
   .legend button {
