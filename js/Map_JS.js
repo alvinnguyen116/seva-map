@@ -7,6 +7,7 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
 var expanded = false;
+var expanded_help = false; 
 var icons = {
       sevaOffice: {
         name: "Seva Office",
@@ -248,7 +249,7 @@ function initMap()
     }
   }
   };
-  xmlhttp.open("GET", "SEVA_Locations.json", true);
+  xmlhttp.open("GET", "data/SEVA_Locations.json", true);
   xmlhttp.send();
 
 
@@ -258,6 +259,9 @@ function initMap()
       prevWindow = false;
       iwclose();
     } 
+    if (expanded_help) {
+      help_close();
+    }
   });
 
   
@@ -301,6 +305,8 @@ function initMap()
    initLegend();
    var map_intro = document.getElementById("map_intro");
    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(map_intro);
+   var legend_help = document.getElementById("legend_help");
+   map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(legend_help);
 }
 
 
@@ -509,4 +515,61 @@ function iwclose(){ //closes info Windows
   }
   $("#iw_responsive").animate({ "margin-left": -1.5*max }, "slow");
   map.setOptions({scrollwheel: true}); //re-enalbes scrolling 
+}
+
+function readTextFile(file, display)
+{
+    var rawFile = new XMLHttpRequest();
+    rawFile.open("GET", file, true);
+    rawFile.onreadystatechange = function ()
+    {
+        if(rawFile.readyState === 4)
+        {
+            if(rawFile.status === 200 || rawFile.status == 0)
+            {
+                var allText = rawFile.responseText;
+                display.innerHTML = allText; 
+            }
+        }
+    }
+    rawFile.send();
+}
+
+function display_file(file, name) {
+  if (!expanded_help) {
+    help_open();
+    readTextFile(file,document.getElementById("legend_help"));
+    expanded_help = name;
+  } else if (name == expanded_help) {
+    help_close();
+  } else {
+    readTextFile(file,document.getElementById("legend_help"));
+    expanded_help = name;
+  }
+}
+
+function help_open() {
+  $("#legend_help").animate({
+    'width' : '1', 
+    'bottom': '60px',
+    'opacity': '.5',
+    'height': '50px',
+  }, 500);
+  $("#legend_help").animate({
+      'width': '500px',
+      'opacity': '1'
+  }, 500);
+}
+function help_close() {
+  $("#legend_help").animate({
+    'width': '1',
+    'opacity': '.5'
+  }, 500);
+  $("#legend_help").animate({
+      'height': '0',
+      'bottom': '0',
+      'opacity': '0',
+      'width': '0'
+    }, 1000);
+  expanded_help = false;
 }
