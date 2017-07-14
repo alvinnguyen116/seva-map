@@ -117,7 +117,7 @@ html, body {    /*if this affects your website, change to a container*/
   border-radius: 2px;
   font-family: 'Gotham-Book', Arial;
   left: 10px !important;
-  bottom: 20px !important;
+  bottom: 35px !important;
   overflow: hidden;
   z-index: 10 !important;
 }
