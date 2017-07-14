@@ -36,6 +36,7 @@ html, body {    /*if this affects your website, change to a container*/
 #legend_help:hover {
   background-color: #3c3d3f;
 }
+
 #map_intro:hover {
   cursor: pointer;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
@@ -101,6 +102,7 @@ html, body {    /*if this affects your website, change to a container*/
   position: absolute;
   top: 0;
   right: 3px;
+  padding: 0;
 }
 
 
@@ -161,7 +163,8 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn {
   margin: 1px;
   outline: none;
-  margin-right: 7px;
+  margin-right: 17px;
+  padding: 0;
 }
 
 @media (orientation: portrait) {
@@ -490,4 +493,3 @@ html, body {    /*if this affects your website, change to a container*/
   }
 }
 
- 
