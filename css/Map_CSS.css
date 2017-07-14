@@ -33,11 +33,11 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
 }
 
-@media (min-width: 1280px) {
-  #legend_help:hover {
-    background-color: #3c3d3f;
-  }
+
+#legend_help:hover {
+  background-color: #3c3d3f;
 }
+
 
 #map_intro:hover {
   cursor: pointer;
@@ -121,9 +121,10 @@ html, body {    /*if this affects your website, change to a container*/
   overflow: hidden;
   z-index: 10 !important;
 }
-
-.legend:hover {
-  background-color: #B43F00;
+@media (min-width: 1280px) {
+  .legend:hover {
+    background-color: #B43F00;
+  }
 }
 
 .legend button { 
