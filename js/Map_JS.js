@@ -267,9 +267,12 @@ function initMap()
   
   menteeClusterer = new MarkerClusterer(map, []);
   partnerClusterer = new MarkerClusterer(map, []);
-  window.addEventListener("resize", initLegend, true);
-  window.addEventListener("orientationchange", initLegend);
-
+  window.addEventListener("resize", temp, true);
+  window.addEventListener("orientationchange", temp);
+  function temp() {
+    initLegend();
+    help_close();
+  }
   function initLegend(){
     if (prevWindow) {
       responsiveOpen(prevWindow);
@@ -277,7 +280,7 @@ function initMap()
     if (getOrientation() == "Portrait") {
       $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
-      $("#box").css("margin-left" , "0"); //slides out 
+      $("#box").css("margin-left" , "1"); //slides out 
       $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
             $("#box").slideUp('slow');
@@ -294,7 +297,7 @@ function initMap()
             $("#box").animate({ "margin-left": -400 },    "slow");
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
-            $("#box").animate({ "margin-left": 0 }, "slow");
+            $("#box").animate({ "margin-left": 1 }, "slow");
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
     }
@@ -468,7 +471,7 @@ function responsiveOpenHelper(infoWindow) {
   prevWindow = infoWindow;
   var iwResp = document.getElementById("iw_responsive");
   iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
-  $("#iw_responsive").animate({ "margin-left": 0 }, "slow");
+  $("#iw_responsive").animate({ "margin-left": 1 }, "slow");
   $("#iw_title img").on("click", function() {
     if (prevWindow) {
       iwclose();
@@ -485,7 +488,7 @@ function legend() { //toggles legend horizontally
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             // $(".legend").animate({"width": 500 }, "slow");
-            $("#box").animate({ "margin-left": 0 }, "slow");
+            $("#box").animate({ "margin-left": 1 }, "slow");
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
 }
@@ -549,17 +552,31 @@ function display_file(file, name) {
 }
 
 function help_open() {
-  $("#legend_help").animate({
-    'width' : '1', 
-    'bottom': '60px',
-    'opacity': '.5',
-    'height': '50px',
-  }, 500);
-  $("#legend_help").animate({
-      'width': '500px',
-      'opacity': '1'
-  }, 500);
+  if (getOrientation() == "Landscape") {
+    $("#legend_help").animate({
+      'width' : '1', 
+      'bottom': '60px',
+      'opacity': '.5',
+      'height': '50px',
+    }, 500);
+    $("#legend_help").animate({
+        'width': '500px',
+        'opacity': '1'
+    }, 500);
+  } else {
+    $("#legend_help").animate({
+      'width' : '1', 
+      'bottom': '35px',
+      'opacity': '.5',
+      'height': '115px',
+    }, 500);
+    $("#legend_help").animate({
+        'width': '200px',
+        'opacity': '1'
+    }, 500);
+  }
 }
+
 function help_close() {
   $("#legend_help").animate({
     'width': '1',
@@ -570,6 +587,6 @@ function help_close() {
       'bottom': '0',
       'opacity': '0',
       'width': '0'
-    }, 1000);
+    }, 500);
   expanded_help = false;
 }
