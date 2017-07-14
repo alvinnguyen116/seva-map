@@ -1,18 +1,22 @@
-<!DOCTYPE html> 
-<html lang="en"> 
-  <head> 
-    <meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Seva Map</title>
     <script type="text/javascript" src="js/Marker_Clusterer.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/npm.js"></script>
+<!--     <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap-theme.css" rel="stylesheet" type="text/css"> -->
     <link href="css/Map_CSS.css" rel="stylesheet" type="text/css"/>
   </head>
   <body> 
   <div id="map"></div>
-
+  <div id="legend_help" onclick="help_close()"></div>
   <img id="map_intro" src="images/menu-icon.png">
 <!--     <button id="map_intro" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
                   <span class="sr-only">Toggle navigation</span>
@@ -22,18 +26,18 @@
     </button> -->
     <div id="iw_responsive"></div>
     <div class="legend" id="legend">
-        <button onclick="toggleSlider()" id="toggleSliderBtn">LEGEND<img id="legend_arrow_portrait" src="images/sort-down_opt.png"> </button> <!--toggles legend vertically-->
+        <button onclick="toggleSlider()" id="toggleSliderBtn">Legend<img id="legend_arrow_portrait" src="images/sort-down_opt.png"> </button> <!--toggles legend vertically-->
         <div class="box" id="box">
           
           <ul>
-            <li><img src="images/seva_office_legend.png" class="category1"> <span>Office</span><img class="help" id="help-office" src="images/help.png"> <input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" /></li>
-            <li><img src="images/seva_partner_legend.png" class="category2"> <span>Partner</span><img class="help" id="help-partner" src="images/help.png"> <input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" /></li>
-            <li><img src="images/seva_mentee_legend.png" class="category3"> <span>Mentee</span><img class="help" id="help-mentee" src="images/help.png"> <input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" /></li>
+            <li><img src="images/seva_office_legend.png" class="category1"> <span>Office</span><img class="help" id="help-office" src="images/help.png" onclick="display_file('data/seva_office.txt', 'office')"> <input type="checkbox" id='sevaOfficeBox' onclick="boxclick(this,'sevaOffice')" /></li>
+            <li><img src="images/seva_partner_legend.png" class="category2"> <span>Partner</span><img class="help" id="help-partner" src="images/help.png" onclick="display_file('data/seva_partner.txt', 'partner')"> <input type="checkbox" id='sevaPartnerBox' onclick="boxclick(this,'sevaPartner')" /></li>
+            <li><img src="images/seva_mentee_legend.png" class="category3"> <span>Mentee</span><img class="help" id="help-mentee" src="images/help.png" onclick="display_file('data/seva_mentee.txt', 'mentee')"> <input type="checkbox" id='sevaMenteeBox' onclick="boxclick(this,'sevaMentee')" /></li>
           </ul>
 
         </div>
-        <button onclick="legend()" id="legendBtn">LEGEND <span id="change_arrow">&#187;</span></button> <!-- toggles legend horizontally -->
+        <button onclick="legend()" id="legendBtn">Legend <span id="change_arrow">&#187;</span></button> <!-- toggles legend horizontally -->
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
-</html> 
+</html>
