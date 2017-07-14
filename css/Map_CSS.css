@@ -33,8 +33,10 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
 }
 
-#legend_help:hover {
-  background-color: #3c3d3f;
+@media (min-width: 1280px) {
+  #legend_help:hover {
+    background-color: #3c3d3f;
+  }
 }
 
 #map_intro:hover {
