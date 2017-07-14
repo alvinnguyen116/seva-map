@@ -33,18 +33,23 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
 }
 
-
+@media (orientation: portrait)  {
+  #legend_help {
+    bottom: 10px;
+    left: 145px;
+  }
+}
 #legend_help:hover {
   background-color: #3c3d3f;
 }
 
-
-#map_intro:hover {
-  cursor: pointer;
-  animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
-  background-color: #e8e9ea;
+@media (min-width: 1280px) {
+  #map_intro:hover {
+    cursor: pointer;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    background-color: #e8e9ea;
+  }
 }
-
 
 @keyframes shake {
   10%, 90% {
