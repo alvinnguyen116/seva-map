@@ -20,9 +20,26 @@ html, body {    /*if this affects your website, change to a container*/
 
 }
 
+#legend_help {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+  opacity: 0;
+  height: 0;
+  width: 0;
+  background-color: black;
+  z-index: 9 !important;
+  color: white;
+  font-size: 16px;
+}
+
+#legend_help:hover {
+  background-color: #3c3d3f;
+}
 #map_intro:hover {
   cursor: pointer;
   animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  background-color: #e8e9ea;
 }
 
 
@@ -58,6 +75,9 @@ html, body {    /*if this affects your website, change to a container*/
   margin-left: 10px;
 }
 
+.box .help:hover {
+  cursor: pointer;
+}
 .iw-bottom-gradient {
   position: absolute;
   width: 460px;
@@ -78,6 +98,9 @@ html, body {    /*if this affects your website, change to a container*/
 
 #legendBtn #change_arrow {
   font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 3px;
 }
 
 
@@ -86,31 +109,34 @@ html, body {    /*if this affects your website, change to a container*/
 
 /*LEGEND CSS*/
 .legend {
-  background: #f05a28; 
+  background-color: #f05a28; 
   border-radius: 2px;
   font-family: 'Gotham-Book', Arial;
-  border: 3px solid #f05a28;
   left: 10px !important;
   bottom: 20px !important;
   overflow: hidden;
+  z-index: 10 !important;
+}
+
+.legend:hover {
+  background-color: #B43F00;
 }
 
 .legend button { 
-  background: #f05a28;
+  background-color: inherit;
   text-align: center;
   color: white;
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 20px;
   font-family: 'Gotham-Book', Arial;
   border: none;
   cursor: pointer;
 }
 
 .legend .box { 
+  margin: 1px;
   color: black;
   font-size: 14px;
   font-family: 'Gotham-Book', Arial;
-  border: 1px solid #f05a28;
 } 
 
 .legend .box input {
@@ -135,6 +161,7 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn {
   margin: 1px;
   outline: none;
+  margin-right: 7px;
 }
 
 @media (orientation: portrait) {
@@ -150,11 +177,11 @@ html, body {    /*if this affects your website, change to a container*/
   } 
 
   .legend #box li span {
-  vertical-align: middle;
+    vertical-align: middle;
   }
 
   #legend_arrow_portrait {
-  padding-left: 10px;
+    padding-left: 10px;
   }
 
   .legend button {
@@ -180,14 +207,6 @@ html, body {    /*if this affects your website, change to a container*/
     vertical-align: middle;
     padding: 3px;
     border-radius: 4px;
-  }
-
-/*  .legend button {
-    margin: 4px 0 0 0;
-  }*/
-
-  #box ul {
-    background-color: #f05a28;
   }
 }
 
