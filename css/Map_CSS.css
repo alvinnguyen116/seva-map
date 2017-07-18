@@ -20,34 +20,46 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #legend_help {
+  border: 1px solid #f05a28;
   position: absolute;
   bottom: 60px !important;
   left: 10px !important;
   opacity: 0;
-  width: 0;
-  height: 50px;
-  background-color: black;
+  width: 405px;
+  height: 0;
+  padding: 7px;
+  background-color: white;
   z-index: 9 !important;
-  color: white;
+  color: black;
+  font-size: 14px;
+}
+
+#legend_help:hover {
+  cursor: pointer;
+}
+#map_filters {
   font-size: 16px;
+  background-color: white;
+  color: black;
+  width: 100px;
+  text-align: center;
+}
+
+#map_filters li div {
+  
+}
+
+#map_filters li div:hover {
+  height: 100%
+  width: 100%;
+  background-color: lightgrey;
 }
 
 @media (orientation: portrait)  {
   #legend_help {
     bottom: 35px !important;
-    left: 144px !important;
-    height: 115px;
-  }
-}
-
-#legend_help:hover {
-  background-color: #3c3d3f;
-}
-
-@media (min-width: 1280px) {
-  #map_intro:hover {
-    cursor: pointer;
-    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+    left: 134px !important;
+    height: 86px;
   }
 }
 
@@ -78,9 +90,12 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 .box .help {
-  width: 18px;
-  height: 18px;
-  margin-left: 10px;
+  border-radius: 20px;
+  background-color: #808287;
+  margin: 0 5px;
+  color: white;
+  font-size: 14px;
+  font-weight: bold;
 }
 
 .box .help:hover {
@@ -108,12 +123,9 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 20px;
   position: absolute;
   top: 0;
-  right: 3px;
+  right: 7px;
   padding: 0;
 }
-
-
-
 
 
 /*LEGEND CSS*/
@@ -125,11 +137,6 @@ html, body {    /*if this affects your website, change to a container*/
   bottom: 35px !important;
   overflow: hidden;
   z-index: 10 !important;
-}
-@media (min-width: 1280px) {
-  .legend:hover {
-    background-color: #B43F00;
-  }
 }
 
 .legend button { 
@@ -151,14 +158,21 @@ html, body {    /*if this affects your website, change to a container*/
 
 .legend .box input {
   vertical-align: middle;
+  margin: 0;
+  margin-right: 5px;
+  margin-bottom: 2px;
 }
 
 .legend .box img {
   vertical-align: middle; 
 }
 
-#toggleSliderBtn {
-  display: none;
+
+
+#change_arr {
+  position: absolute;
+  left: 90px;
+  top: -2px;
 }
 
 #box ul {
@@ -171,20 +185,28 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn {
   margin: 1px;
   outline: none;
-  margin-right: 17px;
-  padding: 0;
+  padding: 0 6px;
+  height: 25px;
+}
+
+.legend button div {
+  font-size: 16px;
 }
 
 @media (orientation: portrait) {
   .legend #box li {
-  height: 20px;
-  margin: 8px 5px;
+    height: 20px;
+    margin: 0 5px;
+  }
+
+  .legend #box li:nth-child(2) {
+    margin-top: 5px;
+    margin-bottom: 5px;
   }
 
   .legend .box { 
-    width: 140px;
+    width: 122px;
     background-color: white;
-    border-radius: 5px;
   } 
 
   .legend #box li span {
@@ -195,11 +217,13 @@ html, body {    /*if this affects your website, change to a container*/
     padding-left: 10px;
   }
 
-  .legend button {
-    margin: auto;
-  }
   #box ul {
     background-color: white;
+    padding: 5px 0;
+  }
+
+  .legend button {
+    width: 87%;
   }
 }
 
@@ -208,6 +232,7 @@ html, body {    /*if this affects your website, change to a container*/
     float: left;
   }
   .legend .box {
+    height: auto !important;
     padding: 2px 1px;
     border-radius: 0;
   }
@@ -216,8 +241,12 @@ html, body {    /*if this affects your website, change to a container*/
     background-color: white;     
     display: inline;
     vertical-align: middle;
-    padding: 3px;
+    padding: 3px 0;
     border-radius: 4px;
+  }
+
+  .legend button div {
+    padding-right: 16px;
   }
 }
 
@@ -330,17 +359,22 @@ html, body {    /*if this affects your website, change to a container*/
   .box .help {
     width: 16px;
     height: 16px;
-    margin-left: 8px;
+    margin: 0 5px;
   }
  
   .legend {
     left: 0 !important;
-  } 
+  }
+
+  #legend_help {
+  left: 0! important;
+  }
+
 }
 
 @media (max-height: 850px) and (max-width: 850px) and (orientation: portrait) {
   #legend_help {
-    left: 134px !important;
+    left: 124px !important;
   }
 } 
 
@@ -374,10 +408,6 @@ html, body {    /*if this affects your website, change to a container*/
 
   #iw_content {
     max-height: 280px;
-  }
-
-  .legend .box {
-    width: 130px;
   }
 }
 
@@ -468,15 +498,6 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_content {
     max-height: 200px;
   }
-
-  .legend .box {
-    width: 120px;
-    font-size: 12px;
-  }
-
-  .legend button {
-    font-size: 14px;
-  }
 }
 
 @media (max-height: 330px) and (max-width: 500px) { 
@@ -492,15 +513,5 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_content {
     max-height: 200px;
   }
-
-  .legend .box {
-    font-size: 12px;
-    padding-left: 0px;
-  }
-
-  .legend button {
-    font-size: 14px;
-  }
 }
 
- 
