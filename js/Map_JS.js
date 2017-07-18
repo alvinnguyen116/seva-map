@@ -525,6 +525,7 @@ function toggleSlider(){ //toggles legend vertically
         }, 500);
         
     $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
+    help_close();
   } else {
     // $("#box").slideDown('slow');
     $("#box").animate({
