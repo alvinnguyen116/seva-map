@@ -46,7 +46,512 @@ html, body {    /*if this affects your website, change to a container*/
 @media (min-width: 1280px) {
   #map_intro:hover {
     cursor: pointer;
+    animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;/*_________________DESKTOP CSS_________________*/
+/*GENERAL CSS*/
+html, body {    /*if this affects your website, change to a container*/
+  height: 100%;
+}
+
+#map {
+  height: 100% !important; 
+}
+
+#map_intro {
+  padding: 5px;
+  height: 20px;
+  width: 20px;
+  right: 10px !important;
+  top: 10px !important;
+  background-color: white;
+  border-radius: 5px;
+  border: 1px solid #f05a28;
+}
+
+#legend_help {
+  position: absolute;
+  bottom: 60px !important;
+  left: 10px !important;
+  opacity: 0;
+  width: 0;
+  height: 50px;
+  background-color: black;
+  z-index: 9 !important;
+  color: white;
+  font-size: 16px;
+}
+
+@media (orientation: portrait)  {
+  #legend_help {
+    bottom: 35px !important;
+    left: 144px !important;
+    height: 115px;
+  }
+}
+
+#legend_help:hover {
+  background-color: #3c3d3f;
+}
+
+@media (min-width: 1280px) {
+  #map_intro:hover {
+    cursor: pointer;
     animation: shake 0.82s cubic-bezier(.36,.07,.19,.97) both;
+  }
+}
+
+@keyframes shake {
+  10%, 90% {
+    transform: rotate(-2deg);
+    -ms-transform: rotate(-2deg); /* IE 9 */
+    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
+  }
+  
+  20%, 80% {
+    transform: rotate(4deg);
+    -ms-transform: rotate(4deg); /* IE 9 */
+    -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
+  }
+
+  30%, 50%, 70% {
+    transform: rotate(-4deg);
+    -ms-transform: rotate(-4deg); /* IE 9 */
+    -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
+  }
+
+  40%, 60% {
+    transform: rotate(7deg);
+    -ms-transform: rotate(7deg); /* IE 9 */
+    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
+  }
+}
+
+.box .help {
+  width: 18px;
+  height: 18px;
+  margin-left: 10px;
+}
+
+.box .help:hover {
+  cursor: pointer;
+}
+.iw-bottom-gradient {
+  position: absolute;
+  width: 460px;
+  height: 25px;
+  bottom: 10px;
+  right: 20px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
+
+@media (max-height: 600px) and (orientation: landscape) {
+  .iw-bottom-gradient {
+      width: 50%;
+  }
+}
+
+#legendBtn #change_arrow {
+  font-size: 20px;
+  position: absolute;
+  top: 0;
+  right: 3px;
+  padding: 0;
+}
+
+
+
+
+
+/*LEGEND CSS*/
+.legend {
+  background-color: #f05a28; 
+  border-radius: 2px;
+  font-family: 'Gotham-Book', Arial;
+  left: 10px !important;
+  bottom: 35px !important;
+  overflow: hidden;
+  z-index: 10 !important;
+}
+@media (min-width: 1280px) {
+  .legend:hover {
+    background-color: #B43F00;
+  }
+}
+
+.legend button { 
+  background-color: inherit;
+  text-align: center;
+  color: white;
+  font-size: 20px;
+  font-family: 'Gotham-Book', Arial;
+  border: none;
+  cursor: pointer;
+}
+
+.legend .box { 
+  margin: 1px;
+  color: black;
+  font-size: 14px;
+  font-family: 'Gotham-Book', Arial;
+} 
+
+.legend .box input {
+  vertical-align: middle;
+}
+
+.legend .box img {
+  vertical-align: middle; 
+}
+
+#toggleSliderBtn {
+  display: none;
+}
+
+#box ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+}
+
+#legendBtn {
+  margin: 1px;
+  outline: none;
+  margin-right: 17px;
+  padding: 0;
+}
+
+@media (orientation: portrait) {
+  .legend #box li {
+  height: 20px;
+  margin: 8px 5px;
+  }
+
+  .legend .box { 
+    width: 140px;
+    background-color: white;
+    border-radius: 5px;
+  } 
+
+  .legend #box li span {
+    vertical-align: middle;
+  }
+
+  #legend_arrow_portrait {
+    padding-left: 10px;
+  }
+
+  .legend button {
+    margin: auto;
+  }
+  #box ul {
+    background-color: white;
+  }
+}
+
+@media (orientation: landscape) { 
+  .legend > div {
+    float: left;
+  }
+  .legend .box {
+    padding: 2px 1px;
+    border-radius: 0;
+  }
+
+  .legend #box li {
+    background-color: white;     
+    display: inline;
+    vertical-align: middle;
+    padding: 3px;
+    border-radius: 4px;
+  }
+}
+
+
+
+
+
+
+
+
+
+/*INFOWINDOW CSS*/
+#iw_container {
+  overflow: hidden;
+  font-family: 'Gotham-Bold', Arial;
+  margin-bottom: 10px;
+}
+
+#iw_title {
+  background: #801a50;
+  color: white;
+  font-size: 22px;
+  padding: 10px;
+}
+
+#iw_content {
+  font-size: 14px;
+  padding: 0 20px 20px;
+  background: white;
+  max-height: 250px;
+  overflow-x: auto;
+}
+
+#iw_container a, a:link, a:visited, a:active {
+    color: #801a50;
+}
+
+#iw_container a:hover { 
+  color: #cc1b75;
+}
+
+#iw_responsive {
+  z-index: 1 !important; 
+  margin-left: -500px;
+  top: 0 !important;
+  left: 0 !important;
+}
+
+#iw_responsive {
+  width: 500px;
+  left: 10px !important;
+  top: 10px !important;
+}
+
+#iw_title img {
+  cursor: pointer;
+  display: inline-block;
+  vertical-align: middle;
+  padding-right: 10px;
+}
+
+#iw_title span {
+  display: inline;
+  vertical-align: middle;
+}
+
+#iw_image {
+  width: 500px;
+  height: 250px;
+  background-size: cover;
+}
+
+
+/*___________BLACKBERRY PLAYBOOK_____________*/
+@media (max-height: 600px) and (min-width: 1000px) and (orientation: landscape) {
+  #iw_image {
+    float: left;
+    height: 300px;
+    width: 600px;
+  }
+
+  #iw_responsive {
+    width: 950px;
+    background: white;
+  }
+}
+
+
+
+
+
+
+
+
+/*_______________PHONE CSS___________________*/
+@media (max-height: 850px) and (max-width: 850px) {
+  #iw_image {
+    background-position: 50% 50%;
+  }
+
+  #iw_title {
+    padding: 5px;
+  }
+
+  #iw_responsive {
+    left: 0 !important;
+    top: 0 !important;
+  }
+
+  .box .help {
+    width: 16px;
+    height: 16px;
+    margin-left: 8px;
+  }
+ 
+  .legend {
+    left: 0 !important;
+  } 
+}
+
+@media (max-height: 850px) and (max-width: 850px) and (orientation: portrait) {
+  #legend_help {
+    left: 134px !important;
+  }
+} 
+
+@media (max-width: 450px) and (max-height: 770px) {
+  #iw_responsive {
+    width: 400px;
+  }
+}
+
+@media (max-height: 450px) and (max-width: 770px) {
+  #iw_image {
+    float: left;
+    height: 350px;
+    width: 350px;
+  }
+
+  #iw_responsive {
+    width: 700px;
+    background-color: white;
+  }
+}
+
+@media (max-width: 400px) and (max-height: 680px) {
+  #iw_responsive {
+    width: 350px;
+  }
+
+  #iw_image {
+    height: 250px;
+  }
+
+  #iw_content {
+    max-height: 280px;
+  }
+
+  .legend .box {
+    width: 130px;
+  }
+}
+
+@media (max-width: 680px) and (max-height: 400px) {
+  #iw_responsive {
+    width: 650px;
+    background-color: white;
+  }
+
+  #iw_image {
+    float: left;
+    height: 300px;
+    width: 300px;
+  }
+
+  #iw_content {
+    max-height: 250px;
+  }
+
+/*  .legend {
+    width: 77%;
+  }*/
+}
+
+@media (max-width: 350px) and (max-height: 650px) { 
+  #iw_responsive {
+    width: 300px;
+  }
+
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 250px;
+  }
+}
+
+@media (max-height: 350px) and (max-width: 580px) { 
+  #iw_responsive {
+    width: 550px;
+  }
+
+  #iw_image {
+    float: left;
+    height: 240px;
+  }
+
+  #iw_content {
+    max-height: 220px;
+  }
+}
+
+@media (max-width: 330px) and (max-height: 550px) { 
+  #iw_responsive {
+    width: 300px;
+  }
+
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 230px;
+  }
+}
+
+@media (max-height: 330px) and (max-width: 550px) { 
+  #iw_responsive {
+    width: 500px;
+  }
+
+  #iw_image {
+    width: 250px;
+    height: 250px;
+  }
+
+  #iw_content {
+    max-height: 230px;
+  }
+}
+
+@media (max-width: 330px) and (max-height: 500px) { 
+  #iw_image {
+    height: 200px;
+  }
+
+  #iw_content {
+    max-height: 200px;
+  }
+
+  .legend .box {
+    width: 120px;
+    font-size: 12px;
+  }
+
+  .legend button {
+    font-size: 14px;
+  }
+}
+
+@media (max-height: 330px) and (max-width: 500px) { 
+  #iw_responsive {
+    width: 450px;
+  }
+
+  #iw_image {
+    width: 210px;
+    height: 210px;
+  }
+
+  #iw_content {
+    max-height: 200px;
+  }
+
+  .legend .box {
+    font-size: 12px;
+    padding-left: 0px;
+  }
+
+  .legend button {
+    font-size: 14px;
+  }
+}
+
+
     background-color: #e8e9ea;
   }
 }
