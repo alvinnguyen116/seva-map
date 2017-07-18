@@ -507,9 +507,10 @@ function legend() { //toggles legend horizontally
             $("#box").animate({ "margin-left": -380 },    "slow");
             $(".legend").css({ "width": "auto"});
             document.getElementById("change_arrow").innerHTML = "&#187;";
+            help_close();
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").css({ "width": 422});
+            $(".legend").animate({ "width": 422}, "slow");
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
 }
