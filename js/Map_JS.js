@@ -411,6 +411,9 @@ function hide(category) {
 }
 
 function boxclick(box,category) {
+  if (prevFilter) {
+    filter_hide(prevFilter);
+  } 
   if (box.checked) {
     show(category);
     uncheckFilters();
@@ -595,10 +598,12 @@ function initFilters() {
 }
 
 function initFilterHelper(allText) {
-  var list_filter = intoArray(allText);
+  var list_filter = allText.split(",");
   var innerHTML = "<ul>"; 
   list_filter.forEach(function(filter) {
-      innerHTML += "<li><span>" + filter + "</span><input type='checkbox' id='" + filter + "Box'" + " onclick= \"filter(this,'" + filter + "')\"/></li>";
+      var id = filter.replace(/\s/g,'');
+        id = id.toLowerCase();
+      innerHTML += "<li><span>" + filter + "</span><input type='checkbox' id='" + id + "Box'" + " onclick= \"filter(this,'" + id + "')\"/></li>";
       filters.push(filter + "Box");
   });
   innerHTML += "</ul>";
@@ -613,9 +618,9 @@ function initFilterHelper(allText) {
 
 function filter(box, keyword) {
   if (prevFilter) {
-    prevFilter.checked = false; 
+    document.getElementById(prevFilter + 'Box').checked = false; 
   }
-  prevFilter = box;
+  prevFilter = keyword;
   if (box.checked) {
     filter_show(keyword);
   } else {
@@ -627,7 +632,7 @@ function intoArray(string) {
   var retArray = [];
   words = string.split(",");
   words.forEach(function(word){
-    retArray.push(word.replace(/\s/g,''));
+    retArray.push(word.replace(/\s/g,'').toLowerCase());
   });
   return retArray;
 }
@@ -653,11 +658,13 @@ function filter_hide(keyword) {
   curr_markers = [];
   // == clear the checkbox ==
   document.getElementById(keyword+"Box").checked = false;
+  prevFilter = false;
   // == close the info window, in case its open on a marker that we just hid
   if (prevWindow) {
     iwclose();
   }
-  showAll();
+  menteeClusterer.clearMarkers();
+  partnerClusterer.clearMarkers();
 }
 
 function contains_key(marker, keyword) {
