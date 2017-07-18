@@ -285,18 +285,29 @@ function initMap()
       $("#box").css("margin-left" , "1"); //slides out 
       $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
-            $("#box").slideUp('slow');
-            document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
+        // $("#box").slideUp('slow');
+        $("#box").animate({
+          "height": 0,
+          "opacity": 0
+        }, 500);
+
+        $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
       } else {
-            $("#box").slideDown('slow');
-            document.getElementById("legend_arrow_portrait").src = "images/sort-down_opt.png";
+        // $("#box").slideDown('slow');
+
+        $("#box").animate({
+          "height": "100%",
+          "opacity": 1,
+        }, 500);
+
+        $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
       }
     } else {
       $("#legendBtn").css("display","block");
       $("#toggleSliderBtn").css("display", "none");
       $("#box").css("display" , "block");
       if (expanded) {
-            $("#box").animate({ "margin-left": -400 },    "slow");
+            $("#box").animate({ "margin-left": -380 },    "slow");
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
@@ -491,7 +502,7 @@ function responsiveOpenHelper(infoWindow) {
 
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
-            $("#box").animate({ "margin-left": -400 },    "slow");
+            $("#box").animate({ "margin-left": -380 },    "slow");
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
@@ -502,12 +513,20 @@ function legend() { //toggles legend horizontally
 
 function toggleSlider(){ //toggles legend vertically 
   if (expanded = !expanded) {
-            $("#box").slideUp('slow');
-            document.getElementById("legend_arrow_portrait").src = "images/caret-arrow-up_opt.png";
-      } else {
-            $("#box").slideDown('slow');
-            document.getElementById("legend_arrow_portrait").src = "images/sort-down_opt.png";
-      }
+    // $("#box").slideUp('slow');
+
+    $("#box").animate({
+          "height": 0
+        }, 500);
+        
+    $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
+  } else {
+    // $("#box").slideDown('slow');
+    $("#box").animate({
+          "height": "80px"
+        }, 500);
+    $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
+  }
 }
 
  function getOrientation(){
@@ -560,23 +579,32 @@ function display_file(file, name) {
 
 function help_open() {
   if (getOrientation() == "Landscape") {
+    $("#legend_help").css({"height": "0", "width": "405px"});
     $("#legend_help").animate({
-        'width': '500px',
+        'height': '70px',
         'opacity': '1'
-    }, 500);
+    }, 400);
   } else {
+    $("#legend_help").css({"height": "86px", "width": "0"});
     $("#legend_help").animate({
         'width': '200px',
         'opacity': '1'
-    }, 500);
+    }, 400);
   }
 }
 
 function help_close() {
-  $("#legend_help").animate({
+  if (getOrientation() == "Landscape") {
+    $("#legend_help").animate({
+      'opacity': '0',
+      'height': '0'
+    }, 500);
+  } else {
+    $("#legend_help").animate({
       'opacity': '0',
       'width': '0'
     }, 500);
+  }
   expanded_help = false;
 }
 
@@ -614,7 +642,7 @@ function initFilterHelper(allText) {
   list_filter.forEach(function(filter) {
       var id = filter.replace(/\s/g,'');
         id = id.toLowerCase();
-      innerHTML += "<li><span>" + filter + "</span><input type='checkbox' id='" + id + "Box'" + " onclick= \"filter(this,'" + id + "')\"/></li>";
+      innerHTML += "<li checked='false' id='" + id + "Box' onclick= \"filter(this,'" + id + "')\">" + filter + "</li>";
       filters.push(id + "Box");
   });
   innerHTML += "</ul>";
@@ -629,10 +657,10 @@ function initFilterHelper(allText) {
 
 function filter(box, keyword) {
   if (prevFilter) {
-    document.getElementById(prevFilter + 'Box').checked = false; 
+    document.getElementById(prevFilter + 'Box').checked = 'false'; 
   }
   prevFilter = keyword;
-  if (box.checked) {
+  if (box.checked == 'false') {
     filter_show(keyword);
   } else {
     filter_hide(keyword);
