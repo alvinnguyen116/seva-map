@@ -1,8 +1,11 @@
 /*GLOBAL VARIABLES*/
 var map; 
 var markers;
+var curr_markers = [];
+var filters = [];
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
+var prevFilter = false; 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
@@ -22,7 +25,6 @@ var icons = {
         icon: 'images/seva_mentee.png'
       }
   };
-
 
 
 
@@ -256,7 +258,6 @@ function initMap()
   google.maps.event.addListener(map, "mousedown", function() { //closes infoWindows automatically 
     if (prevWindow) {
       // prevWindow.close();
-      prevWindow = false;
       iwclose();
     } 
     if (expanded_help) {
@@ -310,6 +311,8 @@ function initMap()
    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(map_intro);
    var legend_help = document.getElementById("legend_help");
    map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(legend_help);
+   var map_filters = document.getElementById("map_filters");
+   map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(map_filters);
 }
 
 
@@ -336,7 +339,7 @@ function plotMarkers(m)
     infoWindow.name = marker.name;
     infoWindow.content = marker.description;
     infoWindow.image = marker.image;
-
+    newMarker.keyword = marker.keyword; 
     newMarker.addListener('click', function() {
       responsiveOpen(infoWindow);
       map.setOptions({ scrollwheel: false }); //enables text scrolling 
@@ -349,9 +352,7 @@ function plotMarkers(m)
   var legend = document.getElementById('legend'); //legend 
   map.controls[google.maps.ControlPosition.LEFT_BOTTOM].push(legend);
 
-  show("sevaOffice");
-  show("sevaMentee");
-  show("sevaPartner");
+  showAll();
 }
 
 function infoWindowContent(name, content, image) {
@@ -394,7 +395,6 @@ function hide(category) {
   for (var i=0; i<markers.length; i++) {
     if (markers[i].category == category) {
       markers[i].setMap(null); //loses animation 
-
     }
   }
   // == clear the checkbox ==
@@ -402,7 +402,6 @@ function hide(category) {
   // == close the info window, in case its open on a marker that we just hid
   if (prevWindow) {
     iwclose();
-    prevWindow = false;
   }
   if (category == "sevaMentee") {
     menteeClusterer.clearMarkers();
@@ -414,6 +413,7 @@ function hide(category) {
 function boxclick(box,category) {
   if (box.checked) {
     show(category);
+    uncheckFilters();
   } else {
     hide(category);
   }
@@ -463,20 +463,24 @@ function responsiveOpen(infoWindow) {
   //responsive design
   if (prevWindow && (prevWindow != infoWindow)) {
         iwclose();
+        window.setTimeout(function(){responsiveOpenHelper(infoWindow)},500);
+  } else if (prevWindow === infoWindow) {
+    iwclose();
   }
-  window.setTimeout(function(){responsiveOpenHelper(infoWindow)},500);
+  else {
+    window.setTimeout(function(){responsiveOpenHelper(infoWindow)},500);
+  }
 }
 
 function responsiveOpenHelper(infoWindow) {
   prevWindow = infoWindow;
   var iwResp = document.getElementById("iw_responsive");
   iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
-  $("#iw_responsive").animate({ "margin-left": 1 }, "slow");
+  $("#iw_responsive").animate({ "margin-left": 1 }, 750);
   $("#iw_title img").on("click", function() {
     if (prevWindow) {
       iwclose();
     } 
-    prevWindow = false; 
     map.setOptions({ scrollwheel: true }); //re-enables scrolling 
   });
 }
@@ -484,10 +488,8 @@ function responsiveOpenHelper(infoWindow) {
 function legend() { //toggles legend horizontally 
       if (expanded = !expanded) {
             $("#box").animate({ "margin-left": -400 },    "slow");
-            // $(".legend").css('width','auto');
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
-            // $(".legend").animate({"width": 500 }, "slow");
             $("#box").animate({ "margin-left": 1 }, "slow");
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -510,6 +512,7 @@ function toggleSlider(){ //toggles legend vertically
 }
 
 function iwclose(){ //closes info Windows 
+  prevWindow = false;
   var max = 0;
   if (getOrientation() == "Portrait") {
     max = $(window).height();
@@ -554,22 +557,10 @@ function display_file(file, name) {
 function help_open() {
   if (getOrientation() == "Landscape") {
     $("#legend_help").animate({
-      'width' : '1', 
-      'bottom': '60px',
-      'opacity': '.5',
-      'height': '50px',
-    }, 500);
-    $("#legend_help").animate({
         'width': '500px',
         'opacity': '1'
     }, 500);
   } else {
-    $("#legend_help").animate({
-      'width' : '1', 
-      'bottom': '35px',
-      'opacity': '.5',
-      'height': '115px',
-    }, 500);
     $("#legend_help").animate({
         'width': '200px',
         'opacity': '1'
@@ -579,14 +570,125 @@ function help_open() {
 
 function help_close() {
   $("#legend_help").animate({
-    'width': '1',
-    'opacity': '.5'
-  }, 500);
-  $("#legend_help").animate({
-      'height': '0',
-      'bottom': '0',
       'opacity': '0',
       'width': '0'
     }, 500);
   expanded_help = false;
+}
+
+function initFilters() {
+ var rawFile = new XMLHttpRequest();
+ rawFile.open("GET", "data/map_filters.txt", true);
+ rawFile.onreadystatechange = function ()
+  {
+      if(rawFile.readyState === 4)
+      {
+          if(rawFile.status === 200 || rawFile.status == 0)
+          {
+              var allText = rawFile.responseText;
+              console.log(allText);
+              initFilterHelper(allText);
+          }
+      }
+  }
+  rawFile.send();
+}
+
+function initFilterHelper(allText) {
+  var list_filter = intoArray(allText);
+  var innerHTML = "<ul>"; 
+  list_filter.forEach(function(filter) {
+      innerHTML += "<li><span>" + filter + "</span><input type='checkbox' id='" + filter + "Box'" + " onclick= \"filter(this,'" + filter + "')\"/></li>";
+      filters.push(filter + "Box");
+  });
+  innerHTML += "</ul>";
+  console.log(innerHTML);
+  var ul = document.getElementById("map_filters");
+  ul.innerHTML = innerHTML;
+  // var filters = Array.from(ul.children());
+  // filters.forEach(function(filter){ 
+  //   filter.checked = false;
+  // });
+}
+
+function filter(box, keyword) {
+  if (prevFilter) {
+    prevFilter.checked = false; 
+  }
+  prevFilter = box;
+  if (box.checked) {
+    filter_show(keyword);
+  } else {
+    filter_hide(keyword);
+  }
+}
+
+function intoArray(string) {
+  var retArray = [];
+  words = string.split(",");
+  words.forEach(function(word){
+    retArray.push(word.replace(/\s/g,''));
+  });
+  return retArray;
+}
+
+function filter_show(keyword) {
+  hideAll();
+  for (var i=0; i<markers.length; i++) {
+    var test;
+    if (test = contains_key(markers[i], keyword)) {
+      markers[i].setMap(map);
+      markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
+      curr_markers.push(markers[i]);
+    }
+    console.log(test);
+  }
+  document.getElementById(keyword+"Box").checked = true;
+}
+
+function filter_hide(keyword) {
+  for (var i=0; i < curr_markers.length; i++) {
+    curr_markers[i].setMap(null); //loses animation 
+  }
+  curr_markers = [];
+  // == clear the checkbox ==
+  document.getElementById(keyword+"Box").checked = false;
+  // == close the info window, in case its open on a marker that we just hid
+  if (prevWindow) {
+    iwclose();
+  }
+  showAll();
+}
+
+function contains_key(marker, keyword) {
+  var value = false;
+  if (marker.keyword) {
+    var allText = intoArray(marker.keyword);
+    allText.forEach(function(word) {
+      
+      if (word === keyword) {
+          value = true;
+      }
+    });
+  }
+  return value;
+}
+
+function showAll() {
+  show("sevaOffice");
+  show("sevaMentee");
+  show("sevaPartner");
+}
+
+function hideAll() {
+  hide("sevaOffice");
+  hide("sevaMentee");
+  hide("sevaPartner");
+}
+
+function uncheckFilters() {
+  filters.forEach(function(filter){ 
+    document.getElementById(filter).checked = false;
+  });
+  prevFilter = false;
 }
