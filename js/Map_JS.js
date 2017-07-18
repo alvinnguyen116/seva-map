@@ -10,7 +10,8 @@ var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
 var expanded = false;
-var expanded_help = false; 
+var expanded_help = false;
+var expanded_filter = false;  
 var icons = {
       sevaOffice: {
         name: "Seva Office",
@@ -579,6 +580,16 @@ function help_close() {
   expanded_help = false;
 }
 
+function startFilter() {
+  if (!expanded_filter) {
+    expanded_filter = true; 
+    initFilters();
+    $("#map_filters").css('display', 'block');
+  } else {
+    expanded_filter = false; 
+    $("#map_filters").css('display', 'none');
+  }
+}
 function initFilters() {
  var rawFile = new XMLHttpRequest();
  rawFile.open("GET", "data/map_filters.txt", true);
