@@ -604,7 +604,7 @@ function initFilterHelper(allText) {
       var id = filter.replace(/\s/g,'');
         id = id.toLowerCase();
       innerHTML += "<li><span>" + filter + "</span><input type='checkbox' id='" + id + "Box'" + " onclick= \"filter(this,'" + id + "')\"/></li>";
-      filters.push(filter + "Box");
+      filters.push(id + "Box");
   });
   innerHTML += "</ul>";
   console.log(innerHTML);
