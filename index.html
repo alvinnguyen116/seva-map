@@ -13,13 +13,8 @@
   <body> 
   <div id="map"></div>
   <div id="legend_help" onclick="help_close()"></div>
-  <img id="map_intro" src="images/menu-icon.png">
-<!--     <button id="map_intro" type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar" aria-expanded="true" aria-controls="navbar">
-                  <span class="sr-only">Toggle navigation</span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-                  <span class="icon-bar"></span>
-    </button> -->
+  <img id="map_intro" src="images/menu-icon.png" onclick="initFilters()">
+  <div id="map_filters"></div>
     <div id="iw_responsive"></div>
     <div class="legend" id="legend">
         <button onclick="toggleSlider()" id="toggleSliderBtn">Legend<img id="legend_arrow_portrait" src="images/sort-down_opt.png"> </button> <!--toggles legend vertically-->
