@@ -58,7 +58,7 @@ html, body {    /*if this affects your website, change to a container*/
 @media (orientation: portrait)  {
   #legend_help {
     bottom: 35px !important;
-    left: 134px !important;
+    left: 138px !important;
     height: 86px;
   }
 }
@@ -123,7 +123,7 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 20px;
   position: absolute;
   top: 1px;
-  right: 7px;
+  right: 9px;
   padding: 0;
 }
 
@@ -204,7 +204,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .legend .box { 
-    width: 122px;
+    width: 124px;
     background-color: white;
   } 
 
@@ -374,7 +374,7 @@ html, body {    /*if this affects your website, change to a container*/
 
 @media (max-height: 850px) and (max-width: 850px) and (orientation: portrait) {
   #legend_help {
-    left: 124px !important;
+    left: 126px !important;
   }
 } 
 
