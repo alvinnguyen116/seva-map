@@ -585,7 +585,7 @@ function display_file(file, name) {
 
 function help_open() {
   if (getOrientation() == "Landscape") {
-    $("#legend_help").css({"height": "0", "width": "406px"});
+    $("#legend_help").css({"height": "0", "width": "411px"});
     $("#legend_help").animate({
         'height': '70px',
         'opacity': '1'
