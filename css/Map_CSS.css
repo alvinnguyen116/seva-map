@@ -176,7 +176,7 @@ html, body {    /*if this affects your website, change to a container*/
 #change_arr {
   position: absolute;
   left: 90px;
-  top: 2px;
+  top: 1px;
   vertical-align: middle;
 }
 
