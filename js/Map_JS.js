@@ -309,10 +309,12 @@ function initMap()
       if (expanded) {
             $("#box").animate({ "margin-left": -380},    "slow");
             $(".legend").animate({ "width": "auto"}, "slow");
+            $("#change_arrow").css({"right": 7});
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({"width": 427}, "slow")
+            $(".legend").animate({"width": 427}, "slow");
+            $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
     }
@@ -506,11 +508,13 @@ function legend() { //toggles legend horizontally
       if (expanded = !expanded) {
             $("#box").animate({ "margin-left": -380 },    "slow");
             $(".legend").css({ "width": "auto"});
+            $("#change_arrow").css({"right": 7});
             document.getElementById("change_arrow").innerHTML = "&#187;";
             help_close();
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
             $(".legend").animate({ "width": 427}, "slow");
+            $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
 }
