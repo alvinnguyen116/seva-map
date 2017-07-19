@@ -122,7 +122,7 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn #change_arrow {
   font-size: 20px;
   position: absolute;
-  top: 0;
+  top: -.5px;
   right: 9px;
   padding: 0;
 }
@@ -147,6 +147,7 @@ html, body {    /*if this affects your website, change to a container*/
   font-family: 'Gotham-Book', Arial;
   border: none;
   cursor: pointer;
+  vertical-align: middle;
 }
 
 .legend .box { 
@@ -173,6 +174,7 @@ html, body {    /*if this affects your website, change to a container*/
   position: absolute;
   left: 90px;
   top: -2px;
+  vertical-align: middle;
 }
 
 #box ul {
@@ -190,6 +192,7 @@ html, body {    /*if this affects your website, change to a container*/
 
 .legend button div {
   font-size: 16px;
+  vertical-align: middle;
 }
 
 @media (orientation: portrait) {
