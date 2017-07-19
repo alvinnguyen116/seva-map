@@ -148,6 +148,9 @@ html, body {    /*if this affects your website, change to a container*/
   border: none;
   cursor: pointer;
   vertical-align: middle;
+  line-height: 100%;
+  margin: 0;
+  padding: 0;
 }
 
 .legend .box { 
@@ -173,7 +176,7 @@ html, body {    /*if this affects your website, change to a container*/
 #change_arr {
   position: absolute;
   left: 90px;
-  top: -2px;
+  top: 0;
   vertical-align: middle;
 }
 
