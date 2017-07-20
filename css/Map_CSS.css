@@ -130,7 +130,6 @@ html, body {    /*if this affects your website, change to a container*/
   background-color: inherit;
   text-align: center;
   color: grey;
-  font-size: 20px;
   font-family: 'Gotham-Book', Arial;
   border: none;
   cursor: pointer;
@@ -240,7 +239,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .legend button div {
-    padding-right: 16px;
+    padding-right: 13px;
   }
 }
 
