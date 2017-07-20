@@ -1,6 +1,6 @@
 /*GLOBAL VARIABLES*/
 var map; 
-var markers; 
+var markers;
 var curr_markers = [];
 var filters = [];
 var bounds;
@@ -603,7 +603,7 @@ function help_open() {
         'opacity': '1'
     }, 400);
   } else {
-    $("#legend_help").css({"height": "83px", "width": "0"});
+    $("#legend_help").css({"height": "95px", "width": "0"});
     $("#legend_help").animate({
         'width': '160px',
         'opacity': '1'
