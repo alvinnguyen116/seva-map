@@ -71,8 +71,15 @@ html, body {    /*if this affects your website, change to a container*/
   background-color: lightgrey;
 }
 
+.legend button div {
+  padding: 1px;
+  font-size: 16px;
+  vertical-align: middle;
+}
+
 @media (orientation: portrait)  {
   .legend button div {
+    padding: 7px 0;
     margin: 1px;
   }
 
@@ -170,6 +177,7 @@ html, body {    /*if this affects your website, change to a container*/
   top: 3px;
   vertical-align: middle;
   font-size: 20px;
+  margin-top: 5px;
 }
 
 #box ul {
@@ -182,12 +190,6 @@ html, body {    /*if this affects your website, change to a container*/
   outline: none;
   padding: 0 6px;
   height: 25px;
-}
-
-.legend button div {
-  padding: 1px;
-  font-size: 16px;
-  vertical-align: middle;
 }
 
 @media (orientation: portrait) {
