@@ -9,49 +9,63 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #map_intro {
-  padding: 5px;
-  height: 20px;
-  width: 20px;
+  width: 160px;
   right: 10px !important;
   top: 10px !important;
   background-color: white;
-  border-radius: 5px;
-  border: 1px solid #f05a28;
+  font-size: 16px;
+  text-align: center;
+  font-family: 'Gotham-Book', Arial;
+  cursor: pointer;
+  padding: 10px 0;
+  color: grey;
+}
+
+.lightgrey {
+  background-color: lightgrey;
 }
 
 #legend_help {
-  border: 1px solid #f05a28;
   position: absolute;
   bottom: 60px !important;
   left: 10px !important;
   opacity: 0;
   width: 406px;
   height: 0;
-  padding: 7px;
+  padding: 8px;
   background-color: white;
   z-index: 9 !important;
-  color: black;
+  color: grey;
   font-size: 14px;
+  border-radius: 2px;
 }
 
 #legend_help:hover {
   cursor: pointer;
 }
+
 #map_filters {
+  cursor: pointer;  
   font-size: 16px;
   background-color: white;
-  color: black;
-  width: 100px;
+  color: grey;
+  opacity: 0;
+  width: 160px;
   text-align: center;
+  position: absolute;
+  right: 10px !important;
+  top: 50px !important;
+  font-family: 'Gotham-Book', Arial;
 }
 
-#map_filters li div {
-  
+#map_filters ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+  overflow: hidden;
 }
 
-#map_filters li div:hover {
-  height: 100%
-  width: 100%;
+#map_filters li:hover {
   background-color: lightgrey;
 }
 
@@ -130,19 +144,21 @@ html, body {    /*if this affects your website, change to a container*/
 
 /*LEGEND CSS*/
 .legend {
-  background-color: #f05a28; 
+  background-color: white; 
   border-radius: 2px;
   font-family: 'Gotham-Book', Arial;
   left: 10px !important;
   bottom: 35px !important;
   overflow: hidden;
   z-index: 10 !important;
+  padding: 1px;
 }
+
 
 .legend button { 
   background-color: inherit;
   text-align: center;
-  color: white;
+  color: grey;
   font-size: 20px;
   font-family: 'Gotham-Book', Arial;
   border: none;
@@ -154,7 +170,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 .legend .box { 
-  margin: 1px;
+  padding: ;
   color: black;
   font-size: 14px;
   font-family: 'Gotham-Book', Arial;
@@ -200,6 +216,7 @@ html, body {    /*if this affects your website, change to a container*/
 
 @media (orientation: portrait) {
   .legend #box li {
+    background-color: lightgrey;
     height: 20px;
     margin: 0 5px;
   }
@@ -211,7 +228,6 @@ html, body {    /*if this affects your website, change to a container*/
 
   .legend .box { 
     width: 130px;
-    background-color: white;
   } 
 
   .legend #box li span {
@@ -244,7 +260,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .legend #box li {
-    background-color: white;     
+    background-color: lightgrey;     
     display: inline;
     vertical-align: middle;
     padding: 3px 0;
