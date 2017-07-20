@@ -191,6 +191,9 @@ html, body {    /*if this affects your website, change to a container*/
   padding: 0 6px;
   height: 25px;
 }
+#toggleSliderBtn {
+  outline: none;
+}
 
 @media (orientation: portrait) {
   .legend #box li {
