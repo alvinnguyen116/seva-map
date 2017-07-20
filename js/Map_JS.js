@@ -2,7 +2,7 @@
 var map; 
 var markers;
 var curr_markers = [];
-var filters = [];
+var filters = []; 
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var prevFilter = false; 
