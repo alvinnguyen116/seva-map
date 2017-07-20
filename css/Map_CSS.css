@@ -77,32 +77,6 @@ html, body {    /*if this affects your website, change to a container*/
   }
 }
 
-@keyframes shake {
-  10%, 90% {
-    transform: rotate(-2deg);
-    -ms-transform: rotate(-2deg); /* IE 9 */
-    -webkit-transform: rotate(2deg); /* Chrome, Safari, Opera */
-  }
-  
-  20%, 80% {
-    transform: rotate(4deg);
-    -ms-transform: rotate(4deg); /* IE 9 */
-    -webkit-transform: rotate(4deg); /* Chrome, Safari, Opera */
-  }
-
-  30%, 50%, 70% {
-    transform: rotate(-4deg);
-    -ms-transform: rotate(-4deg); /* IE 9 */
-    -webkit-transform: rotate(-4deg); /* Chrome, Safari, Opera */
-  }
-
-  40%, 60% {
-    transform: rotate(7deg);
-    -ms-transform: rotate(7deg); /* IE 9 */
-    -webkit-transform: rotate(7deg); /* Chrome, Safari, Opera */
-  }
-}
-
 .box .help {
   border-radius: 20px;
   background-color: #808287;
@@ -312,7 +286,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #iw_responsive {
-  z-index: 1 !important; 
+  z-index: 11 !important; 
   margin-left: -500px;
   top: 0 !important;
   left: 0 !important;
