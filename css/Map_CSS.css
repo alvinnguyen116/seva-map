@@ -107,7 +107,7 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn #change_arrow {
   font-size: 16px;
   position: absolute;
-  top: 6px;
+  top: 6.5px;
   right: 9px;
   padding: 0;
 }
