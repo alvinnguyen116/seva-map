@@ -5,9 +5,9 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #map {
-  height: 100% !important;
 /*  height: 517px !important;
   width: 829px; */
+  height: 100%;
 }
 
 #map_intro {
@@ -175,7 +175,6 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #legendBtn {
-  margin: 1px;
   outline: none;
   padding: 0 6px;
   height: 25px;
@@ -241,7 +240,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .legend button div {
-    padding-right: 16px;
+    padding: 0 16px;
   }
 }
 
