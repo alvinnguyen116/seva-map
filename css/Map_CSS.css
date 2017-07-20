@@ -5,7 +5,9 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #map {
-  height: 100% !important; 
+  height: 100% !important;
+/*  height: 517px !important;
+  width: 829px; */
 }
 
 #map_intro {
@@ -78,12 +80,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 .box .help {
-  border-radius: 20px;
-  background-color: #808287;
   margin: 0 5px;
-  color: white;
-  font-size: 14px;
-  font-weight: bold;
 }
 
 .box .help:hover {
@@ -159,6 +156,7 @@ html, body {    /*if this affects your website, change to a container*/
 
 .legend .box img {
   vertical-align: middle; 
+  margin-bottom: 2px;
 }
 
 
@@ -354,8 +352,6 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .box .help {
-    width: 16px;
-    height: 16px;
     margin: 0 5px;
   }
  
