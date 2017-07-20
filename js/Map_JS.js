@@ -9,7 +9,7 @@ var prevFilter = false;
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
-var expanded = true;
+var expanded = false;
 var expanded_help = false;
 var expanded_filter = false;  
 var icons = {
@@ -221,7 +221,6 @@ function initMap()
   map = new google.maps.Map(document.getElementById('map'), {
     zoom: 8,
     center:  new google.maps.LatLng(-34.397, 150.644),
-    disableDefaultUI: true,
     mapTypeControlOptions: {mapTypeIds: ['roadmap', 'satellite', 'hybrid', 'terrain', 'styled_map']}
   });
   map.mapTypes.set('styled_map', styledMapType); //https://developers.google.com/maps/documentation/javascript/styling
@@ -265,10 +264,6 @@ function initMap()
     if (expanded_help) {
       help_close();
     }
-    if (expanded_filter) {
-      filtersClose();
-    }
-
   });
 
   
@@ -276,12 +271,10 @@ function initMap()
   partnerClusterer = new MarkerClusterer(map, []);
   window.addEventListener("resize", temp, true);
   window.addEventListener("orientationchange", temp);
-
   function temp() {
     initLegend();
     help_close();
   }
-
   function initLegend(){
     if (prevWindow) {
       responsiveOpen(prevWindow);
@@ -289,12 +282,13 @@ function initMap()
     if (getOrientation() == "Portrait") {
       $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
-      $(".legend .box").css("margin-left" , 1); //slides out 
+      $("#box").css("margin-left" , "1"); //slides out 
       $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
         // $("#box").slideUp('slow');
         $("#box").animate({
-          "height": 0
+          "height": 0,
+          "opacity": 0
         }, 500);
 
         $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
@@ -302,7 +296,8 @@ function initMap()
         // $("#box").slideDown('slow');
 
         $("#box").animate({
-          "height": "100%"
+          "height": "100%",
+          "opacity": 1,
         }, 500);
 
         $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
@@ -318,7 +313,7 @@ function initMap()
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({"width": 427}, "slow");
+            $(".legend").animate({"width": 430}, "slow");
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -328,7 +323,6 @@ function initMap()
    var iwResp = document.getElementById('iw_responsive');
    map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); //arbitrary, will move later with !important 
    initLegend();
-   initFilters();
    var map_intro = document.getElementById("map_intro");
    map.controls[google.maps.ControlPosition.TOP_RIGHT].push(map_intro);
    var legend_help = document.getElementById("legend_help");
@@ -438,6 +432,7 @@ function boxclick(box,category) {
   } 
   if (box.checked) {
     show(category);
+    uncheckFilters();
   } else {
     hide(category);
   }
@@ -500,6 +495,8 @@ function responsiveOpenHelper(infoWindow) {
   prevWindow = infoWindow;
   var iwResp = document.getElementById("iw_responsive");
   iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
+  var height = parseInt($("#map").css("height"),10)/3;
+  $("#iw_content").css("max-height", height);
   $("#iw_responsive").animate({ "margin-left": 1 }, 750);
   $("#iw_title img").on("click", function() {
     if (prevWindow) {
@@ -518,7 +515,7 @@ function legend() { //toggles legend horizontally
             help_close();
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({ "width": 427}, "slow");
+            $(".legend").animate({ "width": 430}, "slow");
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -526,7 +523,6 @@ function legend() { //toggles legend horizontally
 
 
 function toggleSlider(){ //toggles legend vertically 
-  $("#box").css("margin-left" , "1"); //fix from landscape mode 
   if (expanded = !expanded) {
     // $("#box").slideUp('slow');
 
@@ -595,7 +591,7 @@ function display_file(file, name) {
 
 function help_open() {
   if (getOrientation() == "Landscape") {
-    $("#legend_help").css({"height": "0", "width": "413px"});
+    $("#legend_help").css({"height": "0", "width": "416px"});
     $("#legend_help").animate({
         'height': '70px',
         'opacity': '1'
@@ -627,18 +623,13 @@ function help_close() {
 function startFilter() {
   if (!expanded_filter) {
     expanded_filter = true; 
-    $("#map_filters").animate({"opacity": 1}, "slow");
+    initFilters();
+    $("#map_filters").css('display', 'block');
   } else {
-    filtersClose();
+    expanded_filter = false; 
+    $("#map_filters").css('display', 'none');
   }
 }
-
-function filtersClose() {
-    expanded_filter = false; 
-    $("#map_filters").animate({'opacity': 0}, "slow");
-}
-
-
 function initFilters() {
  var rawFile = new XMLHttpRequest();
  rawFile.open("GET", "data/map_filters.txt", true);
@@ -649,6 +640,7 @@ function initFilters() {
           if(rawFile.status === 200 || rawFile.status == 0)
           {
               var allText = rawFile.responseText;
+              console.log(allText);
               initFilterHelper(allText);
           }
       }
@@ -662,7 +654,7 @@ function initFilterHelper(allText) {
   list_filter.forEach(function(filter) {
       var id = filter.replace(/\s/g,'');
         id = id.toLowerCase();
-      innerHTML += "<li id='" + id +  "Box' onclick= \"filter('" + id + "')\">" + filter + "</li>";
+      innerHTML += "<li checked='false' id='" + id + "Box' onclick= \"filter(this,'" + id + "')\">" + filter + "</li>";
       filters.push(id + "Box");
   });
   innerHTML += "</ul>";
@@ -675,19 +667,23 @@ function initFilterHelper(allText) {
   // });
 }
 
-function filter(keyword) {
+function filter(box, keyword) {
   if (prevFilter) {
-    $("#" + prevFilter + 'Box').toggleClass("lightgrey");
+    document.getElementById(prevFilter + 'Box').checked = 'false'; 
   }
   prevFilter = keyword;
-  filter_show(keyword);
+  if (box.checked == 'false') {
+    filter_show(keyword);
+  } else {
+    filter_hide(keyword);
+  }
 }
 
 function intoArray(string) {
   var retArray = [];
   words = string.split(",");
   words.forEach(function(word){
-    retArray.push((word.replace(/\s/g,'')).toLowerCase());
+    retArray.push(word.replace(/\s/g,'').toLowerCase());
   });
   return retArray;
 }
@@ -695,13 +691,15 @@ function intoArray(string) {
 function filter_show(keyword) {
   hideAll();
   for (var i=0; i<markers.length; i++) {
-    if (contains_key(markers[i], keyword)) {
+    var test;
+    if (test = contains_key(markers[i], keyword)) {
       markers[i].setMap(map);
       markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
       curr_markers.push(markers[i]);
     }
+    console.log(test);
   }
-  $("#" + keyword + 'Box').toggleClass("lightgrey");
+  document.getElementById(keyword+"Box").checked = true;
 }
 
 function filter_hide(keyword) {
@@ -710,7 +708,7 @@ function filter_hide(keyword) {
   }
   curr_markers = [];
   // == clear the checkbox ==
-  $("#" + keyword + 'Box').toggleClass("lightgrey");
+  document.getElementById(keyword+"Box").checked = false;
   prevFilter = false;
   // == close the info window, in case its open on a marker that we just hid
   if (prevWindow) {
@@ -744,4 +742,11 @@ function hideAll() {
   hide("sevaOffice");
   hide("sevaMentee");
   hide("sevaPartner");
+}
+
+function uncheckFilters() {
+  filters.forEach(function(filter){ 
+    document.getElementById(filter).checked = false;
+  });
+  prevFilter = false;
 }
