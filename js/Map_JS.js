@@ -1,6 +1,6 @@
 /*GLOBAL VARIABLES*/
 var map; 
-var markers;
+var markers; 
 var curr_markers = [];
 var filters = [];
 var bounds;
