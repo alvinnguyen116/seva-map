@@ -167,8 +167,9 @@ html, body {    /*if this affects your website, change to a container*/
 #change_arr {
   position: absolute;
   left: 90px;
-  top: 1px;
+  top: 3px;
   vertical-align: middle;
+  font-size: 20px;
 }
 
 #box ul {
