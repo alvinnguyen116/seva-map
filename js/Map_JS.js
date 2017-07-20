@@ -1,7 +1,7 @@
 /*GLOBAL VARIABLES*/
 var map; 
 var markers;
-var curr_markers = []; 
+var curr_markers = [];
 var filters = [];
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
@@ -318,7 +318,7 @@ function initMap()
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({"width": 412}, "slow");
+            $(".legend").animate({"width": 434}, "slow");
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -520,7 +520,7 @@ function legend() { //toggles legend horizontally
             help_close();
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({ "width": 412}, "slow");
+            $(".legend").animate({ "width": 434}, "slow");
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -597,7 +597,7 @@ function display_file(file, name) {
 
 function help_open() {
   if (getOrientation() == "Landscape") {
-    $("#legend_help").css({"height": "0", "width": "426px"});
+    $("#legend_help").css({"height": "0", "width": "420px"});
     $("#legend_help").animate({
         'height': '70px',
         'opacity': '1'
