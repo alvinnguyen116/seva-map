@@ -2,7 +2,7 @@
 /*GENERAL CSS*/
 html, body {    /*if this affects your website, change to a container*/
   height: 100%;
-}                   
+}
 
 #map {
 /*  height: 517px !important;
@@ -180,6 +180,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 .legend button div {
+  padding: 1px;
   font-size: 16px;
   vertical-align: middle;
 }
