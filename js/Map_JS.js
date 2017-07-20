@@ -1,7 +1,7 @@
 /*GLOBAL VARIABLES*/
 var map; 
 var markers;
-var curr_markers = [];
+var curr_markers = []; 
 var filters = [];
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
