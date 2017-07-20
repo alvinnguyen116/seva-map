@@ -72,6 +72,10 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 @media (orientation: portrait)  {
+  .legend button div {
+    margin: 1px;
+  }
+
   #legend_help {
     bottom: 35px !important;
     left: 142px !important;
@@ -504,6 +508,6 @@ html, body {    /*if this affects your website, change to a container*/
 
   #iw_content {
     max-height: 200px;
-  } 
+  }
 }
 
