@@ -2,14 +2,14 @@
 var map; 
 var markers;
 var curr_markers = [];
-var filters = []; 
+var filters = [];
 var bounds;
 var prevWindow = false; //prevent multiple infoWindows 
 var prevFilter = false; 
 var labels = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
 var menteeClusterer;
 var partnerClusterer;
-var expanded = true;
+var expanded = false;
 var expanded_help = false;
 var expanded_filter = false;  
 var icons = {
@@ -293,24 +293,26 @@ function initMap()
       $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
         // $("#box").slideUp('slow');
+        $(".legend").css({"max-height": "29px"});
         $("#box").animate({
-          "height": 0
-        }, 500);
-
+              "height": 0
+            }, 500);
         $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
+        help_close();
       } else {
         // $("#box").slideDown('slow');
-
+        $(".legend").css({"max-height": "109px"});
+        $(".legend").animate({"height": "109px"});
         $("#box").animate({
-          "height": "100%"
-        }, 500);
-
+              "height": "80px"
+            }, 500);
         $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
       }
     } else {
       $("#legendBtn").css("display","block");
       $("#toggleSliderBtn").css("display", "none");
       $("#box").css("display" , "block");
+      $(".legend").animate({"height": 26}, 500); //undo portrait css 
       if (expanded) {
             $("#box").animate({ "margin-left": -380},    "slow");
             $(".legend").animate({ "width": "auto"}, "slow");
@@ -511,16 +513,17 @@ function responsiveOpenHelper(infoWindow) {
   });
 }
 
-function legend() { //toggles legend horizontally 
+function legend() { //toggles legend horizontally
+      $(".legend").animate({"height": 26}, 500); //undo portrait css 
       if (expanded = !expanded) {
-            $("#box").animate({ "margin-left": -380 },    "slow");
             $(".legend").css({ "width": "auto"});
+            $("#box").animate({ "margin-left": -380},    "slow");
             $("#change_arrow").css({"right": 7});
             document.getElementById("change_arrow").innerHTML = "&#187;";
             help_close();
       } else {
-            $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({ "width": 434}, "slow");
+            $(".legend").animate({"width": 434}, 500);
+            $("#box").animate({ "margin-left": 1}, 400);
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -531,15 +534,16 @@ function toggleSlider(){ //toggles legend vertically
   $("#box").css("margin-left" , "1"); //fix from landscape mode 
   if (expanded = !expanded) {
     // $("#box").slideUp('slow');
-
+    $(".legend").animate({"max-height": "29px"}, 500);
     $("#box").animate({
           "height": 0
         }, 500);
-        
     $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
     help_close();
   } else {
     // $("#box").slideDown('slow');
+    $(".legend").animate({"max-height": "109px"}, 400);
+    $(".legend").animate({"height": "109px"},500);
     $("#box").animate({
           "height": "80px"
         }, 500);
