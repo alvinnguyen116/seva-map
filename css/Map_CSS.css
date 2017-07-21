@@ -193,6 +193,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 #toggleSliderBtn {
   outline: none;
+  height: 29px;
 }
 
 @media (orientation: portrait) {
@@ -251,6 +252,10 @@ html, body {    /*if this affects your website, change to a container*/
 
   .legend button div {
     padding-right: 13px;
+  }
+
+  .legend {
+    height: 26px;
   }
 }
 
