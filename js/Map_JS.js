@@ -320,7 +320,7 @@ function initMap()
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
-            $(".legend").animate({"width": 434}, "slow");
+            $(".legend").animate({"width": 414}, "slow");
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
@@ -515,17 +515,17 @@ function responsiveOpenHelper(infoWindow) {
 
 function legend() { //toggles legend horizontally
       $(".legend").animate({"height": 26}, 500); //undo portrait css 
+      $(".legend").css({ "width": ""});
       if (expanded = !expanded) {
-            $(".legend").css({ "width": "auto"});
             $("#box").animate({ "margin-left": -380},    "slow");
             $("#change_arrow").css({"right": 7});
             document.getElementById("change_arrow").innerHTML = "&#187;";
             help_close();
       } else {
-            $(".legend").animate({"width": 434}, 500);
-            $("#box").animate({ "margin-left": 1}, 400);
+            $("#box").animate({ "margin-left": 1}, 500);
             $("#change_arrow").css({"right": 9});
             document.getElementById("change_arrow").innerHTML = "&#171;";
+            $(".legend").animate({"width": 414}, "slow");
       }
 }
 
