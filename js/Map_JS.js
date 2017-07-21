@@ -290,7 +290,7 @@ function initMap()
       $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
       $(".legend .box").css("margin-left" , 1); //slides out 
-      $(".legend").css('width','auto'); //undo landscape style 
+      $(".legend").css('width',''); //undo landscape style 
       if (expanded) {
         // $("#box").slideUp('slow');
         $(".legend").css({"max-height": "29px"});
