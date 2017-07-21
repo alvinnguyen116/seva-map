@@ -255,6 +255,11 @@ html, body {    /*if this affects your website, change to a container*/
 
   .legend {
     height: 26px;
+    max-width: 414px;
+  }
+
+  .legend button {
+    margin: 0 10px;
   }
 }
 
