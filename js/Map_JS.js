@@ -301,11 +301,9 @@
           help_close();
         } else {
           // $("#box").slideDown('slow');
-          $("#box").css("opacity", 0);
           $(".legend").css({"max-height": "109px"});
           $(".legend").animate({"height": "109px"},500);
           $("#box").animate({ "height": "80px"}, 500);
-          $("#box").animate({"opacity": 1}, 500);
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
@@ -320,12 +318,10 @@
               $("#legendBtn").css({"padding": 0});
               document.getElementById("change_arrow").innerHTML = "&#187;";
         } else {
-              $("#box").css("opacity", 0);
               $("#box").animate({ "margin-left": 1}, "slow");
-              $(".legend").animate({"width": 420}, "slow");
+              $(".legend").css({"width": 420});
               $("#change_arrow").css({"right": 9});
               $("#legendBtn").css({"padding": "0 6px"});
-              $("#box").animate({"opacity": 1}, 500);
               document.getElementById("change_arrow").innerHTML = "&#171;";
         }
       }
