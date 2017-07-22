@@ -290,7 +290,7 @@
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
         $(".legend .box").css("margin-left" , 1); //slides out 
-        $(".legend").css('width','auto'); //undo landscape style 
+        $("#legend").animate({'width':'132px'},500); //undo landscape style 
         if (expanded) {
           // $("#box").slideUp('slow');
           $(".legend").css({"max-height": "29px"});
@@ -301,11 +301,11 @@
           help_close();
         } else {
           // $("#box").slideDown('slow');
+          $("#box").css("opacity", 0);
           $(".legend").css({"max-height": "109px"});
           $(".legend").animate({"height": "109px"});
-          $("#box").animate({
-                "height": "80px"
-              }, 500);
+          $("#box").animate({ "height": "80px"}, 500);
+          $("#box").animate({"opacity": 1},1000);
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
@@ -320,10 +320,12 @@
               $("#legendBtn").css({"padding": 0});
               document.getElementById("change_arrow").innerHTML = "&#187;";
         } else {
-              $("#box").animate({ "margin-left": 1 }, "slow");
+              $("#box").css("opacity", 0);
+              $("#box").animate({ "margin-left": 1}, "slow");
               $(".legend").animate({"width": 420}, "slow");
               $("#change_arrow").css({"right": 9});
               $("#legendBtn").css({"padding": "0 6px"});
+              $("#box").animate({"opacity": 1},1000);
               document.getElementById("change_arrow").innerHTML = "&#171;";
         }
       }
@@ -605,7 +607,7 @@
 
   function help_open() {
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "420px"});
+      $("#legend_help").css({"height": "0", "width": "406px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
