@@ -290,7 +290,7 @@ function initMap()
       $("#legendBtn").css("display","none"); 
       $("#toggleSliderBtn").css("display", "block");
       $(".legend .box").css("margin-left" , 1); //slides out 
-      $(".legend").css('width',''); //undo landscape style 
+      $(".legend").css('width','auto'); //undo landscape style 
       if (expanded) {
         // $("#box").slideUp('slow');
         $(".legend").css({"max-height": "29px"});
@@ -317,11 +317,13 @@ function initMap()
             $("#box").animate({ "margin-left": -380},    "slow");
             $(".legend").animate({ "width": "auto"}, "slow");
             $("#change_arrow").css({"right": 7});
+            $("#legendBtn").css({"padding": 0});
             document.getElementById("change_arrow").innerHTML = "&#187;";
       } else {
             $("#box").animate({ "margin-left": 1 }, "slow");
             $(".legend").animate({"width": 414}, "slow");
             $("#change_arrow").css({"right": 9});
+            $("#legendBtn").css({"padding": "0 6px"});
             document.getElementById("change_arrow").innerHTML = "&#171;";
       }
     }
@@ -519,11 +521,13 @@ function legend() { //toggles legend horizontally
       if (expanded = !expanded) {
             $("#box").animate({ "margin-left": -380},    "slow");
             $("#change_arrow").css({"right": 7});
+            $("#legendBtn").css({"padding": 0});
             document.getElementById("change_arrow").innerHTML = "&#187;";
             help_close();
       } else {
             $("#box").animate({ "margin-left": 1}, 500);
             $("#change_arrow").css({"right": 9});
+            $("#legendBtn").css({"padding": "0 6px"});
             document.getElementById("change_arrow").innerHTML = "&#171;";
             $(".legend").animate({"width": 414}, "slow");
       }
