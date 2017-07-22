@@ -305,7 +305,7 @@
           $(".legend").css({"max-height": "109px"});
           $(".legend").animate({"height": "109px"},500);
           $("#box").animate({ "height": "80px"}, 500);
-          $("#box").animate({"opacity": 1},1000);
+          $("#box").animate({"opacity": 1}, 500);
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
@@ -325,7 +325,7 @@
               $(".legend").animate({"width": 420}, "slow");
               $("#change_arrow").css({"right": 9});
               $("#legendBtn").css({"padding": "0 6px"});
-              $("#box").animate({"opacity": 1},1000);
+              $("#box").animate({"opacity": 1}, 500);
               document.getElementById("change_arrow").innerHTML = "&#171;";
         }
       }
