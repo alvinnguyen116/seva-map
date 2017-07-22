@@ -290,7 +290,7 @@
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
         $(".legend .box").css("margin-left" , 1); //slides out 
-        $("#legend").animate({'width':'132px'},500); //undo landscape style 
+        $("#legend").css('width', '132px'); //undo landscape style 
         if (expanded) {
           // $("#box").slideUp('slow');
           $(".legend").css({"max-height": "29px"});
@@ -303,7 +303,7 @@
           // $("#box").slideDown('slow');
           $("#box").css("opacity", 0);
           $(".legend").css({"max-height": "109px"});
-          $(".legend").animate({"height": "109px"});
+          $(".legend").animate({"height": "109px"},500);
           $("#box").animate({ "height": "80px"}, 500);
           $("#box").animate({"opacity": 1},1000);
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
