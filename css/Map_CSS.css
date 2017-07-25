@@ -3,7 +3,7 @@
 html, body {    /*if this affects your website, change to a container*/
   height: 100%;
 }
-
+ 
 #map_intro {
   width: 160px;
   right: 10px !important;
