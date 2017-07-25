@@ -1198,9 +1198,9 @@ ClusterIcon.prototype.useStyle = function() {
   this.url_ = style['url'];
   this.height_ = style['height'];
   this.width_ = style['width'];
-  this.anchor_ = (this.cluster_.getSize() <= 9) ? style['anchor1'] : style['anchor2'];
+  this.anchor_ = style['anchor'];
   this.textColor_ = style['textColor'];
-  this.textSize_ = (this.cluster_.getSize() <= 9) ? style['textSize1'] : style['textSize2'];
+  this.textSize_ = style['textSize'];
   this.backgroundPosition_ = style['backgroundPosition'];
 };
 
