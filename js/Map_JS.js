@@ -283,9 +283,9 @@
     }
 
     function initLegend(){
-      if (prevWindow) {
-        responsiveOpen(prevWindow);
-      }
+      // if (prevWindow) {
+      //   responsiveOpen(prevWindow);
+      // }
       if (getOrientation() == "Portrait") {
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
@@ -302,15 +302,15 @@
         } else {
           // $("#box").slideDown('slow');
           $(".legend").css({"max-height": "109px"});
-          $(".legend").animate({"height": "109px"},500);
+          $(".legend").css({"height": "109px"});
           $("#box").animate({ "height": "80px"}, 500);
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
+        $(".legend").css("height", "26px"); //undo portrait css 
         $("#legendBtn").css("display","block");
         $("#toggleSliderBtn").css("display", "none");
         $("#box").css("display" , "block");
-        $(".legend").animate({"height": 26}, 500); //undo portrait css 
         if (expanded) {
               $("#box").animate({ "margin-left": -380},    "slow");
               $(".legend").animate({ "width": "auto"}, "slow");
@@ -451,15 +451,12 @@
       maxZoom: 10,
       gridSize: 40, //the proximity required to cluster 
       styles: [{
-       anchor1:[13,21], //seperate anchors for various digits 
-       anchor2: [13,15.5], //[y,x] where top right is [0,0]
+       anchor:[0,0],
        textColor: "white",
-       textSize1: 18,
-       textSize2: 18,
-       height: 52,
-       width: 52,
-       url: "images/cluster_mentee.png",
-       ignoreHidden: true
+       textSize: 16,
+       height: 39,
+       width: 38,
+       url: "images/cluster_mentee.png"
       }]
     });
   }
@@ -469,13 +466,11 @@
       maxZoom: 10,
       gridSize: 40,
       styles: [{
-       anchor1:[13,21],
-       anchor2:[13,15.5], //[y,x] where top right is [0,0]
+       anchor:[0,0],
        textColor: "white",
-       textSize1: 18, //seperate textSizes for various digits 
-       textSize2: 18,
-       height: 52, 
-       width: 52,
+       textSize: 16, 
+       height: 38, 
+       width: 38,
        url: "images/cluster_partner.png"
       }]
     });
@@ -503,8 +498,8 @@
     prevWindow = infoWindow;
     var iwResp = document.getElementById("iw_responsive");
     iwResp.innerHTML = infoWindowContent(infoWindow.name, infoWindow.content, infoWindow.image);
-    var height = parseInt($("#map").css("height"),10)/3;
-    $("#iw_content").css("max-height", height);
+    // var height = parseInt($("#map").css("height"),10)/3;
+    // $("#iw_content").css("max-height", height);
     $("#iw_responsive").animate({ "margin-left": 1 }, 750);
     $("#iw_close").on("click", function() {
       if (prevWindow) {
@@ -524,10 +519,13 @@
       $("#iw_title").css("background-color", "#801a50");
       $("#iw_close").css("color", "#801a50");
     }
+    var width = window.innerWidth; 
+    var height = window.innerHeight;
+
   }
 
   function legend() { //toggles legend horizontally
-        $(".legend").animate({"height": 26}, 500); //undo portrait css 
+        $(".legend").css({"height": "26px"}); //undo portrait css 
         $(".legend").css({ "width": ""});
         if (expanded = !expanded) {
               $("#box").animate({ "margin-left": -380},    "slow");
@@ -571,7 +569,7 @@
       return orientation;
   }
 
-  function iwclose(){ //closes info Windows 
+  function iwclose() { //closes info Windows 
     prevWindow = false;
     var max = 0;
     if (getOrientation() == "Portrait") {
@@ -616,13 +614,13 @@
 
   function help_open() {
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "406px"});
+      $("#legend_help").css({"height": "0", "width": "420px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
       }, 400);
     } else {
-      $("#legend_help").css({"height": "95px", "width": "0"});
+      $("#legend_help").css({"height": "109px", "width": "0"});
       $("#legend_help").animate({
           'width': '160px',
           'opacity': '1'
