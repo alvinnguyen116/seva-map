@@ -1,7 +1,7 @@
-<!DOCTYPE html>  
-<html lang="en">          
-  <head>              
-    <meta charset="utf-8">   
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Seva Map</title>
@@ -9,13 +9,21 @@
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
     <link href="css/Map_CSS.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
   </head>
   <body> 
-  <div id="map"></div>
+  <div class="row">
+    <div class="col-sm-6 col-md-3">
+        <div id="temp"></div>
+    </div>
+    <div class="col-sm-6 col-md-9"> 
+        <div id="map"></div>
+    </div>
+  </div>
   <div id="legend_help" onclick="help_close()"></div>
-<!--   <img id="map_intro" src="images/menu-icon.png" onclick="startFilter()"> -->
-  <div id="map_filters"></div>
-    <div id="iw_responsive"></div> 
+<!--   <div id="map_intro" onclick="startFilter()">Categories</div>
+  <div id="map_filters"></div> --> 
+    <div id="iw_responsive"></div>
     <div class="legend" id="legend">
         <button onclick="toggleSlider()" id="toggleSliderBtn"><div>Legend</div><span id="change_arr">&raquo;</button> <!--toggles legend vertically-->
         <div class="box" id="box">
@@ -32,4 +40,3 @@
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
 </html>
- 
