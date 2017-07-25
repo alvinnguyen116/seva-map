@@ -356,10 +356,11 @@
       var newMarker = new google.maps.Marker({
           position: position,
           icon: icons[marker.type].icon,
-          category: [marker.type],
+          category: marker.type,
           animation: google.maps.Animation.DROP
         });
       var infoWindow = [];
+      infoWindow.category = marker.type;
       infoWindow.name = marker.name;
       infoWindow.content = marker.description;
       infoWindow.image = marker.image;
@@ -383,17 +384,17 @@
     var width = $(window).width();
     var height = $(window).height();
     if (image == "") {
-      if ((width <= 850) && (height <= 850)) {
-        return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
-      }
-      return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
+      // if ((width <= 850) && (height <= 850)) {
+      //   return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
+      // }
+      return "<div id='iw_container'> <div id='iw_title'><span id='iw_close'>&laquo;</span> <span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
     } else {
-      if ((width <= 850) && (height <= 850)) {
-        return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
-      + "<div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
-      }
+      // if ((width <= 850) && (height <= 850)) {
+      //   return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
+      // + "<div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
+      // }
       return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
-      + "<div id='iw_title'><img src='images/left-arrow.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
+      + "<div id='iw_title'><span id='iw_close'>&laquo;</span> <span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
     } 
   }
 
@@ -505,12 +506,24 @@
     var height = parseInt($("#map").css("height"),10)/3;
     $("#iw_content").css("max-height", height);
     $("#iw_responsive").animate({ "margin-left": 1 }, 750);
-    $("#iw_title img").on("click", function() {
+    $("#iw_close").on("click", function() {
       if (prevWindow) {
         iwclose();
       } 
       map.setOptions({ scrollwheel: true }); //re-enables scrolling 
     });
+    //change colors based on category 
+    var category = infoWindow.category;
+    if (category == "sevaPartner") {
+      $("#iw_title").css("background-color","#F0592A");
+      $("#iw_close").css("color", "#F0592A");
+    } else if (category == "sevaMentee") {
+      $("#iw_title").css("background-color", "#5C7949");
+      $("#iw_close").css("color", "#5C7949");
+    } else {
+      $("#iw_title").css("background-color", "#801a50");
+      $("#iw_close").css("color", "#801a50");
+    }
   }
 
   function legend() { //toggles legend horizontally
