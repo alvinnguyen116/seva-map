@@ -373,8 +373,8 @@
       infoWindow.image = marker.image;
       newMarker.keyword = marker.keyword; 
       newMarker.addListener('click', function() {
+        map.setOptions({'scrollwheel': false }); //enables text scrolling 
         responsiveOpen(infoWindow);
-        map.setOptions({ scrollwheel: false }); //enables text scrolling 
       });
       markers.push(newMarker); 
       bounds.extend(position);
@@ -494,7 +494,9 @@
           iwclose();
           window.setTimeout(function(){responsiveOpenHelper(infoWindow)},500);
     } else if (prevWindow === infoWindow) {
+      console.log("butt");
       iwclose();
+      map.setOptions({'scrollwheel': true }); //re-enables scrolling 
     }
     else {
       window.setTimeout(function(){responsiveOpenHelper(infoWindow)},500);
@@ -512,7 +514,7 @@
       if (prevWindow) {
         iwclose();
       } 
-      map.setOptions({ scrollwheel: true }); //re-enables scrolling 
+      map.setOptions({'scrollwheel': true }); //re-enables scrolling 
     });
     //change colors based on category 
     var category = infoWindow.category;
@@ -526,9 +528,6 @@
       $("#iw_title").css("background-color", "#801a50");
       $("#iw_close").css("color", "#801a50");
     }
-    var width = window.innerWidth; 
-    var height = window.innerHeight;
-
   }
 
   function legend() { //toggles legend horizontally
@@ -550,7 +549,7 @@
   }
 
 
-  function toggleSlider(){ //toggles legend vertically 
+  function toggleSlider(){ //toggles legend vertically  
     $("#box").css("margin-left" , "1"); //fix from landscape mode 
     if (expanded = !expanded) {
       // $("#box").slideUp('slow');
@@ -585,7 +584,7 @@
       max = $(window).width();
     }
     $("#iw_responsive").animate({ "margin-left": -1.5*max }, "slow");
-    map.setOptions({scrollwheel: true}); //re-enalbes scrolling 
+    map.setOptions({'scrollwheel': true}); //re-enables scrolling 
   }
 
   function readTextFile(file, display)
