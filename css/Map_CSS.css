@@ -3,7 +3,7 @@
 html, body {    /*if this affects your website, change to a container*/
   height: 100%;
 }
- 
+
 #map_intro {
   width: 160px;
   right: 10px !important;
@@ -348,10 +348,6 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_responsive {
     width: 94%;
   }
-
-  #map, #temp {
-    height: 480px;
-  }
 }
 
 @media (min-width: 768px) { /*sm*/
@@ -366,8 +362,6 @@ html, body {    /*if this affects your website, change to a container*/
   }
 }
 
-@media (min-width: 1100px) { /*laptop*/
-  #map, #temp {
-    height: 517px;
-  }
+#map, #temp {
+  height: 517px;
 }
