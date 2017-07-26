@@ -1,15 +1,15 @@
 <!DOCTYPE html>
-<html lang="en"> 
-  <head>  
-    <meta charset="utf-8"> 
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Seva Map</title>
+    <link href="css/Map_CSS.css" rel="stylesheet" type="text/css"/>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
     <script type="text/javascript" src="js/Marker_Clusterer.js"></script>
     <script type="text/javascript" src="js/jquery.js"></script>
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
-    <link href="css/Map_CSS.css" rel="stylesheet" type="text/css"/>
-    <link href="css/bootstrap.css" rel="stylesheet" type="text/css"/>
   </head>
   <body> 
   <div class="row">
@@ -20,11 +20,11 @@
         <div id="map"></div>
     </div>
   </div>
-  <div id="legend_help" onclick="help_close()"></div>
-<!--   <div id="map_intro" onclick="startFilter()">Categories</div>
-  <div id="map_filters"></div> --> 
+  <div class="hidden" id="legend_help" onclick="help_close()"></div>
+<!--   <div class="hidden" id="map_intro" onclick="startFilter()">Categories</div>
+  <div id="map_filters"></div>  -->
     <div id="iw_responsive"></div>
-    <div class="legend" id="legend">
+    <div class="legend hidden" id="legend">
         <button onclick="toggleSlider()" id="toggleSliderBtn"><div>Legend</div><span id="change_arr">&raquo;</button> <!--toggles legend vertically-->
         <div class="box" id="box">
           
