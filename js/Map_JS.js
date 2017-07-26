@@ -307,7 +307,7 @@
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
-        $(".legend").css("height", "26px"); //undo portrait css 
+        $(".legend").css("height", "29px"); //undo portrait css 
         $("#legendBtn").css("display","block");
         $("#toggleSliderBtn").css("display", "none");
         $("#box").css("display" , "block");
@@ -394,14 +394,14 @@
       // if ((width <= 850) && (height <= 850)) {
       //   return "<div id='iw_container'> <div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
       // }
-      return "<div id='iw_container'> <div id='iw_title'><span id='iw_close'>&laquo;</span> <span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
+      return "<div id='iw_container'> <div id='iw_title'><div class='col-sm-2'><span id='iw_close'>&laquo;</span></div><div class='col-sm-10'><span id='iw_name'>" + name + "</span></div></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>"; //styling purposes 
     } else {
       // if ((width <= 850) && (height <= 850)) {
       //   return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
       // + "<div id='iw_title'><img src='images/left-arrow_phone.png' alt='left-arrow'></img><span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
       // }
-      return "<div id='iw_container'> <div id='iw_image' style='background-image: url(" + image + ");'></div>"
-      + "<div id='iw_title'><span id='iw_close'>&laquo;</span> <span>" + name + "</span></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
+      return "<div id='iw_container'><div id='iw_image' style='background-image: url(" + image + ");'></div>"
+      + "<div id='iw_title'><div class='col-sm-2'><span id='iw_close'>&laquo;</span></div><div class='col-sm-10'><span id='iw_name'>" + name + "</span></div></div><div id='iw_content'>" + content + "</div><div class='iw-bottom-gradient'></div></div>";
     } 
   }
 
@@ -532,7 +532,7 @@
   }
 
   function legend() { //toggles legend horizontally
-        $(".legend").css({"height": "26px"}); //undo portrait css 
+        $(".legend").css({"height": "29px"}); //undo portrait css 
         $(".legend").css({ "width": ""});
         if (expanded = !expanded) {
               $("#box").animate({ "margin-left": -380},    "slow");
