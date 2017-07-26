@@ -284,18 +284,18 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #iw_title {
-  background: #801a50;
   color: white;
   font-size: 22px;
   padding: 10px;
+  overflow: auto;
 }
 
 #iw_content {
   font-size: 14px;
   padding: 10px 20px 20px;
-  background: white;
   max-height: 180px;
   overflow-x: auto;
+  background-color: white;
 }
 
 #iw_container a, a:link, a:visited, a:active {
@@ -352,6 +352,18 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_responsive {
     width: 94%;
   }
+
+/*  #iw_close {
+    position: relative;
+    float: left;
+    width: 25%;
+  }
+
+  #iw_name {
+    position: relative;
+    width: 75%;
+    float: left;
+  }*/
 }
 
 @media (min-width: 768px) { /*sm*/
