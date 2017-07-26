@@ -327,6 +327,12 @@
       }
     }
 
+    function unHidden() { 
+      $("#map_intro").removeClass("hidden");
+      $("#legend_help").removeClass("hidden");
+      $("#legend").removeClass("hidden");
+    }
+
      var iwResp = document.getElementById('iw_responsive');
      map.controls[google.maps.ControlPosition.TOP_CENTER].push(iwResp); //arbitrary, will move later with !important 
      initLegend();
@@ -337,6 +343,7 @@
      map.controls[google.maps.ControlPosition.BOTTOM_RIGHT].push(legend_help);
      var map_filters = document.getElementById("map_filters");
      map.controls[google.maps.ControlPosition.RIGHT_CENTER].push(map_filters);
+     window.setTimeout(function(){unHidden()}, 1000); //prevents div elements from appearing early 
   }
 
 
