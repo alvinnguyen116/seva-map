@@ -322,7 +322,6 @@ html, body {    /*if this affects your website, change to a container*/
   cursor: pointer;
   display: inline-block;
   vertical-align: middle;
-  margin: 0 10px;
   background-color: white;
   border-radius: 16px;
   padding: 0 15px 3px 14px;
