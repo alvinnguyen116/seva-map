@@ -116,7 +116,7 @@ html, body {    /*if this affects your website, change to a container*/
 #legendBtn #change_arrow {
   font-size: 16px;
   position: absolute;
-  top: 6.5px;
+  top: 4.5px;
   right: 9px;
   padding: 0;
   line-height: 100%;
@@ -258,7 +258,7 @@ html, body {    /*if this affects your website, change to a container*/
   }
 
   .legend {
-    height: 26px;
+    height: 29px;
     max-width: 420px;
   }
 
@@ -351,18 +351,6 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_responsive {
     width: 94%;
   }
-
-/*  #iw_close {
-    position: relative;
-    float: left;
-    width: 25%;
-  }
-
-  #iw_name {
-    position: relative;
-    width: 75%;
-    float: left;
-  }*/
 }
 
 @media (min-width: 768px) { /*sm*/
