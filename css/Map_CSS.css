@@ -1,7 +1,13 @@
-/*_________________DESKTOP CSS_________________*/
-/*GENERAL CSS*/
-html, body {    /*if this affects your website, change to a container*/
-  height: 100%;
+@font-face{font-family: "Gotham-Light"; src: url(../fonts/Gotham-Light.otf);
+}
+@font-face{font-family: "Gotham-Book"; src: url(../fonts/Gotham-Book.otf);
+}
+@font-face{font-family: "Gotham-Bold"; src: url(../fonts/Gotham-Bold.otf);
+}
+
+#map, #temp {
+  height: 517px;
+  font-family: 'Gotham-Bold', Arial;
 }
 
 .hidden {
@@ -15,7 +21,7 @@ html, body {    /*if this affects your website, change to a container*/
   background-color: white;
   font-size: 16px;
   text-align: center;
-  font-family: 'Gotham-Book', Arial;
+  font-family: 'Gotham-Bold', Arial;
   cursor: pointer;
   padding: 10px 0;
   color: grey;
@@ -48,7 +54,7 @@ html, body {    /*if this affects your website, change to a container*/
 
 #map_filters {
   cursor: pointer;  
-  font-size: 16px;
+  font-size: 14px;
   background-color: white;
   color: grey;
   opacity: 0;
@@ -76,6 +82,7 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
   position: absolute;
   top: 3px;
+  font-family: "Gotham-Bold", Arial;
 }
 
 @media (orientation: portrait)  {
@@ -119,7 +126,7 @@ html, body {    /*if this affects your website, change to a container*/
   font-size: 16px;
   position: absolute;
   top: 4.5px;
-  right: 11px;
+  right: 5px;
   padding: 0;
   line-height: 100%;
 }
@@ -261,7 +268,7 @@ html, body {    /*if this affects your website, change to a container*/
 
   .legend {
     height: 29px;
-    max-width: 420px;
+    max-width: 431px;
   }
 
   .legend button {
@@ -280,12 +287,13 @@ html, body {    /*if this affects your website, change to a container*/
 /*INFOWINDOW CSS*/
 #iw_container {
   overflow: hidden;
-  font-family: 'Gotham-Bold', Arial;
+  font-family: 'Gotham-Book', Arial;
   margin-bottom: 10px;
   border-radius: 11px;
 }
 
 #iw_title {
+  font-family: 'Gotham-Bold', Arial;
   color: white;
   font-size: 22px;
   padding: 10px;
@@ -365,8 +373,4 @@ html, body {    /*if this affects your website, change to a container*/
   #iw_responsive {
     width: 65%;
   }
-}
-
-#map, #temp {
-  height: 517px;
 }
