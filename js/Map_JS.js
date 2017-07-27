@@ -534,17 +534,17 @@
         $(".legend").css({"height": "29px"}); //undo portrait css 
         $(".legend").css({ "width": ""});
         if (expanded = !expanded) {
-              $("#box").animate({ "margin-left": -380},    "slow");
-              $("#change_arrow").css({"right": 7});
+              $("#box").animate({ "margin-left": -380},    500);
+              // $("#change_arrow").css({"right": 7});
               $("#legendBtn").css({"padding": 0});
               document.getElementById("change_arrow").innerHTML = "&#187;";
               help_close();
         } else {
               $("#box").animate({ "margin-left": 1}, 500);
-              $("#change_arrow").css({"right": 9});
+              $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
-              $(".legend").animate({"width": 420}, "slow");
+              window.setTimeout(function(){ $(".legend").css({"width": 420}); }, 500);
         }
   }
 
