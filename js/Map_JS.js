@@ -274,13 +274,8 @@
     
     menteeClusterer = new MarkerClusterer(map, []);
     partnerClusterer = new MarkerClusterer(map, []);
-    window.addEventListener("resize", temp, true);
-    window.addEventListener("orientationchange", temp);
-
-    function temp() {
-      initLegend();
-      help_close();
-    }
+    window.addEventListener("resize", initLegend, true);
+    window.addEventListener("orientationchange", initLegend);
 
     function initLegend(){
       // if (prevWindow) {
@@ -325,6 +320,13 @@
               document.getElementById("change_arrow").innerHTML = "&#171;";
         }
       }
+      
+      if (getOrientation() == "Portrait") { //in case of resizing 
+        $("#legend_help").css({"height": "109px", "width": "160px"});
+      } else {
+        $("#legend_help").css({"height": "70px", "width": "420px"})
+      }
+
     }
 
     function unHidden() { 
