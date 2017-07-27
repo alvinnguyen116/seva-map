@@ -26,6 +26,7 @@ html, body {    /*if this affects your website, change to a container*/
 }
 
 #legend_help {
+  font-family: 'Gotham-Book', Arial;
   position: absolute;
   bottom: 60px !important;
   left: 10px !important;
@@ -38,6 +39,7 @@ html, body {    /*if this affects your website, change to a container*/
   color: grey;
   font-size: 14px;
   border-radius: 2px;
+  overflow:auto;
 }
 
 #legend_help:hover {
