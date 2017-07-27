@@ -308,19 +308,19 @@
               $("#legendBtn").css({"padding": "0"});
               document.getElementById("change_arrow").innerHTML = "&#187;";
         } else {
-            $(".legend").css({"width": "420px"});
+            $(".legend").css({"width": "431px"});
               $("#box").css({ "margin-left": "1px"});
               // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
-              // window.setTimeout(function(){ $(".legend").css({"width": 420}); }, 500);
+              // window.setTimeout(function(){ $(".legend").css({"width": 431}); }, 500);
         }
       }
 
       if (getOrientation() == "Portrait") { //in case of resizing 
         $("#legend_help").css({"height": "109px", "width": "160px"});
       } else {
-        $("#legend_help").css({"height": "70px", "width": "420px"})
+        $("#legend_help").css({"height": "70px", "width": "431px"})
       }
 
     }
@@ -542,7 +542,7 @@
               // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
-              window.setTimeout(function(){ $(".legend").css({"width": "420px"}); }, 500);
+              window.setTimeout(function(){ $(".legend").css({"width": "431px"}); }, 500);
         }
   }
 
@@ -618,7 +618,7 @@
 
   function help_open() {
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "420px"});
+      $("#legend_help").css({"height": "0", "width": "431px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
