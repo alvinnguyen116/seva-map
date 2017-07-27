@@ -275,7 +275,7 @@
     menteeClusterer = new MarkerClusterer(map, []);
     partnerClusterer = new MarkerClusterer(map, []);
     window.addEventListener("resize", initLegend, true);
-    window.addEventListener("orientationchange", initLegend);
+    // window.addEventListener("orientationchange", initLegend);
 
     function initLegend(){
       // if (prevWindow) {
@@ -293,7 +293,6 @@
                 "height": 0
               }, 500);
           $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
-          help_close();
         } else {
           // $("#box").slideDown('slow');
           $(".legend").css({"max-height": "109px"});
@@ -309,18 +308,19 @@
         if (expanded) {
               $("#box").animate({ "margin-left": -380},    "slow");
               $(".legend").animate({ "width": "auto"}, "slow");
-              $("#change_arrow").css({"right": 7});
+              // $("#change_arrow").css({"right": 7});
               $("#legendBtn").css({"padding": 0});
               document.getElementById("change_arrow").innerHTML = "&#187;";
         } else {
+            $(".legend").css({"width": 420})
               $("#box").animate({ "margin-left": 1}, "slow");
-              $(".legend").css({"width": 420});
-              $("#change_arrow").css({"right": 9});
+              // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
+              // window.setTimeout(function(){ $(".legend").css({"width": 420}); }, 500);
         }
       }
-      
+
       if (getOrientation() == "Portrait") { //in case of resizing 
         $("#legend_help").css({"height": "109px", "width": "160px"});
       } else {
@@ -543,7 +543,7 @@
               help_close();
         } else {
               $("#box").animate({ "margin-left": 1}, 500);
-              $("#change_arrow").css({"right": 11});
+              // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
               window.setTimeout(function(){ $(".legend").css({"width": 420}); }, 500);
