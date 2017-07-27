@@ -275,29 +275,25 @@
     menteeClusterer = new MarkerClusterer(map, []);
     partnerClusterer = new MarkerClusterer(map, []);
     window.addEventListener("resize", initLegend, true);
-    // window.addEventListener("orientationchange", initLegend);
 
-    function initLegend(){
-      // if (prevWindow) {
-      //   responsiveOpen(prevWindow);
-      // }
+    function initLegend() {
       if (getOrientation() == "Portrait") {
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
-        $(".legend .box").css("margin-left" , 1); //slides out 
+        $(".legend .box").css("margin-left" , "1px"); //slides out 
         $("#legend").css('width', '132px'); //undo landscape style 
         if (expanded) {
           // $("#box").slideUp('slow');
           $(".legend").css({"max-height": "29px"});
-          $("#box").animate({
-                "height": 0
-              }, 500);
+          $("#box").css({
+                "height": "0"
+              });
           $("#change_arr").css({" -ms-transform ": "rotate(-90deg)", "-webkit-transform" : "rotate(-90deg)", "transform" : "rotate(-90deg)"});
         } else {
           // $("#box").slideDown('slow');
           $(".legend").css({"max-height": "109px"});
           $(".legend").css({"height": "109px"});
-          $("#box").animate({ "height": "80px"}, 500);
+          $("#box").css({ "height": "80px"});
           $("#change_arr").css({" -ms-transform ": "rotate(90deg)", "-webkit-transform" : "rotate(90deg)", "transform" : "rotate(90deg)"});
         }
       } else {
@@ -306,14 +302,14 @@
         $("#toggleSliderBtn").css("display", "none");
         $("#box").css("display" , "block");
         if (expanded) {
-              $("#box").animate({ "margin-left": -380},    "slow");
-              $(".legend").animate({ "width": "auto"}, "slow");
+              $("#box").css({ "margin-left": "-380px"});
+              $(".legend").css({ "width": "auto"});
               // $("#change_arrow").css({"right": 7});
-              $("#legendBtn").css({"padding": 0});
+              $("#legendBtn").css({"padding": "0"});
               document.getElementById("change_arrow").innerHTML = "&#187;";
         } else {
-            $(".legend").css({"width": 420})
-              $("#box").animate({ "margin-left": 1}, "slow");
+            $(".legend").css({"width": "420px"});
+              $("#box").css({ "margin-left": "1px"});
               // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
@@ -546,7 +542,7 @@
               // $("#change_arrow").css({"right": 11});
               $("#legendBtn").css({"padding": "0 6px"});
               document.getElementById("change_arrow").innerHTML = "&#171;";
-              window.setTimeout(function(){ $(".legend").css({"width": 420}); }, 500);
+              window.setTimeout(function(){ $(".legend").css({"width": "420px"}); }, 500);
         }
   }
 
