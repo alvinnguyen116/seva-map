@@ -12,7 +12,7 @@
 
 .hidden {
   display: none;
-} 
+}
 
 #map_intro {
   width: 160px;
@@ -126,7 +126,7 @@
   font-size: 16px;
   position: absolute;
   top: 4.5px;
-  right: 2px;
+  right: 6px;
   padding: 0;
   line-height: 100%;
 }
@@ -268,7 +268,7 @@
 
   .legend {
     height: 29px;
-    max-width: 431px;
+    max-width: 440px;
   }
 
   .legend button {
