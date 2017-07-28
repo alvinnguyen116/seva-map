@@ -123,9 +123,9 @@
 }
 
 #legendBtn #change_arrow {
-  font-size: 18px;
+  font-size: 20px;
   position: absolute;
-  top: 4.5px;
+  top: 2px;
   right: 6px;
   padding: 0;
   line-height: 100%;
@@ -179,7 +179,7 @@
 #change_arr {
   position: absolute;
   left: 93px;
-  top: -2px;
+  top: -3px;
   vertical-align: middle;
   font-size: 20px;
   margin-top: 5px;
