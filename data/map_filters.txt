@@ -1,3 +1,7 @@
 North America, 
 Central America, 
-None 
+South America, 
+Africa,
+Europe,
+Asia,
+None
