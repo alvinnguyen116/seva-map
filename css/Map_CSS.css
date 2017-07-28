@@ -126,7 +126,7 @@
   font-size: 16px;
   position: absolute;
   top: 4.5px;
-  right: 5px;
+  right: 2px;
   padding: 0;
   line-height: 100%;
 }
@@ -178,8 +178,8 @@
 
 #change_arr {
   position: absolute;
-  left: 99px;
-  top: 5px;
+  left: 93px;
+  top: -1px;
   vertical-align: middle;
   font-size: 20px;
   margin-top: 5px;
