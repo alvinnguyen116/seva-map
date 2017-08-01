@@ -265,9 +265,9 @@
       if (expanded_help) {
         help_close();
       }
-      if (expanded_filter) {
-        filtersClose();
-      }
+      // if (expanded_filter) {
+      //   filtersClose();
+      // }
 
     });
 
