@@ -8,7 +8,7 @@
 		"description": "<p>Since 1978, <a href='http://www.seva.org/site/PageServer' target='_blank'>Seva Foundation</a> has been one of the leading innovators in the delivery of vital eye care services, restoring sight to 4 million people and transforming the lives of countless others. Through an extensive network of eye care professionals and an investment in health infrastructure, Seva creates sustaining solutions for comprehensive eye care across the globe. Seva continues to innovate and expand sight restoring programs, working in over 20 countries to build economically sustainable, community-based eye care solutions for the people who need them most.</p>"
 	},
 	{ "keyword" : "North America",  
-		"image": "images/united_indian.jpg", 
+		"image": "", 
 		"lat": 40.8972409, 
 		"lng": -124.0860229,
 		"name": "United Indian Health Services - Potawot Health Village",
@@ -32,7 +32,7 @@
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Kewa' target='_blank'>Kewa Pueblo Health Corporation</a> (KPHC), located 41 miles outside of Albuquerque, New Mexico in Santo Domingo Pueblo, is a remote clinic that provides basic health services including optometry, primary care, dental and pharmacy. In 2014, the clinic was awarded a P.L. 93-638 contract under the Self Determination Act. With the award of the contract, KPHC has management oversight of the health center and is run by a Tribal board and elected governors.<p>Seva works with in partnership with optometrist Dr. Lindsey Marvel, who is a Tribal member of the Caddo Nation out of Oklahoma. Seva supports Dr. Marvel in treating patients with corneal irregularities, keratoconus and pellucid marginal degeneration. KPHC provides services to bed ridden patients and conducts screenings at the local elementary schools. Dr. Marvel was awarded the 2014 National Center for American Indian Enterprise Development for 40 under 40, which recognizes outstanding Native American Tribal members for their leadership and community contributions.</p><p>Seva partners with Dr. Marvels vision of providing expanded care to the Santo Domingo Pueblo and surrounding Pueblos.</p>"
 	},
 	{ "keyword" : "North America",   
-		"image": "images/Southwestern_Indian.jpg",
+		"image": "",
 		"lat": 35.17537, 
 		"lng": -106.6714,
 		"name": "Southwestern Indian Polytechnic Institute",
@@ -48,7 +48,7 @@
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/IMO' target='_blank'>Instituto Mexicano de Oftalmologica</a> is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.<p>Seva began working with the Instiuto Mexicano de Oftalmologia (IMO) in 2014 through our GSI partnership with Visualiza. IMO is a social hospital that serves the poor and uninsured from Queratro and surrounding regions. Visualiza is working with IMO staff on increasing outreach services, creating a tiered pricing system to attract more paying patients to make the hospital financially sustainable, organizational development, and implementing an electronic hospital management system.</p>" 
 	},
 	{ "keyword" : "Central America",   
-		"image": "images/visualiza.jpg",
+		"image": "",
 		"lat": 14.6317501, 
 		"lng": -90.4674988,
 		"name": "Visualiza Clínica Médica Oftalmológica",
@@ -72,7 +72,7 @@
 		"description": "<p>Clinica Ojo Sano (COOS) is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.</p>"
 	},
 	{ "keyword" : "Central America",   
-		"image": "images/Clinique_Vision.jpg",
+		"image": "",
 		"lat": 19.7602416, 
 		"lng": -72.2006853,
 		"name": "Clinique Vision Plus",
@@ -80,7 +80,7 @@
 		"description": "<p>Clinique Vision Plus is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, Mentee of International Eye Foundation (IEF).<p>In 2013 Seva partnered with the International Eye Foundation (IEF) and Visualiza to work with Vision Plus Clinique (CVP), an eye clinic located in Cap Haitien. Staff from IEF and Visualiza have spent time training and working with the staff of Vision Plus Clinique on surgical skills, patient flow, clinic set-up, data collection and many other topics. This hospital and its dedicated staff are one of the only clinics bringing eye care to the people of Northern Haiti. The greatest cause of blindness in Haiti is cataract. With only 55 ophthalmologists in the entire country – of whom it is not known how many are currently practicing – there is a desperate need for quality, affordable eye care.</p>"
 	},
 	{ "keyword" : "Central America",   
-		"image": "images/Dr_Pierre.png",
+		"image": "",
 		"lat": 18.5812333, 
 		"lng": -72.2304571,
 		"name": "Dr. Pierre Decastro Clinic",
@@ -144,7 +144,7 @@
 		"description": "<p>Sava Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/KCCO' target='_blank'>Kilimanjaro Centre for Community Ophthalmology</a> (KCCO).</p>"
 	},
 	{ "keyword" : "Africa",   
-		"image": "images/zomba_eye.JPG",
+		"image": "",
 		"lat": -15.3765857, 
 		"lng": 35.3356518, 
 		"name": "Zomba Eye Hospital",
@@ -192,7 +192,7 @@
 		"description": "<p>Lira Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/KCCO' target='_blank'>Kilimanjaro Centre for Community Ophthalmology</a> (KCCO).</p>"
 	},
 	{ "keyword" : "Africa",   
-		"image": "images/Debre_Berhan.jpg",
+		"image": "",
 		"lat": 9.6698704, 
 		"lng": 39.530571,
 		"name": "Debre Berhan Eye Hospital",
@@ -200,7 +200,7 @@
 		"description": "<p>Debre Berhan Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/KCCO' target='_blank'>Kilimanjaro Centre for Community Ophthalmology</a> (KCCO).</p>"
 	},
 	{ "keyword" : "Africa",   
-		"image": "images/magrabi.png",
+		"image": "",
 		"lat": 30.0499096, 
 		"lng": 31.2486,
 		"name": "Magrabi Foundation",
@@ -216,10 +216,10 @@
 		"description": "<p>Russia has one of the highest rates of people living with HIV and AIDS. Through the <a href='http://www.seva.org/site/PageNavigator/programs/AIDSEyeInitiative' target='_blank'>AIDS Eye Initiative</a>, Seva has supported the training of infectious disease doctors at some of Russia's foremost medical institutes, including Botkin's Hospital, Saint Petersburg TB Hospital #2 and Saint Petersburg AIDS Center, on how to examine patient's eyes using an indirect ophthalmoscope. This helps to detect blinding CMV Retinitis while it still can be cured with medication. Health workers can also detect tuberculosis using this technique.</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/aravind_tirupur.png",
+		"image": "",
 		"lat": 11.147182,
 		"lng": 77.315161,
-		"name": "Aravind Eye Hospital Tirupur",
+		"name": "",
 		"type": "sevaMentee",
 		"description": "<p>Aravind Eye Hospital Tirupur is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	},
@@ -227,7 +227,7 @@
 		"image": "",
 		"lat": 10.909433,
 		"lng": 78.366535,
-		"name": "Aravind Eye Care System (AECS)",
+		"name": "",
 		"type": "sevaPartner",
 		"description": "<p>Aravind Eye Hospital was founded in 1976, by Dr. G. Venkataswamy. Beginning with an eleven bed hospital manned by 4 medical officers, he saw the potential for what it could become. Today, Aravind is one of the largest facilities in the world for eye care, boasting 10 hospitals and more than 40 primary vision centers. Over the years, the organization has evolved into the <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS), a sophisticated system dedicated to compassionate service that acts as a model for other eye care providers around the world.<p> With Seva's support, AECS established the Lions Aravind Institute of Community Ophthalmology (LAICO) in 1992, the first training center in Asia dedicated to the prevention of blindness. LAICO coordinates Aravind's clinical training programs in ophthalmology and related professions. LAICO also offers world class degrees and certificate programs in a wide range of management topics and is a key partner within the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a>.</p><p>Aravind is world renowned for its innovative service models and works with Seva to spread their model of universal access to service through the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> (GSI) network . Additionally, Seva supports Aravind and their many partners with subsidized and free direct services.</p>"
 	},
@@ -240,7 +240,7 @@
 		"description": "<p>Aravind Eye Hospital Salem is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/MM_Joshi.jpg",
+		"image": "",
 		"lat": 15.454051,
 		"lng": 75.006652,
 		"name": "MM Joshi Eye Hospital",
@@ -251,7 +251,7 @@
 		"image": "",
 		"lat": 17.68368,
 		"lng": 73.346017,
-		"name": "Lions Nab Eye Hospital",
+		"name": "",
 		"type": "sevaMentee",
 		"description": "<p>Lions Nab Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"
 	},
@@ -259,7 +259,7 @@
 		"image": "",
 		"lat": 18.093356,
 		"lng": 73.419001,
-		"name": "Laxmi Charitable Trust",
+		"name": "",
 		"type": "sevaMentee",
 		"description": "<p>Laxmi Charitable Trust is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	},
@@ -267,7 +267,7 @@
 		"image": "",
 		"lat": 19.531932,
 		"lng": 76.055457,
-		"name": "HV Desai Eye Hospital",
+		"name": "",
 		"type": "sevaPartner",
 		"description": "<p>The Pune Blind Men's Association (PBMA) established the <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> in 2000. PBMA is a center committed to the socio-economic rehabilitation of blind people and has been active for the past 60 years. The hospital has examined more than 2.7 million patients and completed more than 400,000 eye surgeries since it was established 15 years ago. Approximately 60% of patients are treated absolutely free through a sustainable fee system where paying patients cover the cost of services for non-paying patients.<p> HV Desai operates a tertiary center in Pune and has two secondary centers. It also operates 7 vision centers in and around Pune. In recent years, they have completed almost 10,000 surgeries annually. The Chief Medical Director of HV Desai also served as the President of VISION2020 India for a number of years.</p><p>HV Desai offers postgraduate and paramedical ophthalmic training and has emerged as a leading comprehensive eye care center in the region and works with mentees to build the capacity of hospital staff and increase economic sustainability. Seva works with HV Desai to spread their model through the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> and provides subsidized direct service support through <a href='http://www.focusingphilanthropy.org/registryitem.asp?ID=672&title=Seva%20Foundation' target='_blank'>Focusing Philanthropy's</a> World Sight Day campaigns.</p>"
 	},
@@ -275,12 +275,12 @@
 		"image": "",
 		"lat": 18.168287,
 		"lng": 76.118634,
-		"name": "FC Ajmera Rotary Eye Hospital",
+		"name": "",
 		"type": "sevaMentee",
 		"description": "<p>FC Ajmera Rotary Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"
 	},
 	{ "keyword" : "Asia",
-		"image": "images/karad.jpeg",
+		"image": "",
 		"lat": 18.4160616, 
 		"lng": 76.5401527,
 		"name": "D.S. Karad Eye Institute",
@@ -288,7 +288,7 @@
 		"description": "<p>D.S.Karad Eye Institute is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a>(LVPEI).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/lions_eye.jpg",
+		"image": "",
 		"lat": 18.351755,
 		"lng": 76.753897,
 		"name": "Udayagiri Lions Eye Hospital",
@@ -296,7 +296,7 @@
 		"description": "<p>Udayagiri Lions Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/lvpei.jpg",
+		"image": "",
 		"lat": 17.849592,
 		"lng": 79.115166,
 		"name": "LV Prasad Eye Institute (LVPEI)",
@@ -312,7 +312,7 @@
 		"description": "<p>Edward & Soona Brown Eye Center is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/srikiran.jpg",
+		"image": "",
 		"lat": 17.32125, 
 		"lng": 82.0407137,
 		"name": "Srikiran Eye Institute",
@@ -320,7 +320,7 @@
 		"description": "<p>Srikiran Eye Institute is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/rotaryeye.png",
+		"image": "",
 		"lat": 20.9467019, 
 		"lng": 72.9520348,
 		"name": "Rotary Eye Hospital Navsari",
@@ -344,7 +344,7 @@
 		"description": "<p>PBMA Kanta Laxmi Shah Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/pe_tatya.jpg",
+		"image": "",
 		"lat": 21.0013504, 
 		"lng": 75.5624237,
 		"name": "PE Tatya Patil Eye Hospital",
@@ -360,7 +360,7 @@
 		"description": "<p>Bareja Eye Hospital BPA is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/drashti.jpg",
+		"image": "",
 		"lat": 22.8486195, 
 		"lng": 74.2660065,
 		"name": "Drashti Nethralaya Eye Hospital",
@@ -376,7 +376,7 @@
 		"description": "<p>JSW Global Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/Alakh_Nayan.jpg",
+		"image": "",
 		"lat": 24.5869904, 
 		"lng": 73.6987534,
 		"name": "Alakh Nayan Mandir Eye Institute",
@@ -384,7 +384,7 @@
 		"description": "<p>Alakh Nayan Mandir Eye Institute is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/HVDEH' target='_blank'>HV Desai Eye Hospital</a> (HVDEH).</p>"	
 	},
 	{ "keyword" : "Asia",   
-		"image": "images/purnima.jpg",
+		"image": "",
 		"lat": 24.0195694, 
 		"lng": 76.3749313,
 		"name": "Purnima Netralaya Eye Hospital",
@@ -400,7 +400,7 @@
 		"description": "<p>Murali Kripa Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/sewa.png",
+	 	"image": "",
 	 	"lat": 23.2874036, 
 	 	"lng": 77.3266991,
 	 	"name": "Sewa Sadan Eye Hospital Trust",
@@ -408,7 +408,7 @@
 	 	"description": "<p>Sewa Sadan Eye Hospital Trust is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/SNC' target='_blank'>Sadguru Netra Chikitsalaya</a> (SNC).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/sadguru.jpg",
+	 	"image": "",
 	 	"lat": 24.1668491,
 	 	"lng": 77.4378586,
 	 	"name": "Sadguru Sankalp Netra Chikitsalaya (SSNC)",
@@ -432,7 +432,7 @@
 	 	"description": "<p>Naraindas Budhrani Eye Center is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/kalinga.jpg",
+	 	"image": "",
 	 	"lat": 20.6600950,
 	 	"lng": 85.5842220,
 	 	"name": "Kalinga Eye Hospital and Research Center",
@@ -448,7 +448,7 @@
 	 	"description": "<p>LEPRA Mahandi Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/VMANNN' target='_blank'>Vivekananda Mission Asram Netra Niramay Niketan</a> (VMANNN).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/trilochan.png",
+	 	"image": "",
 	 	"lat": 21.4800030,
 	 	"lng": 83.9786550,
 	 	"name": "Trilochan Netralaya",
@@ -464,7 +464,7 @@
 	 	"description": "<p>OCL Eye Center is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/vmannn.jpg",
+	 	"image": "g",
 	 	"lat": 22.1173380,
 	 	"lng": 88.0799970,
 	 	"name": "Vivekananda Mission Asram Netra Niramay Niketan (VMANNN)",
@@ -496,7 +496,7 @@
 	 	"description": "<p>Sri Bijoy Krishna Ashram Relief Society is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>" 
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/CHEF_international.jpg",
+	 	"image": "",
 	 	"lat": 33.6995270,
 	 	"lng": 72.9811290,
 	 	"name": "Comprehensive Health and Education Forum (CHEF) International",
@@ -520,7 +520,7 @@
 	 	"description": "<p>Rampur Maniharan Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/SCEH' target='_blank'>Dr. Shroff's Charity Eye Hospital</a> (SCEH).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/mahadeo.jpg",
+	 	"image": "",
 	 	"lat": 28.3802100,
 	 	"lng": 75.6091700,
 	 	"name": "Mahadeo Singhi Eye Hospital",
@@ -552,7 +552,7 @@
 	 	"description": "<p>Lok Nayak Jaiprakash Eye Hospitalis a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/VMANNN' target='_blank'>Vivekananda Mission Asram Netra Niramay Niketan</a> (VMANNN).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/gupta.jpg",
+	 	"image": "",
 	 	"lat": 28.8736560,
 	 	"lng": 78.7249470,
 	 	"name": "C.L. Gupta Eye Institute",
@@ -560,7 +560,7 @@
 	 	"description": "<p>C.L. Gupta Eye Institute is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/LVP' target='_blank'>LV Prasad Eye Institute</a> (LVPEI).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/geta.jpg",
+	 	"image": "",
 	 	"lat": 28.7884470,
 	 	"lng": 80.6104890,
 	 	"name": "Geta Eye Hospital",
@@ -576,7 +576,7 @@
 	 	"description": "<p>Mohammaddi Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/SCEH' target='_blank'>Dr. Shroff's Charity Eye Hospital</a> (SCEH).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/sitapur.jpg",
+	 	"image": "",
 	 	"lat": 27.5651780,
 	 	"lng": 80.6769490,
 	 	"name": "Sitapur Eye Hospital",
@@ -600,7 +600,7 @@
 	 	"description": "<p>Primary Eye Care Center Bindki is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/SNC' target='_blank'>Sadguru Netra Chikitsalaya</a> (SNC).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/snc.jpg",
+	 	"image": "",
 	 	"lat": 25.1640080,
 	 	"lng": 80.8665850,
 	 	"name": "Sadguru Netra Chikitsalaya",
@@ -608,7 +608,7 @@
 	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/SNC' target='_blank'>Sadguru Netra Chikitsalaya</a> (SNC) is a pair of rural hospitals performing high volume eye surgeries in Chitrakoot and Anandpur, India. SNC was founded in the 1950s by Param Pujya Gurudev Shri Ranchoddasji Maharaj with the mission to provide \"food for the hungry, clothes for the destitute, sight for the blind.\" To attain this mission, he formulated the Charitable Shri Sadguru Seva Sangh Trust, under which the hospital functions today.<p>SNC endeavors to provide quality eye care services to all sections of society, particularly the economically underserved. For these low-income patients, treatment is free. For the middle class, treatment it is subsidized and individuals from the upper middle and upper classes pay the full service fees. This scalable payment system allows SNC to be economically sustainable.</p><p>The Center of Community Ophthalmology within SNC began in 2008. Its purpose is to increase community awareness and to restore sight throughout the region. The center at SNC offers training and consultation to other institutions in this vast underserved region. As a mentor in the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, SNC works with Seva to spread their model of universal access to service and economic sustainability in areas overlooked throughout India. Seva also supports free and subsidized direct services through the <a href='http://www.seva.org/site/PageNavigator/programs/toms' target='_blank'>TOMS One for One</a> program and <a href='http://www.focusingphilanthropy.org/registryitem.asp?ID=672&title=Seva%20Foundation' target='_blank'>Focusing Philanthropy's</a> World Sight Day campaigns.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/ayodhya.jpg",
+	 	"image": "",
 	 	"lat": 26.7732480,
 	 	"lng": 82.1441640,
 	 	"name": "Ayodhya Eye Hospital",
@@ -648,7 +648,7 @@
 	 	"description": "<p>Butwal Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of Seva Nepal.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/lumbini.jpg",
+	 	"image": "",
 	 	"lat": 27.5065120,
 	 	"lng": 83.4376750,
 	 	"name": "Lumbini Eye Institute",
@@ -680,7 +680,7 @@
 	 	"description": "<p>Bharatpur Eye Hospital Chitwan is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/thori.jpg",
+	 	"image": "",
 	 	"lat": 27.3622410,
 	 	"lng": 84.5746240,
 	 	"name": "Bharatpur Eye Hospital Thori",
@@ -688,7 +688,7 @@
 	 	"description": "<p>Bharatpur Eye Hospital Thori is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/kedia.JPG",
+	 	"image": "",
 	 	"lat": 27.0873650,
 	 	"lng": 84.9268060,
 	 	"name": "Kedia Eye Hospital",
@@ -696,7 +696,7 @@
 	 	"description": "<p>Kedia Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of Seva Nepal.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/gaur.jpg",
+	 	"image": "",
 	 	"lat": 26.7581320,
 	 	"lng": 85.2796880,
 	 	"name": "Gaur Eye Hospital",
@@ -736,7 +736,7 @@
 	 	"description": "<p>Aliadpur Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/VMANNN' target='_blank'>Vivekananda Mission Asram Netra Niramay Niketan</a> (VMANNN).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/marium.jpg",
+	 	"image": "",
 	 	"lat": 25.6628520,
 	 	"lng": 89.6212400,
 	 	"name": "Marium Eye Hospital",
@@ -744,7 +744,7 @@
 	 	"description": "<p>Marium Eye Hospital is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/VMANNN' target='_blank'>Vivekananda Mission Asram Netra Niramay Niketan</a> (VMANNN).</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/grameen.jpg",
+	 	"image": "",
 	 	"lat": 24.8435590,
 	 	"lng": 89.3701080,
 	 	"name": "Grameen GC Eye Care Hospital",
@@ -760,7 +760,7 @@
 	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Mettashin' target='_blank'>Quasem Foundation</a>, located in Dhaka, Bangladesh, is an organization dedicated to improving the lives for vulnerable populations in Northern Bangladesh, extending charity where it is most needed and giving hope where it is most lacking. Founded in 1958, Quasem Foundation began its operations in Ulipur, the home town of its founder Abul Quasem.</p><p>Through the implementation of focused and comprehensive projects, the foundation has grown in both reach and reputation over the last six decades. Quasem now serves not only Ulipur but the entire Rangpur district and other parts of Northern Bangladesh. Seva and Quasem work together to provide low-cost and high-quality comprehensive services. Quasem's efforts are supported by <a href='http://www.seva.org/site/PageNavigator/programs/toms' target='_blank'>TOMS One for One program</a> and <a href='http://www.focusingphilanthropy.org/registryitem.asp?ID=672&title=Seva%20Foundation' target='_blank'>Focusing Philanthropy's</a> World Sight Day campaigns, providing subsidized direct services, including glasses, medical treatments and surgeries.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/ispahani_islamia.jpg",
+	 	"image": "",
 	 	"lat": 23.7598150,
 	 	"lng": 90.3913170,
 	 	"name": "Ispahani Islamia Eye Institute and Hospital",
@@ -800,7 +800,7 @@
 	 	"description": "<p>Seva partners with <a href='http://www.seva.org/site/PageNavigator/programs/partners/Kham' target='_blank'>Kham Eye Center</a> to train clinicians and management personnel. Seva supports the outreach capacity of KEC to include screening camps and provision of essential supplies needed for cataract patients, with a goal of screening 15,000 patients and conduct 2,000 surgeries annually.<p>Seva also works with KEC to strengthen primary eye care services through a community ophthalmology approach that includes a network of eye health care providers at all levels (prefecture, county, township). Additionally, Seva aims to expand refractive error services, subsidize glasses services, enhance advanced ophthalmic medical technology training and develop Kham Eye Center as a regional training base.</p><p>KEC is also a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network and a mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a>.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/mettashin.jpg",
+	 	"image": "",
 	 	"lat": 20.7887570,
 	 	"lng": 97.0337140,
 	 	"name": "Mettashin Foundation",
@@ -808,7 +808,7 @@
 	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Mettashin' target='_blank'>Mettashin Foundation</a> has been providing free eye care to people in the Taunggyi, Shan Province region of <a href='http://www.seva.org/site/PageNavigator/programs/partners/MAM' target='_blank'>Myanmar</a> since 2007 through the guiding principles of self-motivation, generosity, compassion and kindness.<p>Seva and Mettashin Foundation recently partnered to build capacity and increase access to eye care in Myanmar. Seva is supporting infrastructure improvements, including equipment and technical staff training for a new eye hospital that is currently under construction.</p>"
 	 },
 	 { "keyword" : "Asia",   
-	 	"image": "images/yangon.jpg",
+	 	"image": "",
 	 	"lat": 16.7999060,
 	 	"lng": 96.1682410,
 	 	"name": "Yangon Eye Hospital",
