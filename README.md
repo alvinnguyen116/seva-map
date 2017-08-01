@@ -39,3 +39,6 @@ Each legend description is in a seperate text file. For example, the mentee's te
 <h1>III. Editing Filter</h1>
 
 To add more filters, edit the file called "map_filters.txt". This is a comma separated list of words that should not be case-sensitive nor space sensitive. Once you add a filter, make sure you also edit the "keyword" category of the locations(s) you wish to appear under this filter. You should use the exact same word as you used in the filter file. There is no limit to how many filters you add or delete. To delete a filter, simply remove that word from the list. However, please be mindful of how many filters you add as the height and width for each filter is pre-set.
+
+<h1> IV. Changing Map Size </h1> 
+The map height is constant and can be changed in the Cascading Style Sheet labeled "Map_CSS.css". To change the width, you can either edit the map's width directly or its empty container. I recommend bootstrap's grid system for responsive design.   
