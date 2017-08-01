@@ -5,9 +5,8 @@
 @font-face{font-family: "Gotham-Bold"; src: url(../fonts/Gotham-Bold.otf);
 }
 
-#map, #temp {
+#map {
   height: 517px;
-  font-family: 'Gotham-Bold', Arial;
 }
 
 .hidden {
@@ -78,16 +77,14 @@
   background-color: lightgrey;
 }
 
-.legend button div {
-  padding: 1px;
+.legend button {
+  position: relative;
   font-size: 16px;
-  position: absolute;
-  top: 3px;
   font-family: "Gotham-Bold", Arial;
 }
 
 @media (orientation: portrait)  {
-  .legend button div {
+  .legend button {
     padding: 7px 0;
     margin: 1px;
     position:relative;
@@ -123,14 +120,14 @@
   background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
 }
 
-#legendBtn #change_arrow {
+/*#legendBtn #change_arrow {
   font-size: 20px;
   position: absolute;
   top: 3px;
   right: 6px;
   padding: 0;
   line-height: 100%;
-}
+}*/
 
 
 /*LEGEND CSS*/
@@ -148,13 +145,10 @@
 
 .legend button { 
   background-color: inherit;
-  text-align: center;
   color: grey;
-  font-family: 'Gotham-Book', Arial;
+  font-family: 'Gotham-Bold', Arial;
   border: none;
   cursor: pointer;
-  margin: 0;
-  padding: 0;
 }
 
 .legend .box { 
@@ -180,7 +174,7 @@
 #change_arr {
   position: absolute;
   left: 93px;
-  top: -3px;
+  top: 2px;
   vertical-align: middle;
   font-size: 20px;
   margin-top: 5px;
@@ -195,9 +189,7 @@
 #legendBtn {
   display: none;
   outline: none;
-  padding: 0 6px;
-  height: 25px;
-  width: 72px;
+  padding: 3px;
 }
 #toggleSliderBtn {
   outline: none;
@@ -263,17 +255,9 @@
     border-radius: 4px;
   }
 
-  .legend button div {
-    padding-right: 13px;
-  }
-
   .legend {
     height: 29px;
-    max-width: 440px;
-  }
-
-  .legend button {
-    margin: 1px 10px;
+    max-width: 431px;
   }
 }
 
@@ -309,8 +293,9 @@
   background-color: white;
 }
 
-#iw_container a, a:link, a:visited, a:active {
+#iw_container a {
     color: #801a50;
+    text-decoration: underline;
 }
 
 #iw_container a:hover { 
