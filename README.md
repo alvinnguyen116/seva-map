@@ -15,7 +15,7 @@ To add data to the map, please open the 'data' folder and edit the appropriate f
   
 *Keyword is a comma seperated list of words you would like a location to be tagged with. These words should not be case-senstive nor space sensitive, but to be safe, I would try to be as consistent as possible. 
 
-*Image is the location of image you would like to display with the location. 
+*Image is the location of image you would like to display with the location. <b>(Image dimensions are 225 x 500. If you are going to add an image, I would recommed this specific cropping. Landscape photos would fit best.)</b> 
 
 *Lat is a numeric value for the latitude of a location. 
 
