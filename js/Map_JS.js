@@ -648,6 +648,7 @@
   }
 
   function startFilter() {
+    $("#map_filters").css("display", "block");
     if (!expanded_filter) {
       expanded_filter = true; 
       $("#map_filters").animate({"opacity": 1}, "slow");
@@ -657,6 +658,7 @@
   }
 
   function filtersClose() {
+      $("#map_filters").css("display", "none");
       expanded_filter = false; 
       $("#map_filters").animate({'opacity': 0}, "slow");
   }
