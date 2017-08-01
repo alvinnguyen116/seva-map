@@ -1,7 +1,7 @@
-<!DOCTYPE html>  
-<html lang="en">         
-  <head>   
-    <meta charset="utf-8"> 
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
     <title>Seva Map</title>
@@ -12,14 +12,9 @@
     <script type="text/javascript" src="js/Map_JS.js" defer></script>
   </head>
   <body> 
-  <div class="row">
-    <div class="col-sm-6 col-md-3">
-        <div id="temp"></div>
-    </div>
-    <div class="col-sm-6 col-md-9"> 
+    <div class=""> 
         <div id="map"></div>
     </div>
-  </div>
   <div class="hidden" id="legend_help" onclick="help_close()"></div>
   <div class="hidden" id="map_intro" onclick="startFilter()">Categories</div>
   <div id="map_filters"></div> 
@@ -35,7 +30,7 @@
           </ul>
 
         </div>
-        <button onclick="legend()" id="legendBtn"><div>Legend</div><div id="change_arrow">&#187;</div></button> <!-- toggles legend horizontally -->
+        <button onclick="legend()" id="legendBtn">Legend &#187;</button> <!-- toggles legend horizontally -->
     </div>
     <iframe src="https://www.google.com/maps/d/u/0/embed?mid=1zlJ5Sg9AltYVwFAETf9vOwMiyfg&ll=25.602629367407268%2C-3.867185500000005&z=2" width=100% height=480></iframe> <!-- reference --> 
   </body>
