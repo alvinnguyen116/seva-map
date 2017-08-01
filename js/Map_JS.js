@@ -304,23 +304,23 @@
         if (expanded) {
               $("#box").css({ "margin-left": "-380px"});
               $(".legend").css({ "width": "auto"});
-              // $("#change_arrow").css({"right": 7});
-              $("#legendBtn").css({"padding": "0"});
-              document.getElementById("change_arrow").innerHTML = "&#187;";
+              // $("#legendBtn").css({"right": 7});
+              // $("#legendBtn").css({"padding": "0"});
+              document.getElementById("legendBtn").innerHTML = "Legend &#187;";
         } else {
-              $(".legend").css({"width": "440px"});
+              $(".legend").css({"width": "431px"});
               $("#box").css({ "margin-left": "1px"});
-              // $("#change_arrow").css({"right": 11});
-              $("#legendBtn").css({"padding": "0 6px"});
-              document.getElementById("change_arrow").innerHTML = "&#171;";
-              // window.setTimeout(function(){ $(".legend").css({"width": 440}); }, 500);
+              // $("#legendBtn").css({"right": 11});
+              $("#legendBtn").css({"padding": "3px"});
+              document.getElementById("legendBtn").innerHTML = "Legend &#171;";
+              // window.setTimeout(function(){ $(".legend").css({"width": 431}); }, 500);
         }
       }
 
       if (getOrientation() == "Portrait") { //in case of resizing 
         $("#legend_help").css({"height": "109px", "width": "160px"});
       } else {
-        $("#legend_help").css({"height": "70px", "width": "440px"})
+        $("#legend_help").css({"height": "70px", "width": "431px"})
       }
 
     }
@@ -423,7 +423,7 @@
 
   function hide(category) {
     for (var i=0; i<markers.length; i++) {
-      if (markers[i].category == category) {
+      if (markers[i].category === category) {
         markers[i].setMap(null); //loses animation 
       }
     }
@@ -433,16 +433,19 @@
     if (prevWindow) {
       iwclose();
     }
-    if (category == "sevaMentee") {
+    if (category === "sevaMentee") {
       menteeClusterer.clearMarkers();
-    } else if (category == "sevaPartner") {
+    } else if (category === "sevaPartner") {
       partnerClusterer.clearMarkers();
     }
   }
 
   function boxclick(box,category) {
     if (prevFilter) {
-      filter_hide(prevFilter);
+      if (prevFilter != 'all') {
+        filter_hide(prevFilter);
+      }
+      prevFilter = false;
     } 
     if (box.checked) {
       show(category);
@@ -533,16 +536,16 @@
         $(".legend").css({ "width": ""});
         if (expanded = !expanded) {
               $("#box").animate({ "margin-left": -380},    500);
-              // $("#change_arrow").css({"right": 7});
-              $("#legendBtn").css({"padding": 0});
-              document.getElementById("change_arrow").innerHTML = "&#187;";
+              // $("#legendBtn").css({"right": 7});
+              // $("#legendBtn").css({"padding": 0});
+              document.getElementById("legendBtn").innerHTML = "Legend &#187;";
               help_close();
         } else {
               $("#box").animate({ "margin-left": 1}, 500);
-              // $("#change_arrow").css({"right": 11});
-              $("#legendBtn").css({"padding": "0 6px"});
-              document.getElementById("change_arrow").innerHTML = "&#171;";
-              window.setTimeout(function(){ $(".legend").css({"width": "440px"}); }, 500);
+              // $("#legendBtn").css({"right": 11});
+              $("#legendBtn").css({"padding": "3px"});
+              document.getElementById("legendBtn").innerHTML = "Legend &#171;";
+              window.setTimeout(function(){ $(".legend").css({"width": "431px"}); }, 500);
         }
   }
 
@@ -618,7 +621,7 @@
 
   function help_open() {
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "440px"});
+      $("#legend_help").css({"height": "0", "width": "431px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
@@ -683,7 +686,7 @@
 
   function initFilterHelper(allText) {
     var list_filter = allText.split(",");
-    var innerHTML = "<ul>"; 
+    var innerHTML = "<ul><li id='allBox' onclick=\"filter('all')\">All</li>"; 
     list_filter.forEach(function(filter) {
         var id = filter.replace(/\s/g,'');
           id = id.toLowerCase();
@@ -718,22 +721,27 @@
 
   function filter_show(keyword) {
     hideAll();
-    var mentee = [];
-    var partner = [];
-    for (var i=0; i<markers.length; i++) {
-      if (contains_key(markers[i], keyword)) {
-        markers[i].setMap(map);
-        markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
-        curr_markers.push(markers[i]);
-        if (markers[i].category == "sevaPartner") {
-          partner.push(markers[i]);
-        } else if (markers[i].category == "sevaMentee") {
-          mentee.push(markers[i]);
+    if (keyword === 'all') {
+      showAll();
+      console.log("butt");
+    } else {
+      var mentee = [];
+      var partner = [];
+      for (var i=0; i<markers.length; i++) {
+        if (contains_key(markers[i], keyword)) {
+          markers[i].setMap(map);
+          markers[i].setAnimation(google.maps.Animation.DROP); //add back the animation 
+          curr_markers.push(markers[i]);
+          if (markers[i].category == "sevaPartner") {
+            partner.push(markers[i]);
+          } else if (markers[i].category == "sevaMentee") {
+            mentee.push(markers[i]);
+          }
         }
       }
-    }
-    clusterMentee(mentee);
-    clusterPartner(partner);
+      clusterMentee(mentee);
+      clusterPartner(partner);
+  }
     $("#" + keyword + 'Box').toggleClass("lightgrey");
   }
 
