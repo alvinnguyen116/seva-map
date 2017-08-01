@@ -190,6 +190,7 @@
   display: none;
   outline: none;
   padding: 3px;
+  margin: 1px;
 }
 #toggleSliderBtn {
   outline: none;
