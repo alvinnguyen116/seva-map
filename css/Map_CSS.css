@@ -6,7 +6,7 @@
 }
 
 #map, #temp {
-  height: 517px; 
+  height: 517px;
   font-family: 'Gotham-Bold', Arial;
 }
 
@@ -64,6 +64,7 @@
   right: 10px !important;
   top: 48px !important;
   font-family: 'Gotham-Book', Arial;
+  display: none;
 }
 
 #map_filters ul {
