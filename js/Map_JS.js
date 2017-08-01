@@ -444,6 +444,8 @@
     if (prevFilter) {
       if (prevFilter != 'all') {
         filter_hide(prevFilter);
+      } else {
+        $("#allBox").toggleClass("lightgrey");
       }
       prevFilter = false;
     } 
@@ -451,6 +453,7 @@
       show(category);
     } else {
       hide(category);
+
     }
   }
 
