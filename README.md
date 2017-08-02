@@ -1,5 +1,5 @@
-Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a>
-Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Seva Foundation: Where We Work </a> 
+Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a> </br>
+Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Seva Foundation: Where We Work </a> </br>
 This is a map Adam and I made collobarated to make for the Seva Foundation's website. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
 <hr>
 To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
