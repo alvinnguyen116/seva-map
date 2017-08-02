@@ -1,5 +1,7 @@
 Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a>
-
+Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Seva Foundation: Where We Work </a> 
+This is a map Adam and I made collobarated to make for the Seva Foundation's website. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
+<hr>
 To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
 
 <h1>I. Editing Location</h1>
@@ -42,7 +44,13 @@ Each legend description is in a seperate text file. For example, the mentee's te
 
 To add more filters, edit the file called "map_filters.txt". This is a comma separated list of keywords. Once you add a filter, make sure you also edit the "keyword" category of the locations(s) you wish to appear under this filter. You should use the exact same word as you used in the filter file. There is no limit to how many filters you add or delete. To delete a filter, simply remove that word from the list. However, please be mindful of how many filters you add as the height and width for each filter is pre-set.
 <hr>
-That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources which made working with JSON data much easier. Also check out the google map API documentation for how to get started and the inner workings of the map: https://developers.google.com/maps/documentation/ 
+That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources in the code which made working with JSON data much easier. Also check out the google map API documentation for how to get started and the inner workings of the map: https://developers.google.com/maps/documentation/ 
+This project was initiated by the Seva Foundation to improve the now deprecated google MyMaps. We didn't like how the MyMaps algorithm would randomly add pictures and unnecessary information to each info window. The key goals in this projects were the following: 
+  -marker clustering 
+  -obvious legend 
+  -custom images 
+  -filter capability 
+This map project started in May and ended in August 2017. Design decisions were influenced by Adam Chew, the web master at the Seva Foundation office in Berkeley, and the programs team.
 <hr>
 If you have any questions or concerns, feel free to shoot me an email: alvinnguyen116@gmail.com 
 
