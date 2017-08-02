@@ -5,10 +5,13 @@
 @font-face{font-family: "Gotham-Bold"; src: url(../fonts/Gotham-Bold.otf);
 }
 
-html, body, #map { /* change this to fit your website */
+#map { /* change this to fit your website */
   height: 100%;
 }
 
+html, body {
+  height: 1005
+}
 
 
 
