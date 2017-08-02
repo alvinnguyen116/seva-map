@@ -5,14 +5,31 @@
 @font-face{font-family: "Gotham-Bold"; src: url(../fonts/Gotham-Bold.otf);
 }
 
+
+
+
+
 #map {
   height: 517px;
 }
 
+
+
+
+
+/*jquery toggle classes*/
 .hidden {
   display: none;
 }
 
+.lightgrey {
+  background-color: lightgrey;
+}
+
+
+
+
+/*FILTERS*/
 #map_intro {
   width: 160px;
   right: 10px !important;
@@ -24,31 +41,6 @@
   cursor: pointer;
   padding: 10px 0;
   color: grey;
-}
-
-.lightgrey {
-  background-color: lightgrey;
-}
-
-#legend_help {
-  font-family: 'Gotham-Book', Arial;
-  position: absolute;
-  bottom: 60px !important;
-  left: 10px !important;
-  opacity: 0;
-  width: 406px;
-  height: 0;
-  padding: 8px;
-  background-color: white;
-  z-index: 9 !important;
-  color: grey;
-  font-size: 14px;
-  border-radius: 2px;
-  overflow:auto;
-}
-
-#legend_help:hover {
-  cursor: pointer;
 }
 
 #map_filters {
@@ -77,30 +69,6 @@
   background-color: lightgrey;
 }
 
-.legend button {
-  position: relative;
-  font-size: 16px;
-  font-family: "Gotham-Bold", Arial;
-}
-
-@media (orientation: portrait)  {
-  .legend button {
-    padding: 7px 0;
-    margin: 1px; 
-    position:relative;
-    top:0;
-  }
-
-  #toggleSliderBtn {
-    line-height: 100%;
-  }
-  #legend_help {
-    bottom: 35px !important;
-    left: 142px !important;
-    height: 86px;
-  }
-}
-
 .box .help {
   margin: 0 5px;
 }
@@ -108,29 +76,15 @@
 .box .help:hover {
   cursor: pointer;
 }
-.iw-bottom-gradient {
-  position: absolute;
-  width: 92%;
-  height: 25px;
-  bottom: 10px;
-  right: 20px;
-  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
-  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
-}
-
-/*#legendBtn #change_arrow {
-  font-size: 20px;
-  position: absolute;
-  top: 3px;
-  right: 6px;
-  padding: 0;
-  line-height: 100%;
-}*/
 
 
-/*LEGEND CSS*/
+
+
+
+
+
+
+/*Legend CSS*/
 .legend {
   background-color: white; 
   border-radius: 2px;
@@ -141,7 +95,6 @@
   z-index: 10 !important;
   padding: 1px;
 }
-
 
 .legend button { 
   background-color: inherit;
@@ -169,12 +122,10 @@
   margin-bottom: 2px;
 }
 
-
-
 #change_arr {
   position: absolute;
   left: 93px;
-  top: 2px;
+  top: 0px;
   vertical-align: middle;
   font-size: 20px;
   margin-top: 5px;
@@ -192,13 +143,42 @@
   padding: 3px;
   margin: 1px;
 }
-#toggleSliderBtn {
-  outline: none;
-  height: 29px;
-  display: none;
+
+#legend_help {
+  font-family: 'Gotham-Book', Arial;
+  position: absolute;
+  bottom: 60px !important;
+  left: 10px !important;
+  opacity: 0;
+  width: 406px;
+  height: 0;
+  padding: 8px;
+  background-color: white;
+  z-index: 9 !important;
+  color: grey;
+  font-size: 14px;
+  border-radius: 2px;
+  overflow:auto;
+}
+
+#legend_help:hover {
+  cursor: pointer;
+}
+
+.legend button {
+  position: relative;
+  font-size: 16px;
+  font-family: "Gotham-Bold", Arial;
 }
 
 @media (orientation: portrait) {
+  #toggleSliderBtn {
+    line-height: 100%;
+    outline: none;
+    height: 25px;
+    display: none;
+  }
+
   .legend #box li {
     background-color: lightgrey;
     height: 20px;
@@ -231,10 +211,20 @@
 
   .legend button {
     width: 87%;
+    padding: 0;
+    margin: 1px;
+    position:relative;
+    top:0;
   }
 
   .legend {
     width: 132px;
+  }
+
+  #legend_help {
+    bottom: 35px !important;
+    left: 142px !important;
+    height: 86px;
   }
 }
 
@@ -270,7 +260,9 @@
 
 
 
-/*INFOWINDOW CSS*/
+
+
+/*Infowindow CSS*/
 #iw_container {
   overflow: hidden;
   font-family: 'Gotham-Book', Arial;
@@ -336,14 +328,19 @@
   background-size: cover;
 }
 
-/*phone css*/
-@media (max-height: 850px) and (max-width: 850px) and (orientation: portrait) {
-  #legend_help {
-    left: 142px !important;
-  }
-} 
+.iw-bottom-gradient {
+  position: absolute;
+  width: 92%;
+  height: 25px;
+  bottom: 10px;
+  right: 20px;
+  background: linear-gradient(to bottom, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+  background: -webkit-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -moz-linear-gradient(top, rgba(255,255,255,0) 0%, rgba(255,255,255,1) 100%);
+  background: -ms-linear-gradient(top, rgba(255,255,255,0) 0%,rgba(255,255,255,1) 100%);
+}
 
-/*css for info window*/
+/*responsive info windows*/
 @media (min-width: 360px) { /*iphone*/
   #iw_responsive {
     width: 94%;
