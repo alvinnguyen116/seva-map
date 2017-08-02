@@ -39,7 +39,7 @@
 		"type": "sevaPartner",
 		"description": "<p>Seva partners with the Vision Care Technology Program at the <a href='http://www.seva.org/site/PageNavigator/programs/partners/SIPI' target='_blank'>Southwestern Indian Polytechnic Institute</a> (SIPI), a Tribal community college in Albuquerque, New Mexico. The Vision Care Technology's comprehensive program offers an Associate Degree of Applied Science and a certificate in Optical Laboratory Technology. SIPI's Vision Care program is designed to lead students into careers as opticians, dispensing opticians, ophthalmic optical laboratory technicians, and ophthalmic technicians and assistants. This unique program provides students with hands-on laboratory experience that will open economic opportunities by qualifying them for employment in the optical and ophthalmic industry.<p>Seva supports SIPI by providing essential equipment and supplies for training in the classroom and community outreach events conducted by students. Additionally, Seva subsidizes costly certification exams administered by the National American Board of Opticianary, (ABO). These certifications enable graduates to secure employment after completing their coursework. Many graduates move on to work as vision technicians within Native American communities, which often lack affordable and equitable access to eye care services.</p>"
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "images/instituto_mexico.jpg",
 		"lat": 20.57804, 
 		"lng": -100.3639,
@@ -47,7 +47,7 @@
 		"type": "sevaMentee",
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/IMO' target='_blank'>Instituto Mexicano de Oftalmologica</a> is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.<p>Seva began working with the Instiuto Mexicano de Oftalmologia (IMO) in 2014 through our GSI partnership with Visualiza. IMO is a social hospital that serves the poor and uninsured from Queratro and surrounding regions. Visualiza is working with IMO staff on increasing outreach services, creating a tiered pricing system to attract more paying patients to make the hospital financially sustainable, organizational development, and implementing an electronic hospital management system.</p>" 
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "",
 		"lat": 14.6317501, 
 		"lng": -90.4674988,
@@ -55,7 +55,7 @@
 		"type": "sevaPartner",
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a> is a leading eye hospital in Guatemala and works to prevent and cure blindness caused by major conditions including cataract and refractive errors. Although Visualiza employs only 2% of the nation's ophthalmologists, the organization performs over 20% of all cataract surgeries in Guatemala. Founded in 1997, the hospital has been actively refining its unique community-oriented low cost and free service system since 2002. Visualiza's hospitals provide private care alongside free vision services for their low-income patients. Visualiza operates clinics in Guatemala City and the rural Petén region.<p>Seva works with Visualiza to spread their model of universal access to service. Through the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a>, Visualiza serves as a mentor to five mentee hospitals in Latin America. Additionally, Seva provides direct support for Visualiza's clinical services and school screenings that help reduce avoidable blindness across Guatemala and restore sight to some of the country's most vulnerable populations, including women and children in rural communities. Seva is committed to augmenting Visualiza's service capacity with a focus on local staff development and management training. With Seva's ongoing support for skill-based training, Visualiza has become a resource to improve other eye care centers in Latin America.</p>"
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "",
 		"lat": 15.5039301, 
 		"lng": -88.0158768,
@@ -63,7 +63,7 @@
 		"type": "sevaMentee",
 		"description": "<p>Optilens is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network and a mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Eye Care System</a> (Guatemala). With the guidance of Seva and mentorship of Visualiza, Optilens has been steadily increasing the volume of services they are able to provide to Hondurans in need of eye care.</p>"
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "images/Clinica_Ojo.jpg",
 		"lat": 12.145555, 
 		"lng":-86.278397,
@@ -71,7 +71,7 @@
 		"type": "sevaMentee",
 		"description": "<p>Clinica Ojo Sano (COOS) is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Clínica Médica Oftalmológica</a>.</p>"
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "",
 		"lat": 19.7602416, 
 		"lng": -72.2006853,
@@ -79,7 +79,7 @@
 		"type": "sevaMentee",
 		"description": "<p>Clinique Vision Plus is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, Mentee of International Eye Foundation (IEF).<p>In 2013 Seva partnered with the International Eye Foundation (IEF) and Visualiza to work with Vision Plus Clinique (CVP), an eye clinic located in Cap Haitien. Staff from IEF and Visualiza have spent time training and working with the staff of Vision Plus Clinique on surgical skills, patient flow, clinic set-up, data collection and many other topics. This hospital and its dedicated staff are one of the only clinics bringing eye care to the people of Northern Haiti. The greatest cause of blindness in Haiti is cataract. With only 55 ophthalmologists in the entire country – of whom it is not known how many are currently practicing – there is a desperate need for quality, affordable eye care.</p>"
 	},
-	{ "keyword" : "All, Central America",   
+	{ "keyword" : "All, North America",   
 		"image": "",
 		"lat": 18.5812333, 
 		"lng": -72.2304571,
