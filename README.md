@@ -1,4 +1,4 @@
-Check out the github pages here: alvinnguyen116.github.io/seva-map
+Check out the github pages here: <a href="alvinnguyen116.github.io/seva-map" target="_blank"> Seva Map </a>
 
 To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
 
