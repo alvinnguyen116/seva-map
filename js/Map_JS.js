@@ -246,7 +246,7 @@
          }
       }
     };
-    xmlhttp.open("GET", "data/SEVA_Locations.json", true); //change if directory changes 
+    xmlhttp.open("GET", "../data/SEVA_Locations.json", true); //change if directory changes 
     xmlhttp.send();
 
 
@@ -661,7 +661,7 @@
 
   function initFilters() {
    var rawFile = new XMLHttpRequest();
-   rawFile.open("GET", "data/map_filters.txt", true);
+   rawFile.open("GET", "../data/map_filters.txt", true);
    rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
