@@ -220,7 +220,8 @@
     map = new google.maps.Map(document.getElementById('map'), {
       zoom: 8,
       center:  new google.maps.LatLng(-34.397, 150.644),
-      disableDefaultUI: true
+      disableDefaultUI: false,
+      mapTypeControlOptions: {mapTypeIds: ['roadmap', 'satellite', 'styled_map']}
     });
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map'); 
@@ -292,7 +293,7 @@
               $(".legend").css({ "width": "auto"});
               document.getElementById("legendBtn").innerHTML = "Legend &#187;";
         } else {
-              $(".legend").css({"width": "431px"});
+              $(".legend").css({"width": "440px"});
               $("#box").css({ "margin-left": "1px"});
               $("#legendBtn").css({"padding": "3px"});
               document.getElementById("legendBtn").innerHTML = "Legend &#171;";
@@ -302,7 +303,7 @@
       if (getOrientation() == "Portrait") { //in case of resizing, legend helpers will also change  
         $("#legend_help").css({"height": "109px", "width": "160px"});
       } else {
-        $("#legend_help").css({"height": "70px", "width": "431px"})
+        $("#legend_help").css({"height": "70px", "width": "440px"})
       }
 
     }
@@ -452,7 +453,7 @@
               $("#box").animate({ "margin-left": 1}, 500);
               $("#legendBtn").css({"padding": "3px"});
               document.getElementById("legendBtn").innerHTML = "Legend &#171;";
-              window.setTimeout(function(){ $(".legend").css({"width": "431px"}); }, 500);
+              window.setTimeout(function(){ $(".legend").css({"width": "440px"}); }, 500);
         }
   }
 
@@ -502,7 +503,7 @@
 
   function help_open() { //jquery animation for legend helpers
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "431px"});
+      $("#legend_help").css({"height": "0", "width": "440px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
