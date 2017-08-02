@@ -54,7 +54,7 @@ This project was initiated by the Seva Foundation to improve the now-deprecated 
 <p> This map project started in May and ended in August 2017. Design decisions were influenced by Adam Chew, the web master, and the programs team. </p>
 <hr>
 If you have any questions or concerns, feel free to shoot me an email: alvinnguyen116@gmail.com 
-
+<br>
 <b><em>Happy Mapping!</em></b> 
 
 
