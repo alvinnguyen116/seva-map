@@ -41,7 +41,7 @@ Each legend description is in a seperate text file. For example, the mentee's te
 <h1>III. Editing Filter</h1>
 
 To add more filters, edit the file called "map_filters.txt". This is a comma separated list of keywords. Once you add a filter, make sure you also edit the "keyword" category of the locations(s) you wish to appear under this filter. You should use the exact same word as you used in the filter file. There is no limit to how many filters you add or delete. To delete a filter, simply remove that word from the list. However, please be mindful of how many filters you add as the height and width for each filter is pre-set.
-
+<hr>
 That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources which made working with JSON data much easier. Also check out the google map API documentation for how to get started and the inner workings of the map: https://developers.google.com/maps/documentation/ 
 
 If you have any questions or concerns, feel free to shoot me an email: alvinnguyen116@gmail.com 
