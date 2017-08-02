@@ -33,7 +33,7 @@ Type is a predefined category for the three marker types on the map:
   - sevaOffice
 
 'Type' is case sensitive, so make sure to be as percise as possible. Every location needs to have exactly one of the seven values above. 
-None of these values may be blank as per JSON data regulations. If there is no value, please using double quotes, or an empty string, to indicate there is no value. 
+None of these values may be blank as per JSON data regulations. If there is no value, please using double quotes(empty String) to indicate there is no value. 
 </p>
 
 <h1>II. Changing Legend Description</h1>
