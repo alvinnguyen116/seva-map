@@ -15,15 +15,15 @@
   var icons = {
         sevaOffice: {
           name: "Seva Office",
-          icon: 'images/map/seva_office.png' //must change if directory changes 
+          icon: '../images/map/seva_office.png' //must change if directory changes 
         },
         sevaPartner: {
           name: "Seva Partner",
-          icon: 'images/map/seva_partner.png'
+          icon: '../images/map/seva_partner.png'
         },
         sevaMentee: {
           name: "Seva Mentee",
-          icon: 'images/map/seva_mentee.png'
+          icon: '../images/map/seva_mentee.png'
         }
     };
 
@@ -613,7 +613,7 @@
        textSize: 16,
        height: 39,
        width: 38,
-       url: "images/map/cluster_mentee.png",
+       url: "../images/map/cluster_mentee.png",
        otherStyle: 'font-family:Gotham-Bold, Arial; font-weight:bold;' //use this to add custom styles
       }]
     });
@@ -629,7 +629,7 @@
        textSize: 16, 
        height: 38, 
        width: 38,
-       url: "images/map/cluster_partner.png",
+       url: "../images/map/cluster_partner.png",
        otherStyle: 'font-family:Gotham-Bold, Arial; font-weight:bold;' //use this to add custom styles
       }]
     });
