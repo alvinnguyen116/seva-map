@@ -1,7 +1,7 @@
 Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a> </br>
 Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Where We Work </a> </br>
 <hr>
-This is a map Adam and I made collobarated to make for the Seva Foundation's website. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
+This project is a collaboration with the Seva Foundation office in Berkeely. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
 <hr>
 To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
 
@@ -51,7 +51,7 @@ This project was initiated by the Seva Foundation to improve the now deprecated 
   -obvious legend 
   -custom images 
   -filter capability 
-This map project started in May and ended in August 2017. Design decisions were influenced by Adam Chew, the web master at the Seva Foundation office in Berkeley, and the programs team.
+This map project started in May and ended in August 2017. Design decisions were influenced by Adam Chew, the web master, and the programs team.
 <hr>
 If you have any questions or concerns, feel free to shoot me an email: alvinnguyen116@gmail.com 
 
