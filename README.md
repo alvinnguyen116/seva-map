@@ -8,7 +8,7 @@ To add data to the map, please open the 'data' folder and edit the appropriate f
 <h1>I. Editing Location</h1>
 <p> Markers are recorded in the file "locations.json". 
 
-<em>Each data has 7 attributes:
+Each data has 7 attributes:
   - keyword
   - image
   - lat
@@ -16,7 +16,6 @@ To add data to the map, please open the 'data' folder and edit the appropriate f
   - name
   - type
   - description 
-</em>
   
 *Keyword is a comma seperated list of words you would like a location to be tagged with. These words should not be case-senstive nor space sensitive, but to be safe, I would try to be as consistent as possible. 
 
@@ -28,11 +27,11 @@ To add data to the map, please open the 'data' folder and edit the appropriate f
 
 *Name is the name of a location. Name will be displayed in the info window. 
 
-<em>Type is a predefined category for the three marker types on the map: 
+Type is a predefined category for the three marker types on the map: 
   - sevaMentee
   - sevaPartner
   - sevaOffice
-</em>
+
 'Type' is case sensitive, so make sure to be as percise as possible. Every location needs to have exactly one of the seven values above. 
 None of these values may be blank as per JSON data regulations. If there is no value, please using double quotes, or an empty string, to indicate there is no value. 
 </p>
