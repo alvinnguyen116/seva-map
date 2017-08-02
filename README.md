@@ -44,7 +44,7 @@ Each legend description is in a seperate text file. For example, the mentee's te
 
 To add more filters, edit the file called "map_filters.txt". This is a comma separated list of keywords. Once you add a filter, make sure you also edit the "keyword" category of the locations(s) you wish to appear under this filter. You should use the exact same word as you used in the filter file. There is no limit to how many filters you add or delete. To delete a filter, simply remove that word from the list. However, please be mindful of how many filters you add as the height and width for each filter is pre-set.
 <hr>
-That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources in the code which made working with JSON data much easier. Also, check out the google map API documentation for a deeper understand and how to get started:<a href="https://developers.google.com/maps/documentation/" target='_blank'>Google Map API Documentation</a> <br>
+That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources in the code which made working with JSON data much easier. Also, check out the google map API documentation for a deeper understand and how to get started: <a href="https://developers.google.com/maps/documentation/" target='_blank'>Google Map API Documentation</a> <br>
 
 This project was initiated by the Seva Foundation to improve the now-deprecated google program "MyMaps". We didn't like how "MyMaps" algorithm would randomly add pictures and unnecessary information to the info windows. The key goals in this projects were the following: 
   - marker clustering 
