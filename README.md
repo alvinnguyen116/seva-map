@@ -38,7 +38,7 @@ None of these values may be blank as per JSON data regulations. If there is no v
 
 <h1>II. Changing Legend Description</h1>
 
-Each legend description is in a seperate text file. For example, the mentee's text description is in a file called "seva_mentee.txt". Again, do not change the names of these text files and do not remove the span tag. If you wish to edit the text, only edit the text within the span. There is no limit to how long the description is. You can add html to the these text files if you want to have a special in-line style but it should not be necessary. 
+Each legend description is in a seperate text file. For example, the mentee's text description is in a file called "seva_mentee.txt". Again, do not change the names of these text files and do not remove the span tag. If you wish to edit the text, only edit the text within the span. There is no limit to how long the description is. You can add html to the these text files if you want to have a special in-line style.
 
 <h1>III. Editing Filter</h1>
 
