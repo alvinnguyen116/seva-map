@@ -3,7 +3,7 @@ Check out the live website here: <a href="http://www.seva.org/site/PageServer?pa
 <hr>
 This project is a collaboration with the Seva Foundation office in Berkeley. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
 <hr>
-To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
+To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the JS is name-dependent.
 
 <h1>I. Editing Location</h1>
 <p> Markers are recorded in the file "locations.json". 
