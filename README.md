@@ -1,5 +1,5 @@
-Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a> </br>
-Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Where We Work </a> </br>
+Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a> <br>
+Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness&_ga=2.77450645.182892957.1501700893-359267843.1484544530" target="_blank"> Where We Work </a> <br>
 <hr>
 This project is a collaboration with the Seva Foundation office in Berkeley. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be in the front-end), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
 <hr>
@@ -44,8 +44,9 @@ Each legend description is in a seperate text file. For example, the mentee's te
 
 To add more filters, edit the file called "map_filters.txt". This is a comma separated list of keywords. Once you add a filter, make sure you also edit the "keyword" category of the locations(s) you wish to appear under this filter. You should use the exact same word as you used in the filter file. There is no limit to how many filters you add or delete. To delete a filter, simply remove that word from the list. However, please be mindful of how many filters you add as the height and width for each filter is pre-set.
 <hr>
-That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources in the code which made working with JSON data much easier. Also, check out the google map API documentation for a deeper understand and how to get started: <a href="https://developers.google.com/maps/documentation/" target='_blank'>documentation</a> 
-This project was initiated by the Seva Foundation to improve the now deprecated google MyMaps. We didn't like how the MyMaps algorithm would randomly add pictures and unnecessary information to each info window. The key goals in this projects were the following: 
+That should cover the basics of using this map. Read the comments in the code to see how I implemented this map. I cited several sources in the code which made working with JSON data much easier. Also, check out the google map API documentation for a deeper understand and how to get started:<a href="https://developers.google.com/maps/documentation/" target='_blank'>Google Map API Documentation</a> <br>
+
+This project was initiated by the Seva Foundation to improve the now-deprecated google program "MyMaps". We didn't like how "MyMaps" algorithm would randomly add pictures and unnecessary information to the info windows. The key goals in this projects were the following: 
   -marker clustering 
   -obvious legend 
   -custom images 
