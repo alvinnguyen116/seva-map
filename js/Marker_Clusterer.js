@@ -1202,6 +1202,7 @@ ClusterIcon.prototype.useStyle = function() {
   this.textColor_ = style['textColor'];
   this.textSize_ = style['textSize'];
   this.backgroundPosition_ = style['backgroundPosition'];
+  this.otherStyle_ = style['otherStyle'];
 };
 
 
@@ -1253,7 +1254,7 @@ ClusterIcon.prototype.createCss = function(pos) {
 
   style.push('cursor:pointer; top:' + pos.y + 'px; left:' +
       pos.x + 'px; color:' + txtColor + '; position:absolute; font-size:' +
-      txtSize + 'px; font-family:Gotham-Bold, Arial; font-weight:bold');
+      txtSize + 'px;' + this.otherStyle_ );
   return style.join('');
 };
 
