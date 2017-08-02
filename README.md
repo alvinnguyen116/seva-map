@@ -1,7 +1,9 @@
+Check out the github pages here: alvinnguyen116.github.io/seva-map
+
 To add data to the map, please open the 'data' folder and edit the appropriate file(s). Do not change the name of a file as the javascript is dependent on these names. 
 
 <h1>I. Editing Location</h1>
-<p> Markers or locations are recorded in the file "locations.json". 
+<p> Markers are recorded in the file "locations.json". 
 
 <em>Each data has 7 attributes:
   - keyword
@@ -44,6 +46,6 @@ That should cover the basics of using this map. Read the comments in the code to
 
 If you have any questions or concerns, feel free to shoot me an email: alvinnguyen116@gmail.com 
 
-Happy Mapping! 
+<b><em>Happy Mapping!</em></b> 
 
 
