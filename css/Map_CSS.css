@@ -285,12 +285,12 @@ html, body { /*remove later*/
   background-color: white;
 }
 
-#iw_container a {
-    color: #801a50;
-    text-decoration: underline;
+#iw_container a, #legend_help a {
+  color: #801a50;
+  text-decoration: underline;
 }
 
-#iw_container a:hover { 
+#iw_container a:hover, #legend_help a:hover { 
   color: #cc1b75;
 }
 
