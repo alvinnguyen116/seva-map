@@ -1,6 +1,6 @@
 	[
 	{   "keyword" : "All, North America",  
-	    "image": "../images/map/seva_foundation_hq.jpg", 
+	    "image": "images/map/seva_foundation_hq.jpg", 
 		"lat": 37.8704265,
 		"lng": -122.2996446,
 		"name": "Seva Foundation HQ",
@@ -40,7 +40,7 @@
 		"description": "<p>Seva partners with the Vision Care Technology Program at the <a href='http://www.seva.org/site/PageNavigator/programs/partners/SIPI' target='_blank'>Southwestern Indian Polytechnic Institute</a> (SIPI), a Tribal community college in Albuquerque, New Mexico. The Vision Care Technology's comprehensive program offers an Associate Degree of Applied Science and a certificate in Optical Laboratory Technology. SIPI's Vision Care program is designed to lead students into careers as opticians, dispensing opticians, ophthalmic optical laboratory technicians, and ophthalmic technicians and assistants. This unique program provides students with hands-on laboratory experience that will open economic opportunities by qualifying them for employment in the optical and ophthalmic industry.<p>Seva supports SIPI by providing essential equipment and supplies for training in the classroom and community outreach events conducted by students. Additionally, Seva subsidizes costly certification exams administered by the National American Board of Opticianary, (ABO). These certifications enable graduates to secure employment after completing their coursework. Many graduates move on to work as vision technicians within Native American communities, which often lack affordable and equitable access to eye care services.</p>"
 	},
 	{ "keyword" : "All, North America",   
-		"image": "../images/map/instituto_mexico.jpg",
+		"image": "images/map/instituto_mexico.jpg",
 		"lat": 20.57804, 
 		"lng": -100.3639,
 		"name": "Instituto Mexicano de Oftalmologica",
@@ -64,7 +64,7 @@
 		"description": "<p>Optilens is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network and a mentee of <a href='http://www.seva.org/site/PageNavigator/programs/partners/Visualiza' target='_blank'>Visualiza Eye Care System</a> (Guatemala). With the guidance of Seva and mentorship of Visualiza, Optilens has been steadily increasing the volume of services they are able to provide to Hondurans in need of eye care.</p>"
 	},
 	{ "keyword" : "All, North America",   
-		"image": "../images/map/Clinica_Ojo.jpg",
+		"image": "images/map/Clinica_Ojo.jpg",
 		"lat": 12.145555, 
 		"lng":-86.278397,
 		"name": "Clinica Ojo Sano (COOS)",
@@ -104,7 +104,7 @@
 		"description": "<p>Clinica Iquitos is a member of the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> network, mentee of Clinica Oftalmológica <a href='http://www.seva.org/site/PageNavigator/programs/partners/DNJ' target='_blank'>Divino Niño Jesús</a> (DNJ).</p>"
 	},
 	{ "keyword" : "All, South America",   
-		"image": "../images/map/Divino_nino_jesus.jpg",
+		"image": "images/map/Divino_nino_jesus.jpg",
 		"lat": -12.1715781, 
 		"lng": -76.9746365,
 		"name": "Clinica Oftalmológica Divino Niño Jesús (DNJ)",
@@ -208,7 +208,7 @@
 		"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Magrabi' target='_blank'>Magrabi Foundation</a>, founded in 1999, is a leading non-governmental organization in Egypt that provides high quality eye care services regardless of their patients' abilities to pay. Magrabi Foundation's key activities include providing high-quality eye surgeries to effectively prevent or cure of blindness, reaching out to underserved communities through local Vision Centers and Outreach Caravans, and offering comprehensive education and training services at all levels, including eye surgeons, para-medical personnel, nurses, community organizations and hospital managers.<p>Since 2006 Seva works with Magrabi to build the foundation up as a regional model for community eye care services and program sustainability. Magrabi offers workshops on management for eye care delivery and conducts several projects aimed at increasing education and access to marginalized groups, with a focus on women. Seva also works with Magrabi to mentor ophthalmic departments at two district hospitals to build quality eye care services. Magrabi's outreach efforts are supported by Seva and <a href='http://www.seva.org/site/PageNavigator/programs/toms' target='_blank'>TOMS One for One</a> program, providing subsidized direct services, including glasses, medical treatments and surgeries.</p>"
 	},
 	{ "keyword" : "All, Europe",   
-		"image": "../images/map/Aids_eye.jpg",
+		"image": "images/map/Aids_eye.jpg",
 		"lat": 59.9331818, 
 		"lng": 30.3060398,
 		"name": "AIDS Eye Initiative",
@@ -232,7 +232,7 @@
 		"description": "<p>Aravind Eye Hospital was founded in 1976, by Dr. G. Venkataswamy. Beginning with an eleven bed hospital manned by 4 medical officers, he saw the potential for what it could become. Today, Aravind is one of the largest facilities in the world for eye care, boasting 10 hospitals and more than 40 primary vision centers. Over the years, the organization has evolved into the <a href='http://www.seva.org/site/PageNavigator/programs/partners/AECS' target='_blank'>Aravind Eye Care System</a> (AECS), a sophisticated system dedicated to compassionate service that acts as a model for other eye care providers around the world.<p> With Seva's support, AECS established the Lions Aravind Institute of Community Ophthalmology (LAICO) in 1992, the first training center in Asia dedicated to the prevention of blindness. LAICO coordinates Aravind's clinical training programs in ophthalmology and related professions. LAICO also offers world class degrees and certificate programs in a wide range of management topics and is a key partner within the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a>.</p><p>Aravind is world renowned for its innovative service models and works with Seva to spread their model of universal access to service through the <a href='http://www.seva.org/site/PageNavigator/programs/gsi' target='_blank'>Global Sight Initiative</a> (GSI) network . Additionally, Seva supports Aravind and their many partners with subsidized and free direct services.</p>"
 	},
 	{ "keyword" : "All, Asia",   
-		"image": "../images/map/aravind_salem.png",
+		"image": "images/map/aravind_salem.png",
 		"lat": 11.661201,
 		"lng": 78.16025,
 		"name": "Aravind Eye Hospital Salem",
@@ -752,7 +752,7 @@
 	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/Grameen' target='_blank'>Grameen Healthcare Services</a>' mission is to establish sustainable best practices in a broad range of healthcare services for a broad market particularly those in need. Grameen Healthcare Services was established in 2006, with the first Grameen Eye Hospital opening in 2008. Every patient receives high quality services, regardless of a patient's ability to pay.<p><a href='http://www.seva.org/site/PageServer' target='_blank'>Seva Foundation</a> works closely with Grameen to increase affordable eye care through the new eye hospitals in the Bogra, Barisal and Thakurgaon districts. Seva sponsors training of the hospitals' staff, including doctors, nurses and management. Additionally, Seva has augmented Grameen's existing support by contributing toward subsidized eye care services through the <a href='http://www.seva.org/site/PageNavigator/programs/toms' target='_blank'>TOMS One for One</a> program and <a href='http://www.focusingphilanthropy.org/registryitem.asp?ID=672&title=Seva%20Foundation' target='_blank'>Focusing Philanthropy's</a> World Sight Day campaigns.</p>"
 	 },
 	 { "keyword" : "All, Asia",   
-	 	"image": "../images/map/quasem_foundation.jpg",
+	 	"image": "images/map/quasem_foundation.jpg",
 	 	"lat": 23.8103320,
 	 	"lng": 90.4125180,
 	 	"name": "Quasem Foundation",
@@ -816,7 +816,7 @@
 	 	"description": "<p><a href='http://www.seva.org/site/PageNavigator/programs/partners/YEH' target='_blank'>Yangon Eye Hospital</a> has been providing eye care since 2006. Yangon Eye Hospital (YEH) is a specialist teaching hospital providing comprehensive eye care services and training to pre- and post-graduate ophthalmology students. Seva has recently partnered with YEH to build capacity and knowledge base with the goal of increasing access to eye care in the Yangon region.<p>Seva is supporting Yangon Eye hospital to conduct a Rapid Assessment of Avoidable Blindness, also known as a RAAB survey. Findings from the RAAB survey are vital in creating an effective plan to eliminate preventable and treatable blindness and vision impairment. Seva is also supporting clinical training for eye care professionals at Yangon Eye Hospital.</p>"
 	 },
 	 { "keyword" : "All, Asia",   
-	 	"image": "../images/map/cambodia.jpg",
+	 	"image": "images/map/cambodia.jpg",
 	 	"lat": 13.0957300,
 	 	"lng": 103.2022050,
 	 	"name": "Seva Cambodia",
