@@ -15,8 +15,6 @@ html, body { /*remove later*/
 
 
 
-
-
 /*jquery toggle classes*/
 .hidden {
   display: none;
@@ -142,6 +140,7 @@ html, body { /*remove later*/
   outline: none;
   padding: 3px;
   margin: 1px;
+  width: 91px;
 }
 
 #legend_help {
@@ -248,7 +247,7 @@ html, body { /*remove later*/
 
   .legend {
     height: 29px;
-    max-width: 431px;
+    max-width: 440px;
   }
 }
 
