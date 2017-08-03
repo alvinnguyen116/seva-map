@@ -15,15 +15,15 @@
   var icons = {
         sevaOffice: {
           name: "Seva Office",
-          icon: '../images/map/seva_office.png' //must change if directory changes 
+          icon: 'images/map/seva_office.png' //must change if directory changes 
         },
         sevaPartner: {
           name: "Seva Partner",
-          icon: '../images/map/seva_partner.png'
+          icon: 'images/map/seva_partner.png'
         },
         sevaMentee: {
           name: "Seva Mentee",
-          icon: '../images/map/seva_mentee.png'
+          icon: 'images/map/seva_mentee.png'
         }
     };
 
@@ -247,7 +247,7 @@
          }
       }
     };
-    xmlhttp.open("GET", "../data/SEVA_Locations.json", true); //change if directory changes 
+    xmlhttp.open("GET", "data/SEVA_Locations.json", true); //change if directory changes 
     xmlhttp.send();
 
 
@@ -614,7 +614,7 @@
        textSize: 16,
        height: 39,
        width: 38,
-       url: "../images/map/cluster_mentee.png",
+       url: "images/map/cluster_mentee.png",
        otherStyle: 'font-family:Gotham-Bold, Arial; font-weight:bold;' //use this to add custom styles
       }]
     });
@@ -630,7 +630,7 @@
        textSize: 16, 
        height: 38, 
        width: 38,
-       url: "../images/map/cluster_partner.png",
+       url: "images/map/cluster_partner.png",
        otherStyle: 'font-family:Gotham-Bold, Arial; font-weight:bold;' //use this to add custom styles
       }]
     });
@@ -662,7 +662,7 @@
 
   function initFilters() {
    var rawFile = new XMLHttpRequest();
-   rawFile.open("GET", "../data/map_filters.txt", true);
+   rawFile.open("GET", "data/map_filters.txt", true);
    rawFile.onreadystatechange = function ()
     {
         if(rawFile.readyState === 4)
