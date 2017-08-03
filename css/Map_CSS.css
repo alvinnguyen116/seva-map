@@ -155,7 +155,7 @@ html, body { /*remove later*/
   background-color: white;
   z-index: 9 !important;
   color: grey;
-  font-size: 12px;  
+  font-size: 12px;
   border-radius: 2px;
   overflow:auto;
 }
@@ -247,7 +247,7 @@ html, body { /*remove later*/
 
   .legend {
     height: 29px;
-    max-width: 465px;
+    max-width: 446px;
   }
 }
 
