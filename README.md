@@ -1,5 +1,5 @@
 Check out the github pages here: <a href="https://alvinnguyen116.github.io/seva-map/" target="_blank"> Seva Map </a> <br>
-Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=Map" target="_blank"> Where We Work </a> <br>
+Check out the live website here: <a href="http://www.seva.org/site/PageServer?pagename=programs/prevent_blindness#where" target="_blank"> Where We Work </a> <br>
 <hr>
 This project is a collaboration with the Seva Foundation office in Berkeley. I got involved by interning for the Summer and it was a great learning experience for me. If you want to get involved(doesn't have to be coding), check out more opportunities here: <a href="http://www.seva.org/site/PageServer?pagename=getinvolved/volunteer#.WYIkUYgrLIV" target='_blank'> Seva Opportunities</a>
 <hr>
