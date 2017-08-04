@@ -221,11 +221,11 @@
       zoom: 8,
       center:  new google.maps.LatLng(-34.397, 150.644),
       disableDefaultUI: false,
-      mapTypeControlOptions: {mapTypeIds: ['roadmap', 'styled_map']}
+      mapTypeControlOptions: {mapTypeIds: ['roadmap', 'satellite', 'styled_map']}
     });
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map'); 
-    map.setOptions({ minZoom: 1, maxZoom: 10 }); //lower # is how close, higher # is how far 
+    map.setOptions({ minZoom: 0, maxZoom: 10 }); //lower # is how close, higher # is how far 
 
 
 
@@ -293,7 +293,7 @@
               $(".legend").css({ "width": "auto"});
               document.getElementById("legendBtn").innerHTML = "Legend &#187;";
         } else {
-              $(".legend").css({"width": "446px"});
+              $(".legend").css({"width": "450px"});
               $("#box").css({ "margin-left": "1px"});
               $("#legendBtn").css({"padding": "3px"});
               document.getElementById("legendBtn").innerHTML = "Legend &#171;";
@@ -303,7 +303,7 @@
       if (getOrientation() == "Portrait") { //in case of resizing, legend helpers will also change  
         $("#legend_help").css({"height": "109px", "width": "160px"});
       } else {
-        $("#legend_help").css({"height": "70px", "width": "446px"})
+        $("#legend_help").css({"height": "70px", "width": "450px"})
       }
 
     }
@@ -453,7 +453,7 @@
               $("#box").animate({ "margin-left": 1}, 500);
               $("#legendBtn").css({"padding": "3px"});
               document.getElementById("legendBtn").innerHTML = "Legend &#171;";
-              window.setTimeout(function(){ $(".legend").css({"width": "446px"}); }, 500);
+              window.setTimeout(function(){ $(".legend").css({"width": "450px"}); }, 500);
         }
   }
 
@@ -503,7 +503,7 @@
 
   function help_open() { //jquery animation for legend helpers
     if (getOrientation() == "Landscape") {
-      $("#legend_help").css({"height": "0", "width": "446px"});
+      $("#legend_help").css({"height": "0", "width": "450px"});
       $("#legend_help").animate({
           'height': '70px',
           'opacity': '1'
@@ -654,9 +654,8 @@
   }
 
   function filtersClose() {
-      $("#map_filters").css("display", "none");
       expanded_filter = false; 
-      $("#map_filters").animate({'opacity': 0}, "slow");
+      $("#map_filters").animate({'opacity': 0, 'display': 'none'}, "slow");
   }
 
 
