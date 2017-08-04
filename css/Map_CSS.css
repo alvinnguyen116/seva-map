@@ -122,7 +122,7 @@ html, body { /*remove later*/
 
 #change_arr {
   position: absolute;
-  left: 93px;
+  left: 108px;
   top: 0px;
   vertical-align: middle;
   font-size: 20px;
@@ -191,7 +191,7 @@ html, body { /*remove later*/
   }
 
   .legend .box { 
-    width: 130px;
+    width: 152px;
   } 
 
   .legend #box li span {
@@ -217,7 +217,7 @@ html, body { /*remove later*/
   }
 
   .legend {
-    width: 132px;
+    width: 154px;
   }
 
   #legend_help {
