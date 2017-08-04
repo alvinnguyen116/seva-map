@@ -221,7 +221,7 @@
       zoom: 8,
       center:  new google.maps.LatLng(-34.397, 150.644),
       disableDefaultUI: false,
-      mapTypeControlOptions: {mapTypeIds: ['roadmap', 'satellite', 'styled_map']}
+      mapTypeControlOptions: {mapTypeIds: ['roadmap', 'styled_map']}
     });
     map.mapTypes.set('styled_map', styledMapType);
     map.setMapTypeId('styled_map'); 
@@ -270,7 +270,7 @@
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
         $(".legend .box").css("margin-left" , "1px"); //slides out 
-        $("#legend").css('width', '132px'); //undo landscape style 
+        $("#legend").css('width', '154px'); //undo landscape style 
         if (expanded) {
           $(".legend").css({"max-height": "29px"});
           $("#box").css({
