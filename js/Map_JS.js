@@ -763,5 +763,5 @@
   function hideAll() {
     hide("sevaOffice");
     hide("sevaMentee");
-    hide("sevaPartner");
+    hide("sevaPartner"); 
   }
