@@ -270,7 +270,7 @@
         $("#legendBtn").css("display","none"); 
         $("#toggleSliderBtn").css("display", "block");
         $(".legend .box").css("margin-left" , "1px"); //slides out 
-        $("#legend").css('width', '142px'); //undo landscape style 
+        $("#legend").css('width', '154px'); //undo landscape style 
         if (expanded) {
           $(".legend").css({"max-height": "29px"});
           $("#box").css({
